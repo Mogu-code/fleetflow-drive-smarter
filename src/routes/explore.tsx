@@ -20,7 +20,7 @@ const CATEGORIES: VehicleCategory[] = [
   "MUV",
 ];
 
-type ExploreSearch = { category?: VehicleCategory; q?: string };
+type ExploreSearch = { category?: VehicleCategory | undefined; q?: string | undefined };
 
 export const Route = createFileRoute("/explore")({
   validateSearch: (search: Record<string, unknown>): ExploreSearch => ({
