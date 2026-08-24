@@ -46,7 +46,7 @@ export interface Vehicle {
   nextServiceDate: string;
   utilization: number; // 0-100
   revenueGenerated: number;
-  currentRenterId?: string;
+  currentRenterId?: string | undefined;
   unavailableDates: string[]; // ISO dates
 }
 
@@ -67,7 +67,7 @@ export interface Booking {
   id: string;
   vehicleId: string;
   customerId: string;
-  salespersonId?: string;
+  salespersonId?: string | undefined;
   startDate: string;
   endDate: string;
   pickupLocation: string;
@@ -78,7 +78,7 @@ export interface Booking {
   insurance: number;
   total: number;
   createdAt: string;
-  agreementId?: string;
+  agreementId?: string | undefined;
   timeline: BookingTimelineEvent[];
 }
 
@@ -96,7 +96,7 @@ export interface Customer {
   totalBookings: number;
   totalSpend: number;
   lastRentalAt: string | null;
-  salespersonId?: string;
+  salespersonId?: string | undefined;
   savedVehicleIds: string[];
 }
 
@@ -184,8 +184,8 @@ export interface FleetDocument {
   title: string;
   uploadedAt: string;
   status: DocumentStatus;
-  bookingId?: string;
-  expiresAt?: string;
+  bookingId?: string | undefined;
+  expiresAt?: string | undefined;
 }
 
 export interface Review {
@@ -227,9 +227,9 @@ export interface AIMessage {
   id: string;
   role: "user" | "assistant";
   content: string;
-  vehicleIds?: string[];
-  actions?: { label: string; to?: string }[];
-  pending?: boolean;
+  vehicleIds?: string[] | undefined;
+  actions?: { label: string; to?: string | undefined }[] | undefined;
+  pending?: boolean | undefined;
 }
 
 export interface OCRResult {
