@@ -7,6 +7,8 @@
  */
 import {
   aiInsights,
+  bookRelations,
+  branchStats,
   bookings,
   categoryMix,
   customers,
@@ -16,7 +18,9 @@ import {
   notifications,
   payments,
   recommendations,
+  rentalAgreements,
   reviews,
+  serviceAssignments,
   revenueTrend,
   utilizationTrend,
   vehicles,
@@ -25,6 +29,10 @@ import {
 import type {
   AIMessage,
   Booking,
+  Customer,
+  Employee,
+  Mechanic,
+  Salesperson,
   OCRResult,
   Vehicle,
   VehicleCategory,
@@ -311,3 +319,124 @@ export const authService = {
 };
 
 export { CURRENT_CUSTOMER_ID };
+
+/* ------------------------------------------------------------------ *
+ * Relational services: Rental Agreement entity plus the Books and
+ * Services many-to-many relationships from the ER model.
+ * ------------------------------------------------------------------ */
+
+export const agreementService = {
+  async list() {
+    return resolve(rentalAgreements);
+  },
+  async forCustomer(customerId = CURRENT_CUSTOMER_ID) {
+    return resolve(rentalAgreements.filter((a) => a.customerId === customerId));
+  },
+  async forBooking(bookingId: string) {
+    return resolve(rentalAgreements.find((a) => a.bookingId === bookingId) ?? null, 200);
+  },
+};
+
+export const relationshipService = {
+  /** Services junction — vehicles a mechanic has worked on. */
+  async vehiclesServicedBy(mechanicId: string) {
+    const rows = serviceAssignments.filter((s) => s.mechanicId === mechanicId);
+    return resolve(
+      rows.map((r) => ({
+        ...r,
+        vehicle: vehicles.find((v) => v.id === r.vehicleId)!,
+      })),
+    );
+  },
+  /** Services junction — mechanics who have worked on a vehicle. */
+  async mechanicsForVehicle(vehicleId: string) {
+    const rows = serviceAssignments.filter((s) => s.vehicleId === vehicleId);
+    const ids = [...new Set(rows.map((r) => r.mechanicId))];
+    return resolve(
+      ids.map((id) => ({
+        mechanic: employees.find((e) => e.id === id) as Mechanic,
+        jobs: rows.filter((r) => r.mechanicId === id).length,
+        hours: rows.filter((r) => r.mechanicId === id).reduce((s, r) => s + r.hours, 0),
+      })),
+    );
+  },
+  /** Books junction — customers handled by a salesperson. */
+  async customersHandledBy(salespersonId: string) {
+    const rows = bookRelations.filter((b) => b.salespersonId === salespersonId);
+    const ids = [...new Set(rows.map((r) => r.customerId))];
+    return resolve(
+      ids.map((id) => ({
+        customer: customers.find((c) => c.id === id) as Customer,
+        bookings: rows.filter((r) => r.customerId === id).length,
+        commission: rows
+          .filter((r) => r.customerId === id)
+          .reduce((s, r) => s + r.commission, 0),
+      })),
+    );
+  },
+  /** Books junction — salespersons a customer has booked through. */
+  async salespersonsForCustomer(customerId: string) {
+    const rows = bookRelations.filter((b) => b.customerId === customerId);
+    const ids = [...new Set(rows.map((r) => r.salespersonId))];
+    return resolve(
+      ids.map((id) => ({
+        salesperson: employees.find((e) => e.id === id) as Salesperson,
+        bookings: rows.filter((r) => r.salespersonId === id).length,
+      })),
+    );
+  },
+};
+
+export const fleetService = {
+  async branches() {
+    return resolve(branchStats, 200);
+  },
+};
+
+export interface SearchHit {
+  id: string;
+  label: string;
+  sub: string;
+  group: "Vehicles" | "Bookings" | "Customers" | "Payments" | "Maintenance";
+  to: string;
+  params?: Record<string, string>;
+}
+
+export const searchService = {
+  /** Command-centre search across the core entities. */
+  async query(term: string): Promise<SearchHit[]> {
+    const q = term.trim().toLowerCase();
+    if (!q) return [];
+    const hits: SearchHit[] = [];
+    for (const v of vehicles) {
+      if (`${v.id} ${v.name} ${v.registration}`.toLowerCase().includes(q))
+        hits.push({ id: v.id, label: `${v.id} · ${v.name}`, sub: v.registration, group: "Vehicles", to: "/admin/vehicles/$id", params: { id: v.id } });
+    }
+    for (const b of bookings) {
+      if (`${b.id} ${b.status}`.toLowerCase().includes(q))
+        hits.push({ id: b.id, label: b.id, sub: `${b.status} · ${b.startDate}`, group: "Bookings", to: "/admin/bookings" });
+    }
+    for (const c of customers) {
+      if (`${c.id} ${c.name} ${c.phone}`.toLowerCase().includes(q))
+        hits.push({ id: c.id, label: `${c.id} · ${c.name}`, sub: c.phone, group: "Customers", to: "/admin/customers" });
+    }
+    for (const p of payments) {
+      if (`${p.id} ${p.reference}`.toLowerCase().includes(q))
+        hits.push({ id: p.id, label: p.id, sub: `${p.status} · ${p.method}`, group: "Payments", to: "/admin/payments" });
+    }
+    for (const m of maintenanceRecords) {
+      if (`${m.id} ${m.type}`.toLowerCase().includes(q))
+        hits.push({ id: m.id, label: m.id, sub: m.type, group: "Maintenance", to: "/admin/maintenance" });
+    }
+    return hits.slice(0, 12);
+  },
+};
+
+export const employeeDirectory = {
+  async byRole<T extends Employee["role"]>(role: T) {
+    return resolve(employees.filter((e) => e.role === role));
+  },
+  async get(id: string) {
+    return resolve(employees.find((e) => e.id === id) ?? null);
+  },
+};
