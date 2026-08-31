@@ -248,3 +248,37 @@ export interface AIInsight {
   confidence: number;
   impact: "high" | "medium" | "low";
 }
+
+/** Rental Agreement — the contract entity produced by a confirmed booking. */
+export interface RentalAgreement {
+  id: string;
+  bookingId: string;
+  customerId: string;
+  vehicleId: string;
+  salespersonId?: string | undefined;
+  startDate: string;
+  endDate: string;
+  durationDays: number;
+  amount: number;
+  status: "draft" | "active" | "closed" | "cancelled";
+  signedAt: string | null;
+  terms: string[];
+}
+
+/** Junction row for the Mechanic ↔ Vehicle "Services" many-to-many. */
+export interface ServiceAssignment {
+  mechanicId: string;
+  vehicleId: string;
+  maintenanceId: string;
+  servicedOn: string;
+  hours: number;
+}
+
+/** Junction row for the Customer ↔ Salesperson "Books" many-to-many. */
+export interface BookRelation {
+  salespersonId: string;
+  customerId: string;
+  bookingId: string;
+  bookedOn: string;
+  commission: number;
+}

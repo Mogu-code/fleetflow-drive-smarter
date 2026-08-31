@@ -7,6 +7,9 @@ import vehMuv from "@/assets/veh-muv.jpg";
 
 import type {
   AIInsight,
+  BookRelation,
+  RentalAgreement,
+  ServiceAssignment,
   Booking,
   Customer,
   Employee,
@@ -415,3 +418,78 @@ export const testimonials = [
       "Needed a convertible for two days on short notice. The assistant found one at Dabolim and I was driving within the hour.",
   },
 ];
+
+/* ------------------------------------------------------------------ *
+ * Relational extensions — Rental Agreement entity and the two
+ * many-to-many junctions from the ER model (Books, Services).
+ * Shaped exactly like the future SQL junction tables.
+ * ------------------------------------------------------------------ */
+
+export const rentalAgreements: RentalAgreement[] = bookings
+  .filter((b) => b.agreementId)
+  .map((b) => {
+    const days = Math.max(
+      1,
+      Math.round(
+        (new Date(b.endDate + "T00:00:00Z").getTime() -
+          new Date(b.startDate + "T00:00:00Z").getTime()) /
+          86400000,
+      ),
+    );
+    const status: RentalAgreement["status"] =
+      b.status === "completed" ? "closed" : b.status === "pending" ? "draft" : "active";
+    return {
+      id: b.agreementId!,
+      bookingId: b.id,
+      customerId: b.customerId,
+      vehicleId: b.vehicleId,
+      salespersonId: b.salespersonId,
+      startDate: b.startDate,
+      endDate: b.endDate,
+      durationDays: days,
+      amount: b.total,
+      status,
+      signedAt: status === "draft" ? null : b.createdAt,
+      terms: [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour.",
+      ],
+    };
+  });
+
+/** Services junction: a mechanic services many vehicles; a vehicle is serviced by many mechanics. */
+export const serviceAssignments: ServiceAssignment[] = maintenanceRecords.map((m, i) => ({
+  mechanicId: m.mechanicId,
+  vehicleId: m.vehicleId,
+  maintenanceId: m.id,
+  servicedOn: m.completedAt ?? m.scheduledFor,
+  hours: 2 + (i % 5),
+}));
+
+/** Books junction: a salesperson books for many customers; a customer books via many salespersons. */
+export const bookRelations: BookRelation[] = bookings
+  .filter((b) => b.salespersonId)
+  .map((b) => ({
+    salespersonId: b.salespersonId!,
+    customerId: b.customerId,
+    bookingId: b.id,
+    bookedOn: b.createdAt,
+    commission: Math.round(b.total * 0.035),
+  }));
+
+export const howItWorks = [
+  { step: "01", title: "Find your vehicle", body: "Filter the live fleet by location, dates, category and budget. Availability is checked against real rental windows." },
+  { step: "02", title: "Verify your licence", body: "Upload your driving licence once. We extract the details, you confirm them, and it stays verified for future rentals." },
+  { step: "03", title: "Pay and sign", body: "Transparent pricing with taxes and insurance itemised. Your rental agreement is generated the moment payment clears." },
+  { step: "04", title: "Drive and return", body: "Contactless handover at the hub. Track your active rental, extend it, and close it out with a digital return check." },
+];
+
+export const branchStats = LOCATIONS.map((location, i) => ({
+  location,
+  vehicles: 18 + ((i * 7) % 23),
+  utilization: 52 + ((i * 9) % 34),
+  openRentals: 4 + ((i * 3) % 11),
+}));
