@@ -2,23 +2,12 @@
 // backend will expose. UI components consume these types only.
 
 export type VehicleCategory =
-  | "SUV"
-  | "Sedan"
-  | "Hatchback"
-  | "Luxury"
-  | "Electric"
-  | "MUV"
-  | "Convertible";
+  "SUV" | "Sedan" | "Hatchback" | "Luxury" | "Electric" | "MUV" | "Convertible";
 
 export type FuelType = "Petrol" | "Diesel" | "Electric" | "Hybrid" | "CNG";
 export type Transmission = "Automatic" | "Manual";
 
-export type VehicleStatus =
-  | "available"
-  | "reserved"
-  | "rented"
-  | "maintenance"
-  | "inactive";
+export type VehicleStatus = "available" | "reserved" | "rented" | "maintenance" | "inactive";
 
 export interface Vehicle {
   id: string;
@@ -50,12 +39,7 @@ export interface Vehicle {
   unavailableDates: string[]; // ISO dates
 }
 
-export type BookingStatus =
-  | "pending"
-  | "confirmed"
-  | "active"
-  | "completed"
-  | "cancelled";
+export type BookingStatus = "pending" | "confirmed" | "active" | "completed" | "cancelled";
 
 export interface BookingTimelineEvent {
   label: string;
@@ -134,11 +118,7 @@ export interface Manager extends EmployeeBase {
 
 export type Employee = Salesperson | Mechanic | Manager;
 
-export type MaintenanceStatus =
-  | "scheduled"
-  | "in-progress"
-  | "completed"
-  | "overdue";
+export type MaintenanceStatus = "scheduled" | "in-progress" | "completed" | "overdue";
 
 /** Weak entity: identified by its parent vehicle. */
 export interface MaintenanceRecord {
@@ -169,11 +149,7 @@ export interface Payment {
 }
 
 export type DocumentKind =
-  | "Driving License"
-  | "Rental Agreement"
-  | "Invoice"
-  | "Payment Receipt"
-  | "ID Proof";
+  "Driving License" | "Rental Agreement" | "Invoice" | "Payment Receipt" | "ID Proof";
 
 export type DocumentStatus = "verified" | "pending" | "expired" | "rejected";
 
@@ -199,12 +175,7 @@ export interface Review {
 }
 
 export type NotificationKind =
-  | "booking"
-  | "payment"
-  | "document"
-  | "maintenance"
-  | "ai"
-  | "reminder";
+  "booking" | "payment" | "document" | "maintenance" | "ai" | "reminder";
 
 export interface FleetNotification {
   id: string;

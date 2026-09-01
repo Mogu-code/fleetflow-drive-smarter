@@ -19,9 +19,7 @@ export function Logo({
       <span className="relative grid h-8 w-8 place-items-center rounded-[6px] bg-primary">
         <span className="block h-3 w-3 rounded-[2px] bg-primary-foreground transition-transform duration-500 group-hover:translate-x-[2px]" />
       </span>
-      <span className="font-display text-[15px] font-semibold tracking-[-0.02em]">
-        {label}
-      </span>
+      <span className="font-display text-[15px] font-semibold tracking-[-0.02em]">{label}</span>
     </Link>
   );
 }

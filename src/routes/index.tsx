@@ -62,8 +62,8 @@ function Home() {
                 <span className="text-primary"> next drive.</span>
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">
-                Twenty meticulously maintained vehicles, live availability, and pricing that
-                never moves after checkout. Book in under two minutes.
+                Twenty meticulously maintained vehicles, live availability, and pricing that never
+                moves after checkout. Book in under two minutes.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg">

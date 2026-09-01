@@ -69,8 +69,7 @@ export const vehicleService = {
           v.location.toLowerCase().includes(q),
       );
     }
-    if (query.categories?.length)
-      out = out.filter((v) => query.categories!.includes(v.category));
+    if (query.categories?.length) out = out.filter((v) => query.categories!.includes(v.category));
     if (query.fuels?.length) out = out.filter((v) => query.fuels!.includes(v.fuel));
     if (query.transmissions?.length)
       out = out.filter((v) => query.transmissions!.includes(v.transmission));
@@ -154,7 +153,10 @@ export const customerService = {
     return resolve(customers.find((c) => c.id === id) ?? null);
   },
   async current() {
-    return resolve(customers.find((c) => c.id === CURRENT_CUSTOMER_ID)!, 120);
+    return resolve(
+      customers.find((c) => c.id === CURRENT_CUSTOMER_ID)!,
+      120,
+    );
   },
 };
 
@@ -182,7 +184,10 @@ export const paymentService = {
   },
   /** Mock checkout. Real gateway integration replaces this method only. */
   async process(_amount: number, _method: string) {
-    return resolve({ status: "successful" as const, reference: `rzp_${Date.now().toString(36)}` }, 2200);
+    return resolve(
+      { status: "successful" as const, reference: `rzp_${Date.now().toString(36)}` },
+      2200,
+    );
   },
 };
 
@@ -234,9 +239,7 @@ export const analyticsService = {
       revenue: revenueTrend.at(-1)!.revenue,
       revenueDelta: 9.2,
       activeRentals,
-      utilization: Math.round(
-        vehicles.reduce((s, v) => s + v.utilization, 0) / vehicles.length,
-      ),
+      utilization: Math.round(vehicles.reduce((s, v) => s + v.utilization, 0) / vehicles.length),
       available,
       inMaintenance,
       pendingPayments,
@@ -368,9 +371,7 @@ export const relationshipService = {
       ids.map((id) => ({
         customer: customers.find((c) => c.id === id) as Customer,
         bookings: rows.filter((r) => r.customerId === id).length,
-        commission: rows
-          .filter((r) => r.customerId === id)
-          .reduce((s, r) => s + r.commission, 0),
+        commission: rows.filter((r) => r.customerId === id).reduce((s, r) => s + r.commission, 0),
       })),
     );
   },
@@ -410,23 +411,54 @@ export const searchService = {
     const hits: SearchHit[] = [];
     for (const v of vehicles) {
       if (`${v.id} ${v.name} ${v.registration}`.toLowerCase().includes(q))
-        hits.push({ id: v.id, label: `${v.id} · ${v.name}`, sub: v.registration, group: "Vehicles", to: "/admin/vehicles/$id", params: { id: v.id } });
+        hits.push({
+          id: v.id,
+          label: `${v.id} · ${v.name}`,
+          sub: v.registration,
+          group: "Vehicles",
+          to: "/admin/vehicles/$id",
+          params: { id: v.id },
+        });
     }
     for (const b of bookings) {
       if (`${b.id} ${b.status}`.toLowerCase().includes(q))
-        hits.push({ id: b.id, label: b.id, sub: `${b.status} · ${b.startDate}`, group: "Bookings", to: "/admin/bookings" });
+        hits.push({
+          id: b.id,
+          label: b.id,
+          sub: `${b.status} · ${b.startDate}`,
+          group: "Bookings",
+          to: "/admin/bookings",
+        });
     }
     for (const c of customers) {
       if (`${c.id} ${c.name} ${c.phone}`.toLowerCase().includes(q))
-        hits.push({ id: c.id, label: `${c.id} · ${c.name}`, sub: c.phone, group: "Customers", to: "/admin/customers" });
+        hits.push({
+          id: c.id,
+          label: `${c.id} · ${c.name}`,
+          sub: c.phone,
+          group: "Customers",
+          to: "/admin/customers",
+        });
     }
     for (const p of payments) {
       if (`${p.id} ${p.reference}`.toLowerCase().includes(q))
-        hits.push({ id: p.id, label: p.id, sub: `${p.status} · ${p.method}`, group: "Payments", to: "/admin/payments" });
+        hits.push({
+          id: p.id,
+          label: p.id,
+          sub: `${p.status} · ${p.method}`,
+          group: "Payments",
+          to: "/admin/payments",
+        });
     }
     for (const m of maintenanceRecords) {
       if (`${m.id} ${m.type}`.toLowerCase().includes(q))
-        hits.push({ id: m.id, label: m.id, sub: m.type, group: "Maintenance", to: "/admin/maintenance" });
+        hits.push({
+          id: m.id,
+          label: m.id,
+          sub: m.type,
+          group: "Maintenance",
+          to: "/admin/maintenance",
+        });
     }
     return hits.slice(0, 12);
   },

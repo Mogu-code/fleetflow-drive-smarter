@@ -54,9 +54,7 @@ export function MetricCard({
     >
       {accent && <div className="ember-glow pointer-events-none absolute inset-0" />}
       <p className="eyebrow relative">{label}</p>
-      <p className="num relative mt-2 text-2xl font-semibold sm:text-[28px]">
-        {format(animated)}
-      </p>
+      <p className="num relative mt-2 text-2xl font-semibold sm:text-[28px]">{format(animated)}</p>
       <div className="relative mt-1.5 flex items-center gap-2 text-xs text-muted-foreground">
         {typeof delta === "number" && (
           <span

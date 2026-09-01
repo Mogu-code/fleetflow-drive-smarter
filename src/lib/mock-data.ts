@@ -112,8 +112,7 @@ export const vehicles: Vehicle[] = SEEDS.map((s, i) => {
     fuel,
     transmission,
     seats,
-    mileage:
-      fuel === "Electric" ? `${380 + (i % 5) * 20} km range` : `${12 + (i % 8)} km/l`,
+    mileage: fuel === "Electric" ? `${380 + (i % 5) * 20} km range` : `${12 + (i % 8)} km/l`,
     pricePerDay,
     rating: Number((4.2 + ((i * 7) % 8) / 10).toFixed(1)),
     reviewCount: 38 + ((i * 17) % 220),
@@ -129,19 +128,49 @@ export const vehicles: Vehicle[] = SEEDS.map((s, i) => {
     utilization: 42 + ((i * 13) % 54),
     revenueGenerated: 180000 + i * 47500,
     currentRenterId: status === "rented" ? `C${201 + (i % 20)}` : undefined,
-    unavailableDates:
-      i % 3 === 0 ? [iso(2), iso(3), iso(4)] : i % 4 === 0 ? [iso(6), iso(7)] : [],
+    unavailableDates: i % 3 === 0 ? [iso(2), iso(3), iso(4)] : i % 4 === 0 ? [iso(6), iso(7)] : [],
   };
 });
 
 const FIRST = [
-  "Aarav", "Mokshdaa", "Kabir", "Ananya", "Rohan", "Ishita", "Devansh", "Meera",
-  "Vikram", "Sanya", "Arjun", "Nikita", "Rahul", "Tara", "Aditya", "Priya",
-  "Karthik", "Neha", "Siddharth", "Riya",
+  "Aarav",
+  "Mokshdaa",
+  "Kabir",
+  "Ananya",
+  "Rohan",
+  "Ishita",
+  "Devansh",
+  "Meera",
+  "Vikram",
+  "Sanya",
+  "Arjun",
+  "Nikita",
+  "Rahul",
+  "Tara",
+  "Aditya",
+  "Priya",
+  "Karthik",
+  "Neha",
+  "Siddharth",
+  "Riya",
 ];
 const LAST = [
-  "Sharma", "Gupta", "Iyer", "Menon", "Kapoor", "Reddy", "Nair", "Bose",
-  "Chopra", "Verma", "Rao", "Joshi", "Malhotra", "Sen", "Pillai", "Desai",
+  "Sharma",
+  "Gupta",
+  "Iyer",
+  "Menon",
+  "Kapoor",
+  "Reddy",
+  "Nair",
+  "Bose",
+  "Chopra",
+  "Verma",
+  "Rao",
+  "Joshi",
+  "Malhotra",
+  "Sen",
+  "Pillai",
+  "Desai",
 ];
 
 export const customers: Customer[] = FIRST.map((f, i) => {
@@ -169,55 +198,125 @@ export const CURRENT_CUSTOMER_ID = "C202";
 
 export const employees: Employee[] = [
   {
-    id: "E301", name: "Rithika Menon", email: "rithika.menon@fleetflow.in",
-    phone: "+91 98450 11201", role: "Salesperson", branch: "Bengaluru — Indiranagar Hub",
-    status: "active", joinedAt: iso(-980), target: 1800000, achieved: 1542000, commissionRate: 3.5,
+    id: "E301",
+    name: "Rithika Menon",
+    email: "rithika.menon@fleetflow.in",
+    phone: "+91 98450 11201",
+    role: "Salesperson",
+    branch: "Bengaluru — Indiranagar Hub",
+    status: "active",
+    joinedAt: iso(-980),
+    target: 1800000,
+    achieved: 1542000,
+    commissionRate: 3.5,
   },
   {
-    id: "E302", name: "Imran Qureshi", email: "imran.qureshi@fleetflow.in",
-    phone: "+91 98450 11202", role: "Salesperson", branch: "Mumbai — Bandra Kurla",
-    status: "active", joinedAt: iso(-640), target: 2200000, achieved: 2310000, commissionRate: 4,
+    id: "E302",
+    name: "Imran Qureshi",
+    email: "imran.qureshi@fleetflow.in",
+    phone: "+91 98450 11202",
+    role: "Salesperson",
+    branch: "Mumbai — Bandra Kurla",
+    status: "active",
+    joinedAt: iso(-640),
+    target: 2200000,
+    achieved: 2310000,
+    commissionRate: 4,
   },
   {
-    id: "E303", name: "Sneha Kulkarni", email: "sneha.kulkarni@fleetflow.in",
-    phone: "+91 98450 11203", role: "Salesperson", branch: "Pune — Baner",
-    status: "on-leave", joinedAt: iso(-410), target: 1400000, achieved: 890000, commissionRate: 3,
+    id: "E303",
+    name: "Sneha Kulkarni",
+    email: "sneha.kulkarni@fleetflow.in",
+    phone: "+91 98450 11203",
+    role: "Salesperson",
+    branch: "Pune — Baner",
+    status: "on-leave",
+    joinedAt: iso(-410),
+    target: 1400000,
+    achieved: 890000,
+    commissionRate: 3,
   },
   {
-    id: "E311", name: "Dinesh Waghmare", email: "dinesh.w@fleetflow.in",
-    phone: "+91 98450 11311", role: "Mechanic", branch: "Bengaluru — Indiranagar Hub",
-    status: "active", joinedAt: iso(-1200), specialization: "Diesel powertrain", shift: "Morning",
+    id: "E311",
+    name: "Dinesh Waghmare",
+    email: "dinesh.w@fleetflow.in",
+    phone: "+91 98450 11311",
+    role: "Mechanic",
+    branch: "Bengaluru — Indiranagar Hub",
+    status: "active",
+    joinedAt: iso(-1200),
+    specialization: "Diesel powertrain",
+    shift: "Morning",
   },
   {
-    id: "E312", name: "Farah Sheikh", email: "farah.sheikh@fleetflow.in",
-    phone: "+91 98450 11312", role: "Mechanic", branch: "Mumbai — Bandra Kurla",
-    status: "active", joinedAt: iso(-520), specialization: "EV battery & HV systems", shift: "Evening",
+    id: "E312",
+    name: "Farah Sheikh",
+    email: "farah.sheikh@fleetflow.in",
+    phone: "+91 98450 11312",
+    role: "Mechanic",
+    branch: "Mumbai — Bandra Kurla",
+    status: "active",
+    joinedAt: iso(-520),
+    specialization: "EV battery & HV systems",
+    shift: "Evening",
   },
   {
-    id: "E313", name: "Joseph Mathew", email: "joseph.mathew@fleetflow.in",
-    phone: "+91 98450 11313", role: "Mechanic", branch: "Hyderabad — Gachibowli",
-    status: "active", joinedAt: iso(-300), specialization: "Body & paint", shift: "Night",
+    id: "E313",
+    name: "Joseph Mathew",
+    email: "joseph.mathew@fleetflow.in",
+    phone: "+91 98450 11313",
+    role: "Mechanic",
+    branch: "Hyderabad — Gachibowli",
+    status: "active",
+    joinedAt: iso(-300),
+    specialization: "Body & paint",
+    shift: "Night",
   },
   {
-    id: "E321", name: "Anjali Deshpande", email: "anjali.d@fleetflow.in",
-    phone: "+91 98450 11321", role: "Manager", branch: "Bengaluru — Indiranagar Hub",
-    status: "active", joinedAt: iso(-1500), managedBranch: "Bengaluru — Indiranagar Hub", headcount: 14,
+    id: "E321",
+    name: "Anjali Deshpande",
+    email: "anjali.d@fleetflow.in",
+    phone: "+91 98450 11321",
+    role: "Manager",
+    branch: "Bengaluru — Indiranagar Hub",
+    status: "active",
+    joinedAt: iso(-1500),
+    managedBranch: "Bengaluru — Indiranagar Hub",
+    headcount: 14,
   },
   {
-    id: "E322", name: "Rajeev Khanna", email: "rajeev.khanna@fleetflow.in",
-    phone: "+91 98450 11322", role: "Manager", branch: "Delhi — Aerocity",
-    status: "active", joinedAt: iso(-860), managedBranch: "Delhi — Aerocity", headcount: 11,
+    id: "E322",
+    name: "Rajeev Khanna",
+    email: "rajeev.khanna@fleetflow.in",
+    phone: "+91 98450 11322",
+    role: "Manager",
+    branch: "Delhi — Aerocity",
+    status: "active",
+    joinedAt: iso(-860),
+    managedBranch: "Delhi — Aerocity",
+    headcount: 11,
   },
 ];
 
 const STATUSES: Booking["status"][] = [
-  "confirmed", "active", "completed", "completed", "cancelled", "pending", "completed", "confirmed",
+  "confirmed",
+  "active",
+  "completed",
+  "completed",
+  "cancelled",
+  "pending",
+  "completed",
+  "confirmed",
 ];
 
 function timelineFor(status: Booking["status"], start: string): Booking["timeline"] {
   const stages = ["Booked", "Confirmed", "Pickup", "Active", "Returned", "Completed"];
   const reached: Record<Booking["status"], number> = {
-    pending: 1, confirmed: 2, active: 4, completed: 6, cancelled: 1,
+    pending: 1,
+    confirmed: 2,
+    active: 4,
+    completed: 6,
+    cancelled: 1,
   };
   return stages.map((label, idx) => ({
     label,
@@ -285,7 +384,9 @@ const MAINT_TYPES = [
 
 export const maintenanceRecords: MaintenanceRecord[] = Array.from({ length: 18 }, (_, i) => {
   const vehicle = vehicles[(i * 2) % vehicles.length]!;
-  const status = (["completed", "scheduled", "in-progress", "completed", "overdue"] as const)[i % 5]!;
+  const status = (["completed", "scheduled", "in-progress", "completed", "overdue"] as const)[
+    i % 5
+  ]!;
   return {
     id: `${vehicle.id}-M${i + 1}`,
     vehicleId: vehicle.id,
@@ -302,26 +403,47 @@ export const maintenanceRecords: MaintenanceRecord[] = Array.from({ length: 18 }
 
 export const documents: FleetDocument[] = [
   {
-    id: "DOC-5001", customerId: CURRENT_CUSTOMER_ID, kind: "Driving License",
-    title: "Driving licence — KA0320180004213", uploadedAt: iso(-120),
-    status: "verified", expiresAt: iso(620),
+    id: "DOC-5001",
+    customerId: CURRENT_CUSTOMER_ID,
+    kind: "Driving License",
+    title: "Driving licence — KA0320180004213",
+    uploadedAt: iso(-120),
+    status: "verified",
+    expiresAt: iso(620),
   },
   {
-    id: "DOC-5002", customerId: CURRENT_CUSTOMER_ID, kind: "Rental Agreement",
-    title: "Rental agreement — FF-24817", uploadedAt: iso(-18), status: "verified",
+    id: "DOC-5002",
+    customerId: CURRENT_CUSTOMER_ID,
+    kind: "Rental Agreement",
+    title: "Rental agreement — FF-24817",
+    uploadedAt: iso(-18),
+    status: "verified",
     bookingId: "FF-24817",
   },
   {
-    id: "DOC-5003", customerId: CURRENT_CUSTOMER_ID, kind: "Invoice",
-    title: "Invoice — FF-24810", uploadedAt: iso(-46), status: "verified", bookingId: "FF-24810",
+    id: "DOC-5003",
+    customerId: CURRENT_CUSTOMER_ID,
+    kind: "Invoice",
+    title: "Invoice — FF-24810",
+    uploadedAt: iso(-46),
+    status: "verified",
+    bookingId: "FF-24810",
   },
   {
-    id: "DOC-5004", customerId: CURRENT_CUSTOMER_ID, kind: "Payment Receipt",
-    title: "Receipt — PAY-70213", uploadedAt: iso(-46), status: "verified",
+    id: "DOC-5004",
+    customerId: CURRENT_CUSTOMER_ID,
+    kind: "Payment Receipt",
+    title: "Receipt — PAY-70213",
+    uploadedAt: iso(-46),
+    status: "verified",
   },
   {
-    id: "DOC-5005", customerId: CURRENT_CUSTOMER_ID, kind: "ID Proof",
-    title: "Address proof — utility bill", uploadedAt: iso(-4), status: "pending",
+    id: "DOC-5005",
+    customerId: CURRENT_CUSTOMER_ID,
+    kind: "ID Proof",
+    title: "Address proof — utility bill",
+    uploadedAt: iso(-4),
+    status: "pending",
   },
 ];
 
@@ -338,37 +460,165 @@ export const reviews: Review[] = Array.from({ length: 16 }, (_, i) => {
     vehicleId: vehicle.id,
     customerId: customers[(i * 3) % customers.length]!.id,
     rating: 4 + (i % 2),
-    title: ["Effortless pickup", "Exactly as listed", "Solid long-drive car", "Flexible and fair"][i % 4]!,
+    title: ["Effortless pickup", "Exactly as listed", "Solid long-drive car", "Flexible and fair"][
+      i % 4
+    ]!,
     body: bodies[i % 4]!.replace("车", " "),
     createdAt: iso(-(5 + i * 9)),
   };
 });
 
 export const notifications: FleetNotification[] = [
-  { id: "N1", kind: "booking", title: "Booking confirmed", body: "FF-24817 — Volvo XC60 Ultimate, pickup Aug 24, 09:00.", at: "2h ago", read: false },
-  { id: "N2", kind: "payment", title: "Payment successful", body: "₹9,345 received via UPI for FF-24817.", at: "2h ago", read: false },
-  { id: "N3", kind: "document", title: "Licence verified", body: "Your driving licence passed verification.", at: "Yesterday", read: true },
-  { id: "N4", kind: "reminder", title: "Return reminder", body: "Drop off the Tata Nexon EV by 18:00 tomorrow.", at: "Yesterday", read: true },
-  { id: "N5", kind: "maintenance", title: "Maintenance alert", body: "V114 Porsche Macan GTS is overdue for its annual inspection.", at: "2d ago", read: true },
-  { id: "N6", kind: "ai", title: "New recommendation", body: "Three automatic SUVs under ₹3,500 match your last trip.", at: "3d ago", read: true },
+  {
+    id: "N1",
+    kind: "booking",
+    title: "Booking confirmed",
+    body: "FF-24817 — Volvo XC60 Ultimate, pickup Aug 24, 09:00.",
+    at: "2h ago",
+    read: false,
+  },
+  {
+    id: "N2",
+    kind: "payment",
+    title: "Payment successful",
+    body: "₹9,345 received via UPI for FF-24817.",
+    at: "2h ago",
+    read: false,
+  },
+  {
+    id: "N3",
+    kind: "document",
+    title: "Licence verified",
+    body: "Your driving licence passed verification.",
+    at: "Yesterday",
+    read: true,
+  },
+  {
+    id: "N4",
+    kind: "reminder",
+    title: "Return reminder",
+    body: "Drop off the Tata Nexon EV by 18:00 tomorrow.",
+    at: "Yesterday",
+    read: true,
+  },
+  {
+    id: "N5",
+    kind: "maintenance",
+    title: "Maintenance alert",
+    body: "V114 Porsche Macan GTS is overdue for its annual inspection.",
+    at: "2d ago",
+    read: true,
+  },
+  {
+    id: "N6",
+    kind: "ai",
+    title: "New recommendation",
+    body: "Three automatic SUVs under ₹3,500 match your last trip.",
+    at: "3d ago",
+    read: true,
+  },
 ];
 
 export const recommendations: Recommendation[] = [
-  { id: "RC1", vehicleId: "V103", reason: "Because you rented the Hyundai Creta in July", bucket: "because-you-rented", confidence: 0.86 },
-  { id: "RC2", vehicleId: "V118", reason: "Seats 7 — matches your last two group trips", bucket: "because-you-rented", confidence: 0.79 },
-  { id: "RC3", vehicleId: "V115", reason: "Electric, and your average trip is under 220 km", bucket: "you-may-like", confidence: 0.72 },
-  { id: "RC4", vehicleId: "V106", reason: "Highly rated by customers with similar history", bucket: "you-may-like", confidence: 0.68 },
-  { id: "RC5", vehicleId: "V105", reason: "Most booked at Indiranagar Hub this month", bucket: "popular-near-you", confidence: 0.81 },
-  { id: "RC6", vehicleId: "V110", reason: "Within your typical ₹1,500–2,500 per day range", bucket: "budget-match", confidence: 0.74 },
+  {
+    id: "RC1",
+    vehicleId: "V103",
+    reason: "Because you rented the Hyundai Creta in July",
+    bucket: "because-you-rented",
+    confidence: 0.86,
+  },
+  {
+    id: "RC2",
+    vehicleId: "V118",
+    reason: "Seats 7 — matches your last two group trips",
+    bucket: "because-you-rented",
+    confidence: 0.79,
+  },
+  {
+    id: "RC3",
+    vehicleId: "V115",
+    reason: "Electric, and your average trip is under 220 km",
+    bucket: "you-may-like",
+    confidence: 0.72,
+  },
+  {
+    id: "RC4",
+    vehicleId: "V106",
+    reason: "Highly rated by customers with similar history",
+    bucket: "you-may-like",
+    confidence: 0.68,
+  },
+  {
+    id: "RC5",
+    vehicleId: "V105",
+    reason: "Most booked at Indiranagar Hub this month",
+    bucket: "popular-near-you",
+    confidence: 0.81,
+  },
+  {
+    id: "RC6",
+    vehicleId: "V110",
+    reason: "Within your typical ₹1,500–2,500 per day range",
+    bucket: "budget-match",
+    confidence: 0.74,
+  },
 ];
 
 export const aiInsights: AIInsight[] = [
-  { id: "AI1", category: "demand", title: "Weekend SUV demand trending above average", detail: "Requests for 7-seat SUVs at Bengaluru hubs are running ~22% above the four-week weekend average. Consider shifting two MUVs from Pune.", confidence: 0.74, impact: "high" },
-  { id: "AI2", category: "utilization", title: "Luxury segment is under-utilised on weekdays", detail: "Mon–Thu utilisation for the Luxury category sits at 38% against a fleet average of 61%. A weekday corporate rate could recover idle days.", confidence: 0.69, impact: "medium" },
-  { id: "AI3", category: "revenue", title: "Electric category leads revenue per available day", detail: "EVs earned ₹2,910 per available day last month versus ₹2,240 fleet-wide, helped by lower downtime.", confidence: 0.82, impact: "high" },
-  { id: "AI4", category: "maintenance", title: "V104 servicing more often than similar vehicles", detail: "The Jeep Compass Trailhawk has had 3 unscheduled repairs in 90 days — roughly 2.4× comparable diesel SUVs. Worth a diagnostic review before renewal.", confidence: 0.77, impact: "high" },
-  { id: "AI5", category: "maintenance", title: "SUV maintenance spend up 14% month-on-month", detail: "Driven mainly by brake and tyre work across high-mileage units. Not yet outside seasonal norms.", confidence: 0.63, impact: "medium" },
-  { id: "AI6", category: "customer", title: "Repeat customers convert faster from recommendations", detail: "Customers with 3+ prior rentals book from a recommendation within 2.1 days on average, versus 6.4 days for first-time users.", confidence: 0.71, impact: "medium" },
+  {
+    id: "AI1",
+    category: "demand",
+    title: "Weekend SUV demand trending above average",
+    detail:
+      "Requests for 7-seat SUVs at Bengaluru hubs are running ~22% above the four-week weekend average. Consider shifting two MUVs from Pune.",
+    confidence: 0.74,
+    impact: "high",
+  },
+  {
+    id: "AI2",
+    category: "utilization",
+    title: "Luxury segment is under-utilised on weekdays",
+    detail:
+      "Mon–Thu utilisation for the Luxury category sits at 38% against a fleet average of 61%. A weekday corporate rate could recover idle days.",
+    confidence: 0.69,
+    impact: "medium",
+  },
+  {
+    id: "AI3",
+    category: "revenue",
+    title: "Electric category leads revenue per available day",
+    detail:
+      "EVs earned ₹2,910 per available day last month versus ₹2,240 fleet-wide, helped by lower downtime.",
+    confidence: 0.82,
+    impact: "high",
+  },
+  {
+    id: "AI4",
+    category: "maintenance",
+    title: "V104 servicing more often than similar vehicles",
+    detail:
+      "The Jeep Compass Trailhawk has had 3 unscheduled repairs in 90 days — roughly 2.4× comparable diesel SUVs. Worth a diagnostic review before renewal.",
+    confidence: 0.77,
+    impact: "high",
+  },
+  {
+    id: "AI5",
+    category: "maintenance",
+    title: "SUV maintenance spend up 14% month-on-month",
+    detail:
+      "Driven mainly by brake and tyre work across high-mileage units. Not yet outside seasonal norms.",
+    confidence: 0.63,
+    impact: "medium",
+  },
+  {
+    id: "AI6",
+    category: "customer",
+    title: "Repeat customers convert faster from recommendations",
+    detail:
+      "Customers with 3+ prior rentals book from a recommendation within 2.1 days on average, versus 6.4 days for first-time users.",
+    confidence: 0.71,
+    impact: "medium",
+  },
 ];
 
 export const revenueTrend = [
@@ -481,10 +731,26 @@ export const bookRelations: BookRelation[] = bookings
   }));
 
 export const howItWorks = [
-  { step: "01", title: "Find your vehicle", body: "Filter the live fleet by location, dates, category and budget. Availability is checked against real rental windows." },
-  { step: "02", title: "Verify your licence", body: "Upload your driving licence once. We extract the details, you confirm them, and it stays verified for future rentals." },
-  { step: "03", title: "Pay and sign", body: "Transparent pricing with taxes and insurance itemised. Your rental agreement is generated the moment payment clears." },
-  { step: "04", title: "Drive and return", body: "Contactless handover at the hub. Track your active rental, extend it, and close it out with a digital return check." },
+  {
+    step: "01",
+    title: "Find your vehicle",
+    body: "Filter the live fleet by location, dates, category and budget. Availability is checked against real rental windows.",
+  },
+  {
+    step: "02",
+    title: "Verify your licence",
+    body: "Upload your driving licence once. We extract the details, you confirm them, and it stays verified for future rentals.",
+  },
+  {
+    step: "03",
+    title: "Pay and sign",
+    body: "Transparent pricing with taxes and insurance itemised. Your rental agreement is generated the moment payment clears.",
+  },
+  {
+    step: "04",
+    title: "Drive and return",
+    body: "Contactless handover at the hub. Track your active rental, extend it, and close it out with a digital return check.",
+  },
 ];
 
 export const branchStats = LOCATIONS.map((location, i) => ({

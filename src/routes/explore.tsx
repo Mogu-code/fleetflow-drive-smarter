@@ -11,23 +11,16 @@ import { Button } from "@/components/ui/button";
 import { vehicleService } from "@/lib/services";
 import type { VehicleCategory } from "@/types";
 
-const CATEGORIES: VehicleCategory[] = [
-  "SUV",
-  "Sedan",
-  "Hatchback",
-  "Luxury",
-  "Electric",
-  "MUV",
-];
+const CATEGORIES: VehicleCategory[] = ["SUV", "Sedan", "Hatchback", "Luxury", "Electric", "MUV"];
 
 type ExploreSearch = { category?: VehicleCategory | undefined; q?: string | undefined };
 
 export const Route = createFileRoute("/explore")({
   validateSearch: (search: Record<string, unknown>): ExploreSearch => ({
-    category: CATEGORIES.includes(search['category'] as VehicleCategory)
-      ? (search['category'] as VehicleCategory)
+    category: CATEGORIES.includes(search["category"] as VehicleCategory)
+      ? (search["category"] as VehicleCategory)
       : undefined,
-    q: typeof search['q'] === "string" && search['q'] ? search['q'] : undefined,
+    q: typeof search["q"] === "string" && search["q"] ? search["q"] : undefined,
   }),
   head: () => ({
     meta: [
@@ -91,9 +84,7 @@ function Explore() {
             <Button
               size="sm"
               variant={category ? "secondary" : "default"}
-              onClick={() =>
-                navigate({ search: (prev) => ({ ...prev, category: undefined }) })
-              }
+              onClick={() => navigate({ search: (prev) => ({ ...prev, category: undefined }) })}
             >
               All
             </Button>

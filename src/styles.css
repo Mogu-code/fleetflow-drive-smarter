@@ -67,7 +67,7 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0rem;
 
   /* Light environment */
   --background: oklch(0.988 0.004 85);
@@ -85,8 +85,8 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.24 0.008 60);
 
-  /* FleetFlow copper-orange accent */
-  --primary: oklch(0.64 0.17 45);
+  /* FleetFlow electric blue accent */
+  --primary: oklch(0.55 0.15 250);
   --primary-foreground: oklch(0.99 0.005 80);
   --accent: oklch(0.955 0.02 60);
   --accent-foreground: oklch(0.4 0.12 45);
@@ -107,9 +107,9 @@
 
   --border: oklch(0.912 0.005 80);
   --input: oklch(0.9 0.005 80);
-  --ring: oklch(0.64 0.17 45);
+  --ring: oklch(0.55 0.15 250);
 
-  --chart-1: oklch(0.64 0.17 45);
+  --chart-1: oklch(0.55 0.15 250);
   --chart-2: oklch(0.55 0.12 250);
   --chart-3: oklch(0.56 0.13 155);
   --chart-4: oklch(0.72 0.13 75);
@@ -117,12 +117,12 @@
 
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.3 0.008 60);
-  --sidebar-primary: oklch(0.64 0.17 45);
+  --sidebar-primary: oklch(0.55 0.15 250);
   --sidebar-primary-foreground: oklch(0.99 0.005 80);
   --sidebar-accent: oklch(0.962 0.008 70);
   --sidebar-accent-foreground: oklch(0.28 0.01 60);
   --sidebar-border: oklch(0.918 0.005 80);
-  --sidebar-ring: oklch(0.64 0.17 45);
+  --sidebar-ring: oklch(0.55 0.15 250);
 
   --shadow-soft: 0 1px 2px oklch(0.24 0.01 60 / 0.05), 0 8px 24px -16px oklch(0.24 0.01 60 / 0.18);
   --shadow-lift: 0 2px 4px oklch(0.24 0.01 60 / 0.05), 0 18px 40px -24px oklch(0.24 0.01 60 / 0.28);
@@ -215,8 +215,16 @@
 
 @utility grid-lines {
   background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--border) 70%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--border) 70%, transparent) 1px, transparent 1px);
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--border) 70%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--border) 70%, transparent) 1px,
+      transparent 1px
+    );
   background-size: 68px 68px;
 }
 

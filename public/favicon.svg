@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#3B82F6"/>
+  <!-- Cute Cartoon Car -->
+  <path d="M 15 60 C 15 50, 25 45, 30 45 L 35 30 C 40 20, 65 20, 70 30 L 75 45 C 80 45, 85 50, 85 60 C 85 70, 80 75, 75 75 L 25 75 C 20 75, 15 70, 15 60 Z" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Windows -->
+  <path d="M 38 32 C 43 25, 62 25, 67 32 L 71 45 L 34 45 Z" fill="#93C5FD" stroke="#1D4ED8" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="53" y1="26" x2="53" y2="45" stroke="#1D4ED8" stroke-width="3" />
+  <!-- Wheels -->
+  <circle cx="30" cy="75" r="12" fill="#1E293B" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="30" cy="75" r="4" fill="#94A3B8"/>
+  <circle cx="70" cy="75" r="12" fill="#1E293B" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="70" cy="75" r="4" fill="#94A3B8"/>
+  <!-- Headlights -->
+  <circle cx="80" cy="55" r="4" fill="#FDE047"/>
+  <circle cx="20" cy="55" r="4" fill="#EF4444"/>
+  <!-- Speed lines -->
+  <path d="M 5 50 L 12 50 M 8 60 L 15 60" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+</svg>
