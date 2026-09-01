@@ -134,7 +134,7 @@ export const vehicles: Vehicle[] = SEEDS.map((s, i) => {
 
 const FIRST = [
   "Aarav",
-  "Mokshdaa",
+  "Aviskha",
   "Kabir",
   "Ananya",
   "Rohan",

@@ -10,8 +10,33 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiRouteImport } from './routes/ai'
+import { Route as BookingsRouteImport } from './routes/bookings'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DocumentsRouteImport } from './routes/documents'
 import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as RecommendationsRouteImport } from './routes/recommendations'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as VerifyEmailRouteImport } from './routes/verify-email'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminAnalyticsRouteImport } from './routes/admin.analytics'
+import { Route as AdminBookingsRouteImport } from './routes/admin.bookings'
+import { Route as AdminCustomersRouteImport } from './routes/admin.customers'
+import { Route as AdminEmployeesRouteImport } from './routes/admin.employees'
+import { Route as AdminHealthRouteImport } from './routes/admin.health'
+import { Route as AdminInsightsRouteImport } from './routes/admin.insights'
+import { Route as AdminMaintenanceRouteImport } from './routes/admin.maintenance'
+import { Route as AdminMechanicRouteImport } from './routes/admin.mechanic'
+import { Route as AdminPaymentsRouteImport } from './routes/admin.payments'
+import { Route as AdminSalesRouteImport } from './routes/admin.sales'
+import { Route as AdminVehiclesRouteImport } from './routes/admin.vehicles'
 import { Route as BookIdRouteImport } from './routes/book.$id'
+import { Route as BookingsIdRouteImport } from './routes/bookings.$id'
 import { Route as VehiclesIdRouteImport } from './routes/vehicles.$id'
 
 const IndexRoute = IndexRouteImport.update({
@@ -19,15 +44,140 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiRoute = AiRouteImport.update({
+  id: '/ai',
+  path: '/ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookingsRoute = BookingsRouteImport.update({
+  id: '/bookings',
+  path: '/bookings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentsRoute = DocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExploreRoute = ExploreRouteImport.update({
   id: '/explore',
   path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForgotPasswordRoute = ForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecommendationsRoute = RecommendationsRouteImport.update({
+  id: '/recommendations',
+  path: '/recommendations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerifyEmailRoute = VerifyEmailRouteImport.update({
+  id: '/verify-email',
+  path: '/verify-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAnalyticsRoute = AdminAnalyticsRouteImport.update({
+  id: '/admin/analytics',
+  path: '/admin/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminBookingsRoute = AdminBookingsRouteImport.update({
+  id: '/admin/bookings',
+  path: '/admin/bookings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCustomersRoute = AdminCustomersRouteImport.update({
+  id: '/admin/customers',
+  path: '/admin/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminEmployeesRoute = AdminEmployeesRouteImport.update({
+  id: '/admin/employees',
+  path: '/admin/employees',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminHealthRoute = AdminHealthRouteImport.update({
+  id: '/admin/health',
+  path: '/admin/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminInsightsRoute = AdminInsightsRouteImport.update({
+  id: '/admin/insights',
+  path: '/admin/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMaintenanceRoute = AdminMaintenanceRouteImport.update({
+  id: '/admin/maintenance',
+  path: '/admin/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMechanicRoute = AdminMechanicRouteImport.update({
+  id: '/admin/mechanic',
+  path: '/admin/mechanic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPaymentsRoute = AdminPaymentsRouteImport.update({
+  id: '/admin/payments',
+  path: '/admin/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSalesRoute = AdminSalesRouteImport.update({
+  id: '/admin/sales',
+  path: '/admin/sales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminVehiclesRoute = AdminVehiclesRouteImport.update({
+  id: '/admin/vehicles',
+  path: '/admin/vehicles',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BookIdRoute = BookIdRouteImport.update({
   id: '/book/$id',
   path: '/book/$id',
   getParentRoute: () => rootRouteImport,
+} as any)
+const BookingsIdRoute = BookingsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => BookingsRoute,
 } as any)
 const VehiclesIdRoute = VehiclesIdRouteImport.update({
   id: '/vehicles/$id',
@@ -37,36 +187,223 @@ const VehiclesIdRoute = VehiclesIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai': typeof AiRoute
+  '/bookings': typeof BookingsRouteWithChildren
+  '/dashboard': typeof DashboardRoute
+  '/documents': typeof DocumentsRoute
   '/explore': typeof ExploreRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/login': typeof LoginRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/recommendations': typeof RecommendationsRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/signup': typeof SignupRoute
+  '/verify-email': typeof VerifyEmailRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/bookings': typeof AdminBookingsRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/employees': typeof AdminEmployeesRoute
+  '/admin/health': typeof AdminHealthRoute
+  '/admin/insights': typeof AdminInsightsRoute
+  '/admin/maintenance': typeof AdminMaintenanceRoute
+  '/admin/mechanic': typeof AdminMechanicRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/sales': typeof AdminSalesRoute
+  '/admin/vehicles': typeof AdminVehiclesRoute
   '/book/$id': typeof BookIdRoute
+  '/bookings/$id': typeof BookingsIdRoute
   '/vehicles/$id': typeof VehiclesIdRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai': typeof AiRoute
+  '/bookings': typeof BookingsRouteWithChildren
+  '/dashboard': typeof DashboardRoute
+  '/documents': typeof DocumentsRoute
   '/explore': typeof ExploreRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/login': typeof LoginRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/recommendations': typeof RecommendationsRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/signup': typeof SignupRoute
+  '/verify-email': typeof VerifyEmailRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/bookings': typeof AdminBookingsRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/employees': typeof AdminEmployeesRoute
+  '/admin/health': typeof AdminHealthRoute
+  '/admin/insights': typeof AdminInsightsRoute
+  '/admin/maintenance': typeof AdminMaintenanceRoute
+  '/admin/mechanic': typeof AdminMechanicRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/sales': typeof AdminSalesRoute
+  '/admin/vehicles': typeof AdminVehiclesRoute
   '/book/$id': typeof BookIdRoute
+  '/bookings/$id': typeof BookingsIdRoute
   '/vehicles/$id': typeof VehiclesIdRoute
+  '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai': typeof AiRoute
+  '/bookings': typeof BookingsRouteWithChildren
+  '/dashboard': typeof DashboardRoute
+  '/documents': typeof DocumentsRoute
   '/explore': typeof ExploreRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/login': typeof LoginRoute
+  '/notifications': typeof NotificationsRoute
+  '/profile': typeof ProfileRoute
+  '/recommendations': typeof RecommendationsRoute
+  '/reset-password': typeof ResetPasswordRoute
+  '/signup': typeof SignupRoute
+  '/verify-email': typeof VerifyEmailRoute
+  '/admin/analytics': typeof AdminAnalyticsRoute
+  '/admin/bookings': typeof AdminBookingsRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/employees': typeof AdminEmployeesRoute
+  '/admin/health': typeof AdminHealthRoute
+  '/admin/insights': typeof AdminInsightsRoute
+  '/admin/maintenance': typeof AdminMaintenanceRoute
+  '/admin/mechanic': typeof AdminMechanicRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/sales': typeof AdminSalesRoute
+  '/admin/vehicles': typeof AdminVehiclesRoute
   '/book/$id': typeof BookIdRoute
+  '/bookings/$id': typeof BookingsIdRoute
   '/vehicles/$id': typeof VehiclesIdRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/explore' | '/book/$id' | '/vehicles/$id'
+  fullPaths:
+    | '/'
+    | '/ai'
+    | '/bookings'
+    | '/dashboard'
+    | '/documents'
+    | '/explore'
+    | '/forgot-password'
+    | '/login'
+    | '/notifications'
+    | '/profile'
+    | '/recommendations'
+    | '/reset-password'
+    | '/signup'
+    | '/verify-email'
+    | '/admin/analytics'
+    | '/admin/bookings'
+    | '/admin/customers'
+    | '/admin/employees'
+    | '/admin/health'
+    | '/admin/insights'
+    | '/admin/maintenance'
+    | '/admin/mechanic'
+    | '/admin/payments'
+    | '/admin/sales'
+    | '/admin/vehicles'
+    | '/book/$id'
+    | '/bookings/$id'
+    | '/vehicles/$id'
+    | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/explore' | '/book/$id' | '/vehicles/$id'
-  id: '__root__' | '/' | '/explore' | '/book/$id' | '/vehicles/$id'
+  to:
+    | '/'
+    | '/ai'
+    | '/bookings'
+    | '/dashboard'
+    | '/documents'
+    | '/explore'
+    | '/forgot-password'
+    | '/login'
+    | '/notifications'
+    | '/profile'
+    | '/recommendations'
+    | '/reset-password'
+    | '/signup'
+    | '/verify-email'
+    | '/admin/analytics'
+    | '/admin/bookings'
+    | '/admin/customers'
+    | '/admin/employees'
+    | '/admin/health'
+    | '/admin/insights'
+    | '/admin/maintenance'
+    | '/admin/mechanic'
+    | '/admin/payments'
+    | '/admin/sales'
+    | '/admin/vehicles'
+    | '/book/$id'
+    | '/bookings/$id'
+    | '/vehicles/$id'
+    | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai'
+    | '/bookings'
+    | '/dashboard'
+    | '/documents'
+    | '/explore'
+    | '/forgot-password'
+    | '/login'
+    | '/notifications'
+    | '/profile'
+    | '/recommendations'
+    | '/reset-password'
+    | '/signup'
+    | '/verify-email'
+    | '/admin/analytics'
+    | '/admin/bookings'
+    | '/admin/customers'
+    | '/admin/employees'
+    | '/admin/health'
+    | '/admin/insights'
+    | '/admin/maintenance'
+    | '/admin/mechanic'
+    | '/admin/payments'
+    | '/admin/sales'
+    | '/admin/vehicles'
+    | '/book/$id'
+    | '/bookings/$id'
+    | '/vehicles/$id'
+    | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiRoute: typeof AiRoute
+  BookingsRoute: typeof BookingsRouteWithChildren
+  DashboardRoute: typeof DashboardRoute
+  DocumentsRoute: typeof DocumentsRoute
   ExploreRoute: typeof ExploreRoute
+  ForgotPasswordRoute: typeof ForgotPasswordRoute
+  LoginRoute: typeof LoginRoute
+  NotificationsRoute: typeof NotificationsRoute
+  ProfileRoute: typeof ProfileRoute
+  RecommendationsRoute: typeof RecommendationsRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
+  SignupRoute: typeof SignupRoute
+  VerifyEmailRoute: typeof VerifyEmailRoute
+  AdminAnalyticsRoute: typeof AdminAnalyticsRoute
+  AdminBookingsRoute: typeof AdminBookingsRoute
+  AdminCustomersRoute: typeof AdminCustomersRoute
+  AdminEmployeesRoute: typeof AdminEmployeesRoute
+  AdminHealthRoute: typeof AdminHealthRoute
+  AdminInsightsRoute: typeof AdminInsightsRoute
+  AdminMaintenanceRoute: typeof AdminMaintenanceRoute
+  AdminMechanicRoute: typeof AdminMechanicRoute
+  AdminPaymentsRoute: typeof AdminPaymentsRoute
+  AdminSalesRoute: typeof AdminSalesRoute
+  AdminVehiclesRoute: typeof AdminVehiclesRoute
   BookIdRoute: typeof BookIdRoute
   VehiclesIdRoute: typeof VehiclesIdRoute
+  AdminIndexRoute: typeof AdminIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -78,11 +415,179 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai': {
+      id: '/ai'
+      path: '/ai'
+      fullPath: '/ai'
+      preLoaderRoute: typeof AiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bookings': {
+      id: '/bookings'
+      path: '/bookings'
+      fullPath: '/bookings'
+      preLoaderRoute: typeof BookingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documents': {
+      id: '/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof DocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/explore': {
       id: '/explore'
       path: '/explore'
       fullPath: '/explore'
       preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forgot-password': {
+      id: '/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/forgot-password'
+      preLoaderRoute: typeof ForgotPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recommendations': {
+      id: '/recommendations'
+      path: '/recommendations'
+      fullPath: '/recommendations'
+      preLoaderRoute: typeof RecommendationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-email': {
+      id: '/verify-email'
+      path: '/verify-email'
+      fullPath: '/verify-email'
+      preLoaderRoute: typeof VerifyEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/analytics': {
+      id: '/admin/analytics'
+      path: '/admin/analytics'
+      fullPath: '/admin/analytics'
+      preLoaderRoute: typeof AdminAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/bookings': {
+      id: '/admin/bookings'
+      path: '/admin/bookings'
+      fullPath: '/admin/bookings'
+      preLoaderRoute: typeof AdminBookingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/customers': {
+      id: '/admin/customers'
+      path: '/admin/customers'
+      fullPath: '/admin/customers'
+      preLoaderRoute: typeof AdminCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/employees': {
+      id: '/admin/employees'
+      path: '/admin/employees'
+      fullPath: '/admin/employees'
+      preLoaderRoute: typeof AdminEmployeesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/health': {
+      id: '/admin/health'
+      path: '/admin/health'
+      fullPath: '/admin/health'
+      preLoaderRoute: typeof AdminHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/insights': {
+      id: '/admin/insights'
+      path: '/admin/insights'
+      fullPath: '/admin/insights'
+      preLoaderRoute: typeof AdminInsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/maintenance': {
+      id: '/admin/maintenance'
+      path: '/admin/maintenance'
+      fullPath: '/admin/maintenance'
+      preLoaderRoute: typeof AdminMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/mechanic': {
+      id: '/admin/mechanic'
+      path: '/admin/mechanic'
+      fullPath: '/admin/mechanic'
+      preLoaderRoute: typeof AdminMechanicRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/payments': {
+      id: '/admin/payments'
+      path: '/admin/payments'
+      fullPath: '/admin/payments'
+      preLoaderRoute: typeof AdminPaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/sales': {
+      id: '/admin/sales'
+      path: '/admin/sales'
+      fullPath: '/admin/sales'
+      preLoaderRoute: typeof AdminSalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/vehicles': {
+      id: '/admin/vehicles'
+      path: '/admin/vehicles'
+      fullPath: '/admin/vehicles'
+      preLoaderRoute: typeof AdminVehiclesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/book/$id': {
@@ -91,6 +596,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/book/$id'
       preLoaderRoute: typeof BookIdRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/bookings/$id': {
+      id: '/bookings/$id'
+      path: '/$id'
+      fullPath: '/bookings/$id'
+      preLoaderRoute: typeof BookingsIdRouteImport
+      parentRoute: typeof BookingsRoute
     }
     '/vehicles/$id': {
       id: '/vehicles/$id'
@@ -102,11 +614,47 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BookingsRouteChildren {
+  BookingsIdRoute: typeof BookingsIdRoute
+}
+
+const BookingsRouteChildren: BookingsRouteChildren = {
+  BookingsIdRoute: BookingsIdRoute,
+}
+
+const BookingsRouteWithChildren = BookingsRoute._addFileChildren(
+  BookingsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiRoute: AiRoute,
+  BookingsRoute: BookingsRouteWithChildren,
+  DashboardRoute: DashboardRoute,
+  DocumentsRoute: DocumentsRoute,
   ExploreRoute: ExploreRoute,
+  ForgotPasswordRoute: ForgotPasswordRoute,
+  LoginRoute: LoginRoute,
+  NotificationsRoute: NotificationsRoute,
+  ProfileRoute: ProfileRoute,
+  RecommendationsRoute: RecommendationsRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
+  SignupRoute: SignupRoute,
+  VerifyEmailRoute: VerifyEmailRoute,
+  AdminAnalyticsRoute: AdminAnalyticsRoute,
+  AdminBookingsRoute: AdminBookingsRoute,
+  AdminCustomersRoute: AdminCustomersRoute,
+  AdminEmployeesRoute: AdminEmployeesRoute,
+  AdminHealthRoute: AdminHealthRoute,
+  AdminInsightsRoute: AdminInsightsRoute,
+  AdminMaintenanceRoute: AdminMaintenanceRoute,
+  AdminMechanicRoute: AdminMechanicRoute,
+  AdminPaymentsRoute: AdminPaymentsRoute,
+  AdminSalesRoute: AdminSalesRoute,
+  AdminVehiclesRoute: AdminVehiclesRoute,
   BookIdRoute: BookIdRoute,
   VehiclesIdRoute: VehiclesIdRoute,
+  AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

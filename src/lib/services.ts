@@ -199,13 +199,13 @@ export const documentService = {
   async extract(fileName: string): Promise<OCRResult> {
     return resolve(
       {
-        name: "Mokshdaa Gupta",
+        name: "Aviskha Talukdar",
         licenseNumber: "KA0320180004213",
         dob: "1996-04-11",
         expiry: "2031-04-10",
-        confidence: 0.93,
+        confidence: 0.98,
       },
-      2400,
+      1500,
     ).then((r) => ({ ...r, source: fileName }) as OCRResult);
   },
 };
