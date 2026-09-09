@@ -631,12 +631,12 @@ export const revenueTrend = [
 ];
 
 export const utilizationTrend = [
-  { week: "W1", utilization: 58 },
-  { week: "W2", utilization: 63 },
-  { week: "W3", utilization: 61 },
-  { week: "W4", utilization: 69 },
-  { week: "W5", utilization: 72 },
-  { week: "W6", utilization: 67 },
+  { week: "W1", day: "W1", rate: 58, utilization: 58 },
+  { week: "W2", day: "W2", rate: 63, utilization: 63 },
+  { week: "W3", day: "W3", rate: 61, utilization: 61 },
+  { week: "W4", day: "W4", rate: 69, utilization: 69 },
+  { week: "W5", day: "W5", rate: 72, utilization: 72 },
+  { week: "W6", day: "W6", rate: 67, utilization: 67 },
 ];
 
 export const categoryMix = [

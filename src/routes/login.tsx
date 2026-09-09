@@ -5,17 +5,20 @@ import { PasswordInput } from "@/components/auth/password-input";
 import { DemoAccessPanel } from "@/components/auth/demo-access-panel";
 import { useAuth } from "@/lib/auth/auth-context";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, AlertCircle, CheckCircle2 } from "lucide-react";
+import { ArrowRight, AlertCircle, CheckCircle2, UserCheck, Shield, Wrench, LayoutDashboard } from "lucide-react";
+import type { UserRole } from "@/types/auth";
 
 type LoginSearch = {
   redirect?: string | undefined;
   registered?: boolean | undefined;
+  targetRole?: string | undefined;
 };
 
 export const Route = createFileRoute("/login")({
   validateSearch: (search: Record<string, unknown>): LoginSearch => ({
     redirect: typeof search["redirect"] === "string" ? search["redirect"] : undefined,
     registered: search["registered"] === true || search["registered"] === "true",
+    targetRole: typeof search["targetRole"] === "string" ? search["targetRole"] : undefined,
   }),
   head: () => ({
     meta: [
@@ -29,15 +32,58 @@ export const Route = createFileRoute("/login")({
   component: LoginPage,
 });
 
-function LoginPage() {
-  const { redirect, registered } = Route.useSearch();
-  const router = useRouter();
-  const { login, loading } = useAuth();
+const ROLE_PRESETS: { id: UserRole; label: string; email: string; icon: React.ElementType; desc: string }[] = [
+  {
+    id: "Customer",
+    label: "Customer",
+    email: "alex@fleetflow.demo",
+    icon: UserCheck,
+    desc: "Self-drive Renter",
+  },
+  {
+    id: "Salesperson",
+    label: "Salesperson",
+    email: "sarah@fleetflow.demo",
+    icon: Shield,
+    desc: "Sales Pipeline & Desk",
+  },
+  {
+    id: "Mechanic",
+    label: "Mechanic",
+    email: "daniel@fleetflow.demo",
+    icon: Wrench,
+    desc: "Service Bay & Maintenance",
+  },
+  {
+    id: "Manager",
+    label: "Manager",
+    email: "michael@fleetflow.demo",
+    icon: LayoutDashboard,
+    desc: "Full Enterprise Fleet Ops",
+  },
+];
 
-  const [email, setEmail] = useState("aviskha.talukdar@example.com");
+function LoginPage() {
+  const { redirect, registered, targetRole } = Route.useSearch();
+  const router = useRouter();
+  const { login, loginAsDemo, loading } = useAuth();
+
+  const [selectedRole, setSelectedRole] = useState<UserRole>((targetRole as UserRole) || "Customer");
+  const [email, setEmail] = useState(() => {
+    const preset = ROLE_PRESETS.find((r) => r.id === (targetRole as UserRole));
+    return preset ? preset.email : "alex@fleetflow.demo";
+  });
   const [password, setPassword] = useState("FleetFlow#2026");
   const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const handleRoleSelect = (roleId: UserRole) => {
+    setSelectedRole(roleId);
+    const preset = ROLE_PRESETS.find((r) => r.id === roleId);
+    if (preset) {
+      setEmail(preset.email);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,22 +93,36 @@ function LoginPage() {
       return;
     }
 
-    const res = await login({ email, password, rememberMe });
-    if (res.success) {
-      if (redirect) {
-        router.navigate({ to: redirect as any });
-      } else {
-        router.navigate({ to: "/dashboard" });
-      }
+    // Authenticate with selected role preset or login credentials
+    const preset = ROLE_PRESETS.find((r) => r.id === selectedRole);
+    if (preset && email.trim().toLowerCase() === preset.email.toLowerCase()) {
+      await loginAsDemo(selectedRole);
     } else {
-      setError(res.error || "Invalid credentials. Please try again.");
+      const res = await login({ email, password, rememberMe });
+      if (!res.success) {
+        setError(res.error || "Invalid credentials. Please try again.");
+        return;
+      }
+    }
+
+    // Navigate to role landing route
+    if (redirect) {
+      router.navigate({ to: redirect as any });
+    } else if (selectedRole === "Customer") {
+      router.navigate({ to: "/dashboard" });
+    } else if (selectedRole === "Salesperson") {
+      router.navigate({ to: "/admin/sales" });
+    } else if (selectedRole === "Mechanic") {
+      router.navigate({ to: "/admin/mechanic" });
+    } else {
+      router.navigate({ to: "/admin" });
     }
   };
 
   return (
     <AuthLayout
       title="Welcome back to FleetFlow"
-      subtitle="Sign in to your account to manage reservations & vehicle telemetry."
+      subtitle="Select your account role below to sign in to your dashboard."
     >
       <div className="space-y-6">
         {registered && (
@@ -77,17 +137,46 @@ function LoginPage() {
           </div>
         )}
 
+        {/* ROLE SELECTION BAR */}
+        <div className="space-y-2">
+          <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground block">
+            Select Account Role To Sign In As:
+          </label>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            {ROLE_PRESETS.map((r) => {
+              const Icon = r.icon;
+              const isSelected = selectedRole === r.id;
+              return (
+                <button
+                  key={r.id}
+                  type="button"
+                  onClick={() => handleRoleSelect(r.id)}
+                  className={`p-2.5 rounded-xl border text-center transition-all ${
+                    isSelected
+                      ? "bg-primary/20 border-primary text-primary font-bold ring-1 ring-primary"
+                      : "bg-surface-2 border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
+                  }`}
+                >
+                  <Icon className="w-4 h-4 mx-auto mb-1 text-primary" />
+                  <div className="text-xs font-semibold">{r.label}</div>
+                  <div className="text-[9px] text-muted-foreground opacity-80">{r.desc}</div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-1.5">
             <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Email Address
+              Sign In Email ({selectedRole} Account)
             </label>
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="name@example.com"
+              placeholder="name@fleetflow.demo"
               className="w-full rounded-lg bg-surface-2 border border-border px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-hidden focus:ring-1 focus:ring-primary"
             />
           </div>
@@ -117,32 +206,9 @@ function LoginPage() {
           </div>
 
           <Button type="submit" disabled={loading} className="w-full font-semibold gap-2 py-2.5">
-            {loading ? "Signing in..." : "Sign In to Account"} <ArrowRight className="w-4 h-4" />
+            {loading ? "Signing in..." : `Sign In as ${selectedRole}`} <ArrowRight className="w-4 h-4" />
           </Button>
         </form>
-
-        {/* Social Mock Buttons */}
-        <div className="space-y-3 pt-2 border-t border-border/80 text-center">
-          <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider bg-background px-2 relative -top-5">
-            Or continue with
-          </span>
-          <div className="grid grid-cols-2 gap-3 -mt-2">
-            <button
-              type="button"
-              onClick={() => setEmail("aviskha.talukdar@example.com")}
-              className="p-2.5 rounded-xl bg-surface-2 border border-border hover:border-primary/50 text-xs font-medium text-foreground transition-all flex items-center justify-center gap-2"
-            >
-              <span>Google</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setEmail("aviskha.talukdar@example.com")}
-              className="p-2.5 rounded-xl bg-surface-2 border border-border hover:border-primary/50 text-xs font-medium text-foreground transition-all flex items-center justify-center gap-2"
-            >
-              <span>Apple ID</span>
-            </button>
-          </div>
-        </div>
 
         {/* Demo Access Panel */}
         <DemoAccessPanel redirectUrl={redirect} />

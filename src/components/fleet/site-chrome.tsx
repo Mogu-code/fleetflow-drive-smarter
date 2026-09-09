@@ -6,6 +6,7 @@ import { DemoBar } from "@/components/fleet/demo-bar";
 import { GlobalSearchModal } from "@/components/fleet/global-search";
 import { NotificationsDrawer } from "@/components/fleet/notifications-drawer";
 import { AccountDropdown } from "@/components/auth/account-dropdown";
+import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { useAuth } from "@/lib/auth/auth-context";
 import {
   Search,
@@ -39,22 +40,23 @@ export function SiteHeader() {
     { to: "/recommendations", label: "Recommendations" },
     { to: "/bookings", label: "My Bookings" },
     { to: "/documents", label: "Documents" },
+    { to: "/database", label: "Database" },
     { to: "/dashboard", label: "Dashboard" },
   ];
 
   const SALESPERSON_NAV = [
-    { to: "/admin/sales", label: "Sales Overview" },
-    { to: "/admin/bookings", label: "Bookings" },
+    { to: "/admin/sales", label: "Overview" },
     { to: "/admin/customers", label: "Customers" },
+    { to: "/admin/bookings", label: "Bookings" },
     { to: "/admin/vehicles", label: "Vehicles" },
     { to: "/admin/payments", label: "Payments" },
   ];
 
   const MECHANIC_NAV = [
-    { to: "/admin/mechanic", label: "Service Bay" },
-    { to: "/admin/vehicles", label: "Vehicles" },
+    { to: "/admin/mechanic", label: "Overview" },
     { to: "/admin/maintenance", label: "Maintenance" },
-    { to: "/admin/health", label: "Fleet Health" },
+    { to: "/profile", label: "Profile" },
+    { to: "/notifications", label: "Notifications" },
   ];
 
   const MANAGER_NAV = [
@@ -67,6 +69,8 @@ export function SiteHeader() {
     { to: "/admin/payments", label: "Payments" },
     { to: "/admin/analytics", label: "Analytics" },
     { to: "/admin/insights", label: "AI Insights" },
+    { to: "/profile", label: "Profile" },
+    { to: "/notifications", label: "Notifications" },
   ];
 
   let navItems = CUSTOMER_NAV;
@@ -126,6 +130,9 @@ export function SiteHeader() {
                 <span>AI Assistant</span>
               </Link>
             </Button>
+
+            {/* Theme Toggle (Light / Dark / System) */}
+            <ThemeToggle />
 
             {/* Notifications */}
             {isAuthenticated && (

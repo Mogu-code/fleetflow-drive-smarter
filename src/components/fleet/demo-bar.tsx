@@ -24,7 +24,7 @@ export function DemoBar() {
 
   return (
     <>
-      <div className="bg-surface-2 border-b border-border/80 text-xs py-1.5 px-4 sm:px-8 flex flex-wrap items-center justify-between gap-2 z-50 relative">
+      <div className="w-full max-w-full overflow-hidden bg-surface-2 border-b border-border/80 text-xs py-1.5 px-4 sm:px-8 flex flex-wrap items-center justify-between gap-2 z-50 relative">
         <div className="flex items-center gap-2 text-muted-foreground font-medium">
           <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-foreground font-semibold uppercase tracking-wider text-[10px]">

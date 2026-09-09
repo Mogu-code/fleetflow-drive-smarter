@@ -37,7 +37,19 @@ import { Route as AdminSalesRouteImport } from './routes/admin.sales'
 import { Route as AdminVehiclesRouteImport } from './routes/admin.vehicles'
 import { Route as BookIdRouteImport } from './routes/book.$id'
 import { Route as BookingsIdRouteImport } from './routes/bookings.$id'
+import { Route as DatabaseIndexRouteImport } from './routes/database.index'
+import { Route as DatabaseArchitectureRouteImport } from './routes/database.architecture'
+import { Route as DatabaseConceptsRouteImport } from './routes/database.concepts'
+import { Route as DatabaseErDiagramRouteImport } from './routes/database.er-diagram'
+import { Route as DatabaseNormalizationRouteImport } from './routes/database.normalization'
+import { Route as DatabaseSchemaRouteImport } from './routes/database.schema'
+import { Route as DatabaseSqlLabRouteImport } from './routes/database.sql-lab'
+import { Route as DatabaseTransactionsRouteImport } from './routes/database.transactions'
 import { Route as VehiclesIdRouteImport } from './routes/vehicles.$id'
+import { Route as AdminMechanicHistoryRouteImport } from './routes/admin.mechanic.history'
+import { Route as AdminMechanicVehiclesRouteImport } from './routes/admin.mechanic.vehicles'
+import { Route as AdminSalesPerformanceRouteImport } from './routes/admin.sales.performance'
+import { Route as AdminSalesReviewsRouteImport } from './routes/admin.sales.reviews'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -179,10 +191,70 @@ const BookingsIdRoute = BookingsIdRouteImport.update({
   path: '/$id',
   getParentRoute: () => BookingsRoute,
 } as any)
+const DatabaseIndexRoute = DatabaseIndexRouteImport.update({
+  id: '/database/',
+  path: '/database/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseArchitectureRoute = DatabaseArchitectureRouteImport.update({
+  id: '/database/architecture',
+  path: '/database/architecture',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseConceptsRoute = DatabaseConceptsRouteImport.update({
+  id: '/database/concepts',
+  path: '/database/concepts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseErDiagramRoute = DatabaseErDiagramRouteImport.update({
+  id: '/database/er-diagram',
+  path: '/database/er-diagram',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseNormalizationRoute = DatabaseNormalizationRouteImport.update({
+  id: '/database/normalization',
+  path: '/database/normalization',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseSchemaRoute = DatabaseSchemaRouteImport.update({
+  id: '/database/schema',
+  path: '/database/schema',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseSqlLabRoute = DatabaseSqlLabRouteImport.update({
+  id: '/database/sql-lab',
+  path: '/database/sql-lab',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatabaseTransactionsRoute = DatabaseTransactionsRouteImport.update({
+  id: '/database/transactions',
+  path: '/database/transactions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VehiclesIdRoute = VehiclesIdRouteImport.update({
   id: '/vehicles/$id',
   path: '/vehicles/$id',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMechanicHistoryRoute = AdminMechanicHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => AdminMechanicRoute,
+} as any)
+const AdminMechanicVehiclesRoute = AdminMechanicVehiclesRouteImport.update({
+  id: '/vehicles',
+  path: '/vehicles',
+  getParentRoute: () => AdminMechanicRoute,
+} as any)
+const AdminSalesPerformanceRoute = AdminSalesPerformanceRouteImport.update({
+  id: '/performance',
+  path: '/performance',
+  getParentRoute: () => AdminSalesRoute,
+} as any)
+const AdminSalesReviewsRoute = AdminSalesReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => AdminSalesRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -207,14 +279,26 @@ export interface FileRoutesByFullPath {
   '/admin/health': typeof AdminHealthRoute
   '/admin/insights': typeof AdminInsightsRoute
   '/admin/maintenance': typeof AdminMaintenanceRoute
-  '/admin/mechanic': typeof AdminMechanicRoute
+  '/admin/mechanic': typeof AdminMechanicRouteWithChildren
   '/admin/payments': typeof AdminPaymentsRoute
-  '/admin/sales': typeof AdminSalesRoute
+  '/admin/sales': typeof AdminSalesRouteWithChildren
   '/admin/vehicles': typeof AdminVehiclesRoute
   '/book/$id': typeof BookIdRoute
   '/bookings/$id': typeof BookingsIdRoute
+  '/database/architecture': typeof DatabaseArchitectureRoute
+  '/database/concepts': typeof DatabaseConceptsRoute
+  '/database/er-diagram': typeof DatabaseErDiagramRoute
+  '/database/normalization': typeof DatabaseNormalizationRoute
+  '/database/schema': typeof DatabaseSchemaRoute
+  '/database/sql-lab': typeof DatabaseSqlLabRoute
+  '/database/transactions': typeof DatabaseTransactionsRoute
   '/vehicles/$id': typeof VehiclesIdRoute
   '/admin/': typeof AdminIndexRoute
+  '/database/': typeof DatabaseIndexRoute
+  '/admin/mechanic/history': typeof AdminMechanicHistoryRoute
+  '/admin/mechanic/vehicles': typeof AdminMechanicVehiclesRoute
+  '/admin/sales/performance': typeof AdminSalesPerformanceRoute
+  '/admin/sales/reviews': typeof AdminSalesReviewsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -238,14 +322,26 @@ export interface FileRoutesByTo {
   '/admin/health': typeof AdminHealthRoute
   '/admin/insights': typeof AdminInsightsRoute
   '/admin/maintenance': typeof AdminMaintenanceRoute
-  '/admin/mechanic': typeof AdminMechanicRoute
+  '/admin/mechanic': typeof AdminMechanicRouteWithChildren
   '/admin/payments': typeof AdminPaymentsRoute
-  '/admin/sales': typeof AdminSalesRoute
+  '/admin/sales': typeof AdminSalesRouteWithChildren
   '/admin/vehicles': typeof AdminVehiclesRoute
   '/book/$id': typeof BookIdRoute
   '/bookings/$id': typeof BookingsIdRoute
+  '/database/architecture': typeof DatabaseArchitectureRoute
+  '/database/concepts': typeof DatabaseConceptsRoute
+  '/database/er-diagram': typeof DatabaseErDiagramRoute
+  '/database/normalization': typeof DatabaseNormalizationRoute
+  '/database/schema': typeof DatabaseSchemaRoute
+  '/database/sql-lab': typeof DatabaseSqlLabRoute
+  '/database/transactions': typeof DatabaseTransactionsRoute
   '/vehicles/$id': typeof VehiclesIdRoute
   '/admin': typeof AdminIndexRoute
+  '/database': typeof DatabaseIndexRoute
+  '/admin/mechanic/history': typeof AdminMechanicHistoryRoute
+  '/admin/mechanic/vehicles': typeof AdminMechanicVehiclesRoute
+  '/admin/sales/performance': typeof AdminSalesPerformanceRoute
+  '/admin/sales/reviews': typeof AdminSalesReviewsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -270,14 +366,26 @@ export interface FileRoutesById {
   '/admin/health': typeof AdminHealthRoute
   '/admin/insights': typeof AdminInsightsRoute
   '/admin/maintenance': typeof AdminMaintenanceRoute
-  '/admin/mechanic': typeof AdminMechanicRoute
+  '/admin/mechanic': typeof AdminMechanicRouteWithChildren
   '/admin/payments': typeof AdminPaymentsRoute
-  '/admin/sales': typeof AdminSalesRoute
+  '/admin/sales': typeof AdminSalesRouteWithChildren
   '/admin/vehicles': typeof AdminVehiclesRoute
   '/book/$id': typeof BookIdRoute
   '/bookings/$id': typeof BookingsIdRoute
+  '/database/architecture': typeof DatabaseArchitectureRoute
+  '/database/concepts': typeof DatabaseConceptsRoute
+  '/database/er-diagram': typeof DatabaseErDiagramRoute
+  '/database/normalization': typeof DatabaseNormalizationRoute
+  '/database/schema': typeof DatabaseSchemaRoute
+  '/database/sql-lab': typeof DatabaseSqlLabRoute
+  '/database/transactions': typeof DatabaseTransactionsRoute
   '/vehicles/$id': typeof VehiclesIdRoute
   '/admin/': typeof AdminIndexRoute
+  '/database/': typeof DatabaseIndexRoute
+  '/admin/mechanic/history': typeof AdminMechanicHistoryRoute
+  '/admin/mechanic/vehicles': typeof AdminMechanicVehiclesRoute
+  '/admin/sales/performance': typeof AdminSalesPerformanceRoute
+  '/admin/sales/reviews': typeof AdminSalesReviewsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -309,8 +417,20 @@ export interface FileRouteTypes {
     | '/admin/vehicles'
     | '/book/$id'
     | '/bookings/$id'
+    | '/database/architecture'
+    | '/database/concepts'
+    | '/database/er-diagram'
+    | '/database/normalization'
+    | '/database/schema'
+    | '/database/sql-lab'
+    | '/database/transactions'
     | '/vehicles/$id'
     | '/admin/'
+    | '/database/'
+    | '/admin/mechanic/history'
+    | '/admin/mechanic/vehicles'
+    | '/admin/sales/performance'
+    | '/admin/sales/reviews'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -340,8 +460,20 @@ export interface FileRouteTypes {
     | '/admin/vehicles'
     | '/book/$id'
     | '/bookings/$id'
+    | '/database/architecture'
+    | '/database/concepts'
+    | '/database/er-diagram'
+    | '/database/normalization'
+    | '/database/schema'
+    | '/database/sql-lab'
+    | '/database/transactions'
     | '/vehicles/$id'
     | '/admin'
+    | '/database'
+    | '/admin/mechanic/history'
+    | '/admin/mechanic/vehicles'
+    | '/admin/sales/performance'
+    | '/admin/sales/reviews'
   id:
     | '__root__'
     | '/'
@@ -371,8 +503,20 @@ export interface FileRouteTypes {
     | '/admin/vehicles'
     | '/book/$id'
     | '/bookings/$id'
+    | '/database/architecture'
+    | '/database/concepts'
+    | '/database/er-diagram'
+    | '/database/normalization'
+    | '/database/schema'
+    | '/database/sql-lab'
+    | '/database/transactions'
     | '/vehicles/$id'
     | '/admin/'
+    | '/database/'
+    | '/admin/mechanic/history'
+    | '/admin/mechanic/vehicles'
+    | '/admin/sales/performance'
+    | '/admin/sales/reviews'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -397,13 +541,21 @@ export interface RootRouteChildren {
   AdminHealthRoute: typeof AdminHealthRoute
   AdminInsightsRoute: typeof AdminInsightsRoute
   AdminMaintenanceRoute: typeof AdminMaintenanceRoute
-  AdminMechanicRoute: typeof AdminMechanicRoute
+  AdminMechanicRoute: typeof AdminMechanicRouteWithChildren
   AdminPaymentsRoute: typeof AdminPaymentsRoute
-  AdminSalesRoute: typeof AdminSalesRoute
+  AdminSalesRoute: typeof AdminSalesRouteWithChildren
   AdminVehiclesRoute: typeof AdminVehiclesRoute
   BookIdRoute: typeof BookIdRoute
+  DatabaseArchitectureRoute: typeof DatabaseArchitectureRoute
+  DatabaseConceptsRoute: typeof DatabaseConceptsRoute
+  DatabaseErDiagramRoute: typeof DatabaseErDiagramRoute
+  DatabaseNormalizationRoute: typeof DatabaseNormalizationRoute
+  DatabaseSchemaRoute: typeof DatabaseSchemaRoute
+  DatabaseSqlLabRoute: typeof DatabaseSqlLabRoute
+  DatabaseTransactionsRoute: typeof DatabaseTransactionsRoute
   VehiclesIdRoute: typeof VehiclesIdRoute
   AdminIndexRoute: typeof AdminIndexRoute
+  DatabaseIndexRoute: typeof DatabaseIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -604,12 +756,96 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookingsIdRouteImport
       parentRoute: typeof BookingsRoute
     }
+    '/database/': {
+      id: '/database/'
+      path: '/database'
+      fullPath: '/database/'
+      preLoaderRoute: typeof DatabaseIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/architecture': {
+      id: '/database/architecture'
+      path: '/database/architecture'
+      fullPath: '/database/architecture'
+      preLoaderRoute: typeof DatabaseArchitectureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/concepts': {
+      id: '/database/concepts'
+      path: '/database/concepts'
+      fullPath: '/database/concepts'
+      preLoaderRoute: typeof DatabaseConceptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/er-diagram': {
+      id: '/database/er-diagram'
+      path: '/database/er-diagram'
+      fullPath: '/database/er-diagram'
+      preLoaderRoute: typeof DatabaseErDiagramRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/normalization': {
+      id: '/database/normalization'
+      path: '/database/normalization'
+      fullPath: '/database/normalization'
+      preLoaderRoute: typeof DatabaseNormalizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/schema': {
+      id: '/database/schema'
+      path: '/database/schema'
+      fullPath: '/database/schema'
+      preLoaderRoute: typeof DatabaseSchemaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/sql-lab': {
+      id: '/database/sql-lab'
+      path: '/database/sql-lab'
+      fullPath: '/database/sql-lab'
+      preLoaderRoute: typeof DatabaseSqlLabRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/database/transactions': {
+      id: '/database/transactions'
+      path: '/database/transactions'
+      fullPath: '/database/transactions'
+      preLoaderRoute: typeof DatabaseTransactionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/vehicles/$id': {
       id: '/vehicles/$id'
       path: '/vehicles/$id'
       fullPath: '/vehicles/$id'
       preLoaderRoute: typeof VehiclesIdRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/admin/mechanic/history': {
+      id: '/admin/mechanic/history'
+      path: '/history'
+      fullPath: '/admin/mechanic/history'
+      preLoaderRoute: typeof AdminMechanicHistoryRouteImport
+      parentRoute: typeof AdminMechanicRoute
+    }
+    '/admin/mechanic/vehicles': {
+      id: '/admin/mechanic/vehicles'
+      path: '/vehicles'
+      fullPath: '/admin/mechanic/vehicles'
+      preLoaderRoute: typeof AdminMechanicVehiclesRouteImport
+      parentRoute: typeof AdminMechanicRoute
+    }
+    '/admin/sales/performance': {
+      id: '/admin/sales/performance'
+      path: '/performance'
+      fullPath: '/admin/sales/performance'
+      preLoaderRoute: typeof AdminSalesPerformanceRouteImport
+      parentRoute: typeof AdminSalesRoute
+    }
+    '/admin/sales/reviews': {
+      id: '/admin/sales/reviews'
+      path: '/reviews'
+      fullPath: '/admin/sales/reviews'
+      preLoaderRoute: typeof AdminSalesReviewsRouteImport
+      parentRoute: typeof AdminSalesRoute
     }
   }
 }
@@ -624,6 +860,34 @@ const BookingsRouteChildren: BookingsRouteChildren = {
 
 const BookingsRouteWithChildren = BookingsRoute._addFileChildren(
   BookingsRouteChildren,
+)
+
+interface AdminMechanicRouteChildren {
+  AdminMechanicHistoryRoute: typeof AdminMechanicHistoryRoute
+  AdminMechanicVehiclesRoute: typeof AdminMechanicVehiclesRoute
+}
+
+const AdminMechanicRouteChildren: AdminMechanicRouteChildren = {
+  AdminMechanicHistoryRoute: AdminMechanicHistoryRoute,
+  AdminMechanicVehiclesRoute: AdminMechanicVehiclesRoute,
+}
+
+const AdminMechanicRouteWithChildren = AdminMechanicRoute._addFileChildren(
+  AdminMechanicRouteChildren,
+)
+
+interface AdminSalesRouteChildren {
+  AdminSalesPerformanceRoute: typeof AdminSalesPerformanceRoute
+  AdminSalesReviewsRoute: typeof AdminSalesReviewsRoute
+}
+
+const AdminSalesRouteChildren: AdminSalesRouteChildren = {
+  AdminSalesPerformanceRoute: AdminSalesPerformanceRoute,
+  AdminSalesReviewsRoute: AdminSalesReviewsRoute,
+}
+
+const AdminSalesRouteWithChildren = AdminSalesRoute._addFileChildren(
+  AdminSalesRouteChildren,
 )
 
 const rootRouteChildren: RootRouteChildren = {
@@ -648,13 +912,21 @@ const rootRouteChildren: RootRouteChildren = {
   AdminHealthRoute: AdminHealthRoute,
   AdminInsightsRoute: AdminInsightsRoute,
   AdminMaintenanceRoute: AdminMaintenanceRoute,
-  AdminMechanicRoute: AdminMechanicRoute,
+  AdminMechanicRoute: AdminMechanicRouteWithChildren,
   AdminPaymentsRoute: AdminPaymentsRoute,
-  AdminSalesRoute: AdminSalesRoute,
+  AdminSalesRoute: AdminSalesRouteWithChildren,
   AdminVehiclesRoute: AdminVehiclesRoute,
   BookIdRoute: BookIdRoute,
+  DatabaseArchitectureRoute: DatabaseArchitectureRoute,
+  DatabaseConceptsRoute: DatabaseConceptsRoute,
+  DatabaseErDiagramRoute: DatabaseErDiagramRoute,
+  DatabaseNormalizationRoute: DatabaseNormalizationRoute,
+  DatabaseSchemaRoute: DatabaseSchemaRoute,
+  DatabaseSqlLabRoute: DatabaseSqlLabRoute,
+  DatabaseTransactionsRoute: DatabaseTransactionsRoute,
   VehiclesIdRoute: VehiclesIdRoute,
   AdminIndexRoute: AdminIndexRoute,
+  DatabaseIndexRoute: DatabaseIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
