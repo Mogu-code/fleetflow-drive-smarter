@@ -1,9 +1,9 @@
-import heroVehicle from "@/assets/hero-vehicle.jpg";
-import vehSedan from "@/assets/veh-sedan.jpg";
-import vehHatchback from "@/assets/veh-hatchback.jpg";
-import vehLuxury from "@/assets/veh-luxury.jpg";
-import vehElectric from "@/assets/veh-electric.jpg";
-import vehMuv from "@/assets/veh-muv.jpg";
+const heroVehicle = "";
+const vehSedan = "";
+const vehHatchback = "";
+const vehLuxury = "";
+const vehElectric = "";
+const vehMuv = "";
 
 import type {
   AIInsight,

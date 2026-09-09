@@ -1,0 +1,3923 @@
+{
+  "vehicles": [
+    {
+      "id": "V101",
+      "name": "Volvo XC60 Ultimate",
+      "make": "Volvo",
+      "model": "XC60 Ultimate",
+      "year": 2022,
+      "registration": "KA01FF1000",
+      "category": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "12 km/l",
+      "pricePerDay": 6499,
+      "rating": 4.2,
+      "reviewCount": 38,
+      "status": "available",
+      "location": "Bengaluru — Indiranagar Hub",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Adaptive cruise control",
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist"
+      ],
+      "description": "The Volvo XC60 Ultimate is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 8000,
+      "lastServiceDate": "2026-07-13",
+      "nextServiceDate": "2026-09-11",
+      "utilization": 42,
+      "revenueGenerated": 180000,
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V102",
+      "name": "Toyota Fortuner Legender",
+      "make": "Toyota",
+      "model": "Fortuner Legender",
+      "year": 2023,
+      "registration": "KA02FF1037",
+      "category": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "seats": 7,
+      "mileage": "13 km/l",
+      "pricePerDay": 5899,
+      "rating": 4.9,
+      "reviewCount": 55,
+      "status": "rented",
+      "location": "Bengaluru — KIA Airport",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags"
+      ],
+      "description": "The Toyota Fortuner Legender is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 11100,
+      "lastServiceDate": "2026-07-12",
+      "nextServiceDate": "2026-09-10",
+      "utilization": 55,
+      "revenueGenerated": 227500,
+      "currentRenterId": "C202",
+      "unavailableDates": []
+    },
+    {
+      "id": "V103",
+      "name": "Mahindra XUV700 AX7",
+      "make": "Mahindra",
+      "model": "XUV700 AX7",
+      "year": 2024,
+      "registration": "KA03FF1074",
+      "category": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "seats": 7,
+      "mileage": "14 km/l",
+      "pricePerDay": 3499,
+      "rating": 4.8,
+      "reviewCount": 72,
+      "status": "available",
+      "location": "Mumbai — Bandra Kurla",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit"
+      ],
+      "description": "The Mahindra XUV700 AX7 is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 14200,
+      "lastServiceDate": "2026-07-11",
+      "nextServiceDate": "2026-09-09",
+      "utilization": 68,
+      "revenueGenerated": 275000,
+      "unavailableDates": []
+    },
+    {
+      "id": "V104",
+      "name": "Jeep Compass Trailhawk",
+      "make": "Jeep",
+      "model": "Compass Trailhawk",
+      "year": 2025,
+      "registration": "KA04FF1111",
+      "category": "SUV",
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "15 km/l",
+      "pricePerDay": 4199,
+      "rating": 4.7,
+      "reviewCount": 89,
+      "status": "maintenance",
+      "location": "Delhi — Aerocity",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit",
+        "Ambient lighting"
+      ],
+      "description": "The Jeep Compass Trailhawk is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 17300,
+      "lastServiceDate": "2026-07-10",
+      "nextServiceDate": "2026-09-08",
+      "utilization": 81,
+      "revenueGenerated": 322500,
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V105",
+      "name": "Hyundai Creta SX(O)",
+      "make": "Hyundai",
+      "model": "Creta SX(O)",
+      "year": 2022,
+      "registration": "KA05FF1148",
+      "category": "SUV",
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "seats": 5,
+      "mileage": "16 km/l",
+      "pricePerDay": 2599,
+      "rating": 4.6,
+      "reviewCount": 106,
+      "status": "available",
+      "location": "Pune — Baner",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Adaptive cruise control",
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist"
+      ],
+      "description": "The Hyundai Creta SX(O) is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 20400,
+      "lastServiceDate": "2026-07-09",
+      "nextServiceDate": "2026-09-07",
+      "utilization": 94,
+      "revenueGenerated": 370000,
+      "unavailableDates": [
+        "2026-08-28",
+        "2026-08-29"
+      ]
+    },
+    {
+      "id": "V106",
+      "name": "BMW 530i M Sport",
+      "make": "BMW",
+      "model": "530i M Sport",
+      "year": 2023,
+      "registration": "KA06FF1185",
+      "category": "Sedan",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "17 km/l",
+      "pricePerDay": 8999,
+      "rating": 4.5,
+      "reviewCount": 123,
+      "status": "available",
+      "location": "Hyderabad — Gachibowli",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags"
+      ],
+      "description": "The BMW 530i M Sport is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 23500,
+      "lastServiceDate": "2026-07-08",
+      "nextServiceDate": "2026-09-06",
+      "utilization": 53,
+      "revenueGenerated": 417500,
+      "unavailableDates": []
+    },
+    {
+      "id": "V107",
+      "name": "Skoda Superb Laurin",
+      "make": "Skoda",
+      "model": "Superb Laurin",
+      "year": 2024,
+      "registration": "KA07FF1222",
+      "category": "Sedan",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "18 km/l",
+      "pricePerDay": 4599,
+      "rating": 4.4,
+      "reviewCount": 140,
+      "status": "reserved",
+      "location": "Chennai — Guindy",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit"
+      ],
+      "description": "The Skoda Superb Laurin is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 26600,
+      "lastServiceDate": "2026-07-07",
+      "nextServiceDate": "2026-09-05",
+      "utilization": 66,
+      "revenueGenerated": 465000,
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V108",
+      "name": "Honda City ZX",
+      "make": "Honda",
+      "model": "City ZX",
+      "year": 2025,
+      "registration": "KA08FF1259",
+      "category": "Sedan",
+      "fuel": "Hybrid",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "19 km/l",
+      "pricePerDay": 2299,
+      "rating": 4.3,
+      "reviewCount": 157,
+      "status": "available",
+      "location": "Goa — Dabolim",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit",
+        "Ambient lighting"
+      ],
+      "description": "The Honda City ZX is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 29700,
+      "lastServiceDate": "2026-07-06",
+      "nextServiceDate": "2026-09-04",
+      "utilization": 79,
+      "revenueGenerated": 512500,
+      "unavailableDates": []
+    },
+    {
+      "id": "V109",
+      "name": "Hyundai Verna SX",
+      "make": "Hyundai",
+      "model": "Verna SX",
+      "year": 2022,
+      "registration": "KA09FF1296",
+      "category": "Sedan",
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "seats": 5,
+      "mileage": "12 km/l",
+      "pricePerDay": 1899,
+      "rating": 4.2,
+      "reviewCount": 174,
+      "status": "available",
+      "location": "Bengaluru — Indiranagar Hub",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Adaptive cruise control",
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist"
+      ],
+      "description": "The Hyundai Verna SX is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 32800,
+      "lastServiceDate": "2026-07-05",
+      "nextServiceDate": "2026-09-03",
+      "utilization": 92,
+      "revenueGenerated": 560000,
+      "unavailableDates": [
+        "2026-08-28",
+        "2026-08-29"
+      ]
+    },
+    {
+      "id": "V110",
+      "name": "Maruti Baleno Alpha",
+      "make": "Maruti",
+      "model": "Baleno Alpha",
+      "year": 2023,
+      "registration": "KA01FF1333",
+      "category": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "seats": 5,
+      "mileage": "13 km/l",
+      "pricePerDay": 1499,
+      "rating": 4.9,
+      "reviewCount": 191,
+      "status": "available",
+      "location": "Bengaluru — KIA Airport",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags"
+      ],
+      "description": "The Maruti Baleno Alpha is part of FleetFlow's hatchback line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 35900,
+      "lastServiceDate": "2026-07-04",
+      "nextServiceDate": "2026-09-02",
+      "utilization": 51,
+      "revenueGenerated": 607500,
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V111",
+      "name": "Tata Altroz Racer",
+      "make": "Tata",
+      "model": "Altroz Racer",
+      "year": 2024,
+      "registration": "KA02FF1370",
+      "category": "Hatchback",
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "seats": 5,
+      "mileage": "14 km/l",
+      "pricePerDay": 1399,
+      "rating": 4.8,
+      "reviewCount": 208,
+      "status": "rented",
+      "location": "Mumbai — Bandra Kurla",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit"
+      ],
+      "description": "The Tata Altroz Racer is part of FleetFlow's hatchback line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 39000,
+      "lastServiceDate": "2026-07-03",
+      "nextServiceDate": "2026-09-01",
+      "utilization": 64,
+      "revenueGenerated": 655000,
+      "currentRenterId": "C211",
+      "unavailableDates": []
+    },
+    {
+      "id": "V112",
+      "name": "Mercedes-Benz S 450",
+      "make": "Mercedes-Benz",
+      "model": "S 450",
+      "year": 2025,
+      "registration": "KA03FF1407",
+      "category": "Luxury",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "15 km/l",
+      "pricePerDay": 18999,
+      "rating": 4.7,
+      "reviewCount": 225,
+      "status": "available",
+      "location": "Delhi — Aerocity",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit",
+        "Ambient lighting"
+      ],
+      "description": "The Mercedes-Benz S 450 is part of FleetFlow's luxury line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 42100,
+      "lastServiceDate": "2026-07-02",
+      "nextServiceDate": "2026-08-31",
+      "utilization": 77,
+      "revenueGenerated": 702500,
+      "unavailableDates": []
+    },
+    {
+      "id": "V113",
+      "name": "Audi A6 Technology",
+      "make": "Audi",
+      "model": "A6 Technology",
+      "year": 2022,
+      "registration": "KA04FF1444",
+      "category": "Luxury",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "16 km/l",
+      "pricePerDay": 12499,
+      "rating": 4.6,
+      "reviewCount": 242,
+      "status": "reserved",
+      "location": "Pune — Baner",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Adaptive cruise control",
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist"
+      ],
+      "description": "The Audi A6 Technology is part of FleetFlow's luxury line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 45200,
+      "lastServiceDate": "2026-07-01",
+      "nextServiceDate": "2026-08-30",
+      "utilization": 90,
+      "revenueGenerated": 750000,
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V114",
+      "name": "Porsche Macan GTS",
+      "make": "Porsche",
+      "model": "Macan GTS",
+      "year": 2023,
+      "registration": "KA05FF1481",
+      "category": "Luxury",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "17 km/l",
+      "pricePerDay": 22999,
+      "rating": 4.5,
+      "reviewCount": 39,
+      "status": "maintenance",
+      "location": "Hyderabad — Gachibowli",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags"
+      ],
+      "description": "The Porsche Macan GTS is part of FleetFlow's luxury line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 48300,
+      "lastServiceDate": "2026-06-30",
+      "nextServiceDate": "2026-08-29",
+      "utilization": 49,
+      "revenueGenerated": 797500,
+      "unavailableDates": []
+    },
+    {
+      "id": "V115",
+      "name": "Tata Nexon EV Empowered",
+      "make": "Tata",
+      "model": "Nexon EV Empowered",
+      "year": 2024,
+      "registration": "KA06FF1518",
+      "category": "Electric",
+      "fuel": "Electric",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "460 km range",
+      "pricePerDay": 2799,
+      "rating": 4.4,
+      "reviewCount": 56,
+      "status": "available",
+      "location": "Chennai — Guindy",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit"
+      ],
+      "description": "The Tata Nexon EV Empowered is part of FleetFlow's electric line — inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 51400,
+      "lastServiceDate": "2026-06-29",
+      "nextServiceDate": "2026-08-28",
+      "utilization": 62,
+      "revenueGenerated": 845000,
+      "unavailableDates": []
+    },
+    {
+      "id": "V116",
+      "name": "MG ZS EV Exclusive",
+      "make": "MG",
+      "model": "ZS EV Exclusive",
+      "year": 2025,
+      "registration": "KA07FF1555",
+      "category": "Electric",
+      "fuel": "Electric",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "380 km range",
+      "pricePerDay": 3299,
+      "rating": 4.3,
+      "reviewCount": 73,
+      "status": "available",
+      "location": "Goa — Dabolim",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit",
+        "Ambient lighting"
+      ],
+      "description": "The MG ZS EV Exclusive is part of FleetFlow's electric line — inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 54500,
+      "lastServiceDate": "2026-06-28",
+      "nextServiceDate": "2026-08-27",
+      "utilization": 75,
+      "revenueGenerated": 892500,
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V117",
+      "name": "BYD Atto 3 Superior",
+      "make": "BYD",
+      "model": "Atto 3 Superior",
+      "year": 2022,
+      "registration": "KA08FF1592",
+      "category": "Electric",
+      "fuel": "Electric",
+      "transmission": "Automatic",
+      "seats": 5,
+      "mileage": "400 km range",
+      "pricePerDay": 3899,
+      "rating": 4.2,
+      "reviewCount": 90,
+      "status": "available",
+      "location": "Bengaluru — Indiranagar Hub",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Adaptive cruise control",
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist"
+      ],
+      "description": "The BYD Atto 3 Superior is part of FleetFlow's electric line — inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 57600,
+      "lastServiceDate": "2026-06-27",
+      "nextServiceDate": "2026-08-26",
+      "utilization": 88,
+      "revenueGenerated": 940000,
+      "unavailableDates": [
+        "2026-08-28",
+        "2026-08-29"
+      ]
+    },
+    {
+      "id": "V118",
+      "name": "Kia Carens Luxury Plus",
+      "make": "Kia",
+      "model": "Carens Luxury Plus",
+      "year": 2023,
+      "registration": "KA09FF1629",
+      "category": "MUV",
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "seats": 7,
+      "mileage": "13 km/l",
+      "pricePerDay": 2999,
+      "rating": 4.9,
+      "reviewCount": 107,
+      "status": "available",
+      "location": "Bengaluru — KIA Airport",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "360° parking camera",
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags"
+      ],
+      "description": "The Kia Carens Luxury Plus is part of FleetFlow's muv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 60700,
+      "lastServiceDate": "2026-06-26",
+      "nextServiceDate": "2026-08-25",
+      "utilization": 47,
+      "revenueGenerated": 987500,
+      "unavailableDates": []
+    },
+    {
+      "id": "V119",
+      "name": "Toyota Innova Hycross",
+      "make": "Toyota",
+      "model": "Innova Hycross",
+      "year": 2024,
+      "registration": "KA01FF1666",
+      "category": "MUV",
+      "fuel": "Hybrid",
+      "transmission": "Automatic",
+      "seats": 8,
+      "mileage": "14 km/l",
+      "pricePerDay": 4499,
+      "rating": 4.8,
+      "reviewCount": 124,
+      "status": "rented",
+      "location": "Mumbai — Bandra Kurla",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Ventilated front seats",
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit"
+      ],
+      "description": "The Toyota Innova Hycross is part of FleetFlow's muv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 63800,
+      "lastServiceDate": "2026-06-25",
+      "nextServiceDate": "2026-08-24",
+      "utilization": 60,
+      "revenueGenerated": 1035000,
+      "currentRenterId": "C219",
+      "unavailableDates": [
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26"
+      ]
+    },
+    {
+      "id": "V120",
+      "name": "Mini Cooper S Convertible",
+      "make": "Mini",
+      "model": "Cooper S Convertible",
+      "year": 2025,
+      "registration": "KA02FF1703",
+      "category": "Convertible",
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "seats": 4,
+      "mileage": "15 km/l",
+      "pricePerDay": 9499,
+      "rating": 4.7,
+      "reviewCount": 141,
+      "status": "inactive",
+      "location": "Delhi — Aerocity",
+      "image": "",
+      "gallery": [
+        "",
+        "",
+        ""
+      ],
+      "features": [
+        "Wireless CarPlay & Android Auto",
+        "Panoramic sunroof",
+        "Lane keep assist",
+        "Six airbags",
+        "Digital cockpit",
+        "Ambient lighting"
+      ],
+      "description": "The Mini Cooper S Convertible is part of FleetFlow's convertible line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "odometerKm": 66900,
+      "lastServiceDate": "2026-06-24",
+      "nextServiceDate": "2026-08-23",
+      "utilization": 73,
+      "revenueGenerated": 1082500,
+      "unavailableDates": []
+    }
+  ],
+  "customers": [
+    {
+      "id": "C201",
+      "name": "Aarav Sharma",
+      "email": "aarav.sharma@example.com",
+      "phone": "+91 9800000000",
+      "dob": "1985-01-10",
+      "licenseNumber": "KA0120180000000",
+      "licenseExpiry": "2027-09-26",
+      "city": "Bengaluru",
+      "joinedAt": "2024-09-01",
+      "status": "pending",
+      "totalBookings": 1,
+      "totalSpend": 12500,
+      "lastRentalAt": null,
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V101",
+        "V106"
+      ]
+    },
+    {
+      "id": "C202",
+      "name": "Aviskha Gupta",
+      "email": "aviskha.gupta@example.com",
+      "phone": "+91 9800013457",
+      "dob": "1986-02-11",
+      "licenseNumber": "KA0220180004213",
+      "licenseExpiry": "2027-10-16",
+      "city": "Bengaluru",
+      "joinedAt": "2024-09-27",
+      "status": "active",
+      "totalBookings": 4,
+      "totalSpend": 20900,
+      "lastRentalAt": "2026-08-15",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V102",
+        "V107"
+      ]
+    },
+    {
+      "id": "C203",
+      "name": "Kabir Iyer",
+      "email": "kabir.iyer@example.com",
+      "phone": "+91 9800026914",
+      "dob": "1987-03-12",
+      "licenseNumber": "KA0320180008426",
+      "licenseExpiry": "2027-11-05",
+      "city": "Mumbai",
+      "joinedAt": "2024-10-23",
+      "status": "active",
+      "totalBookings": 7,
+      "totalSpend": 29300,
+      "lastRentalAt": "2026-08-11",
+      "salespersonId": "E303",
+      "savedVehicleIds": [
+        "V103",
+        "V108"
+      ]
+    },
+    {
+      "id": "C204",
+      "name": "Ananya Menon",
+      "email": "ananya.menon@example.com",
+      "phone": "+91 9800040371",
+      "dob": "1988-04-13",
+      "licenseNumber": "KA0420180012639",
+      "licenseExpiry": "2027-11-25",
+      "city": "Delhi",
+      "joinedAt": "2024-11-18",
+      "status": "active",
+      "totalBookings": 10,
+      "totalSpend": 37700,
+      "lastRentalAt": "2026-08-07",
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V104",
+        "V109"
+      ]
+    },
+    {
+      "id": "C205",
+      "name": "Rohan Kapoor",
+      "email": "rohan.kapoor@example.com",
+      "phone": "+91 9800053828",
+      "dob": "1989-05-14",
+      "licenseNumber": "KA0520180016852",
+      "licenseExpiry": "2027-12-15",
+      "city": "Pune",
+      "joinedAt": "2024-12-14",
+      "status": "active",
+      "totalBookings": 13,
+      "totalSpend": 46100,
+      "lastRentalAt": "2026-08-03",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V105",
+        "V110"
+      ]
+    },
+    {
+      "id": "C206",
+      "name": "Ishita Reddy",
+      "email": "ishita.reddy@example.com",
+      "phone": "+91 9800067285",
+      "dob": "1990-06-15",
+      "licenseNumber": "KA0620180021065",
+      "licenseExpiry": "2028-01-04",
+      "city": "Hyderabad",
+      "joinedAt": "2025-01-09",
+      "status": "active",
+      "totalBookings": 2,
+      "totalSpend": 54500,
+      "lastRentalAt": "2026-07-30",
+      "salespersonId": "E303",
+      "savedVehicleIds": [
+        "V106",
+        "V111"
+      ]
+    },
+    {
+      "id": "C207",
+      "name": "Devansh Nair",
+      "email": "devansh.nair@example.com",
+      "phone": "+91 9800080742",
+      "dob": "1991-07-16",
+      "licenseNumber": "KA0720180025278",
+      "licenseExpiry": "2028-01-24",
+      "city": "Chennai",
+      "joinedAt": "2025-02-04",
+      "status": "active",
+      "totalBookings": 5,
+      "totalSpend": 62900,
+      "lastRentalAt": "2026-07-26",
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V107",
+        "V112"
+      ]
+    },
+    {
+      "id": "C208",
+      "name": "Meera Bose",
+      "email": "meera.bose@example.com",
+      "phone": "+91 9800094199",
+      "dob": "1992-08-17",
+      "licenseNumber": "KA0820180029491",
+      "licenseExpiry": "2028-02-13",
+      "city": "Goa",
+      "joinedAt": "2025-03-02",
+      "status": "active",
+      "totalBookings": 8,
+      "totalSpend": 71300,
+      "lastRentalAt": "2026-07-22",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V108",
+        "V113"
+      ]
+    },
+    {
+      "id": "C209",
+      "name": "Vikram Chopra",
+      "email": "vikram.chopra@example.com",
+      "phone": "+91 9800107656",
+      "dob": "1993-09-18",
+      "licenseNumber": "KA0920180033704",
+      "licenseExpiry": "2028-03-04",
+      "city": "Bengaluru",
+      "joinedAt": "2025-03-28",
+      "status": "active",
+      "totalBookings": 11,
+      "totalSpend": 79700,
+      "lastRentalAt": "2026-07-18",
+      "salespersonId": "E303",
+      "savedVehicleIds": [
+        "V109",
+        "V114"
+      ]
+    },
+    {
+      "id": "C210",
+      "name": "Sanya Verma",
+      "email": "sanya.verma@example.com",
+      "phone": "+91 9800121113",
+      "dob": "1994-01-10",
+      "licenseNumber": "KA0120180037917",
+      "licenseExpiry": "2028-03-24",
+      "city": "Bengaluru",
+      "joinedAt": "2025-04-23",
+      "status": "active",
+      "totalBookings": 14,
+      "totalSpend": 88100,
+      "lastRentalAt": null,
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V110",
+        "V115"
+      ]
+    },
+    {
+      "id": "C211",
+      "name": "Arjun Rao",
+      "email": "arjun.rao@example.com",
+      "phone": "+91 9800134570",
+      "dob": "1995-02-11",
+      "licenseNumber": "KA0220180042130",
+      "licenseExpiry": "2028-04-13",
+      "city": "Mumbai",
+      "joinedAt": "2025-05-19",
+      "status": "active",
+      "totalBookings": 3,
+      "totalSpend": 96500,
+      "lastRentalAt": "2026-07-10",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V111",
+        "V116"
+      ]
+    },
+    {
+      "id": "C212",
+      "name": "Nikita Joshi",
+      "email": "nikita.joshi@example.com",
+      "phone": "+91 9800148027",
+      "dob": "1996-03-12",
+      "licenseNumber": "KA0320180046343",
+      "licenseExpiry": "2028-05-03",
+      "city": "Delhi",
+      "joinedAt": "2025-06-14",
+      "status": "pending",
+      "totalBookings": 6,
+      "totalSpend": 104900,
+      "lastRentalAt": "2026-07-06",
+      "salespersonId": "E303",
+      "savedVehicleIds": [
+        "V112",
+        "V117"
+      ]
+    },
+    {
+      "id": "C213",
+      "name": "Rahul Malhotra",
+      "email": "rahul.malhotra@example.com",
+      "phone": "+91 9800161484",
+      "dob": "1997-04-13",
+      "licenseNumber": "KA0420180050556",
+      "licenseExpiry": "2028-05-23",
+      "city": "Pune",
+      "joinedAt": "2025-07-10",
+      "status": "active",
+      "totalBookings": 9,
+      "totalSpend": 113300,
+      "lastRentalAt": "2026-07-02",
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V113",
+        "V118"
+      ]
+    },
+    {
+      "id": "C214",
+      "name": "Tara Sen",
+      "email": "tara.sen@example.com",
+      "phone": "+91 9800174941",
+      "dob": "1998-05-14",
+      "licenseNumber": "KA0520180054769",
+      "licenseExpiry": "2028-06-12",
+      "city": "Hyderabad",
+      "joinedAt": "2025-08-05",
+      "status": "active",
+      "totalBookings": 12,
+      "totalSpend": 121700,
+      "lastRentalAt": "2026-06-28",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V114",
+        "V119"
+      ]
+    },
+    {
+      "id": "C215",
+      "name": "Aditya Pillai",
+      "email": "aditya.pillai@example.com",
+      "phone": "+91 9800188398",
+      "dob": "1999-06-15",
+      "licenseNumber": "KA0620180058982",
+      "licenseExpiry": "2028-07-02",
+      "city": "Chennai",
+      "joinedAt": "2025-08-31",
+      "status": "active",
+      "totalBookings": 1,
+      "totalSpend": 130100,
+      "lastRentalAt": "2026-06-24",
+      "salespersonId": "E303",
+      "savedVehicleIds": [
+        "V115",
+        "V120"
+      ]
+    },
+    {
+      "id": "C216",
+      "name": "Priya Desai",
+      "email": "priya.desai@example.com",
+      "phone": "+91 9800201855",
+      "dob": "1985-07-16",
+      "licenseNumber": "KA0720180063195",
+      "licenseExpiry": "2028-07-22",
+      "city": "Goa",
+      "joinedAt": "2025-09-26",
+      "status": "active",
+      "totalBookings": 4,
+      "totalSpend": 138500,
+      "lastRentalAt": "2026-06-20",
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V116",
+        "V101"
+      ]
+    },
+    {
+      "id": "C217",
+      "name": "Karthik Sharma",
+      "email": "karthik.sharma@example.com",
+      "phone": "+91 9800215312",
+      "dob": "1986-08-17",
+      "licenseNumber": "KA0820180067408",
+      "licenseExpiry": "2028-08-11",
+      "city": "Bengaluru",
+      "joinedAt": "2025-10-22",
+      "status": "active",
+      "totalBookings": 7,
+      "totalSpend": 146900,
+      "lastRentalAt": "2026-06-16",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V117",
+        "V102"
+      ]
+    },
+    {
+      "id": "C218",
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "phone": "+91 9800228769",
+      "dob": "1987-09-18",
+      "licenseNumber": "KA0920180071621",
+      "licenseExpiry": "2028-08-31",
+      "city": "Bengaluru",
+      "joinedAt": "2025-11-17",
+      "status": "suspended",
+      "totalBookings": 10,
+      "totalSpend": 155300,
+      "lastRentalAt": "2026-06-12",
+      "salespersonId": "E303",
+      "savedVehicleIds": [
+        "V118",
+        "V103"
+      ]
+    },
+    {
+      "id": "C219",
+      "name": "Siddharth Iyer",
+      "email": "siddharth.iyer@example.com",
+      "phone": "+91 9800242226",
+      "dob": "1988-01-10",
+      "licenseNumber": "KA0120180075834",
+      "licenseExpiry": "2028-09-20",
+      "city": "Mumbai",
+      "joinedAt": "2025-12-13",
+      "status": "active",
+      "totalBookings": 13,
+      "totalSpend": 163700,
+      "lastRentalAt": null,
+      "salespersonId": "E301",
+      "savedVehicleIds": [
+        "V119",
+        "V104"
+      ]
+    },
+    {
+      "id": "C220",
+      "name": "Riya Menon",
+      "email": "riya.menon@example.com",
+      "phone": "+91 9800255683",
+      "dob": "1989-02-11",
+      "licenseNumber": "KA0220180080047",
+      "licenseExpiry": "2028-10-10",
+      "city": "Delhi",
+      "joinedAt": "2026-01-08",
+      "status": "active",
+      "totalBookings": 2,
+      "totalSpend": 172100,
+      "lastRentalAt": "2026-06-04",
+      "salespersonId": "E302",
+      "savedVehicleIds": [
+        "V120",
+        "V105"
+      ]
+    }
+  ],
+  "employees": [
+    {
+      "id": "E301",
+      "name": "Rithika Menon",
+      "email": "rithika.menon@fleetflow.in",
+      "phone": "+91 98450 11201",
+      "role": "Salesperson",
+      "branch": "Bengaluru — Indiranagar Hub",
+      "status": "active",
+      "joinedAt": "2023-12-16",
+      "target": 1800000,
+      "achieved": 1542000,
+      "commissionRate": 3.5
+    },
+    {
+      "id": "E302",
+      "name": "Imran Qureshi",
+      "email": "imran.qureshi@fleetflow.in",
+      "phone": "+91 98450 11202",
+      "role": "Salesperson",
+      "branch": "Mumbai — Bandra Kurla",
+      "status": "active",
+      "joinedAt": "2024-11-20",
+      "target": 2200000,
+      "achieved": 2310000,
+      "commissionRate": 4
+    },
+    {
+      "id": "E303",
+      "name": "Sneha Kulkarni",
+      "email": "sneha.kulkarni@fleetflow.in",
+      "phone": "+91 98450 11203",
+      "role": "Salesperson",
+      "branch": "Pune — Baner",
+      "status": "on-leave",
+      "joinedAt": "2025-07-08",
+      "target": 1400000,
+      "achieved": 890000,
+      "commissionRate": 3
+    },
+    {
+      "id": "E311",
+      "name": "Dinesh Waghmare",
+      "email": "dinesh.w@fleetflow.in",
+      "phone": "+91 98450 11311",
+      "role": "Mechanic",
+      "branch": "Bengaluru — Indiranagar Hub",
+      "status": "active",
+      "joinedAt": "2023-05-10",
+      "specialization": "Diesel powertrain",
+      "shift": "Morning"
+    },
+    {
+      "id": "E312",
+      "name": "Farah Sheikh",
+      "email": "farah.sheikh@fleetflow.in",
+      "phone": "+91 98450 11312",
+      "role": "Mechanic",
+      "branch": "Mumbai — Bandra Kurla",
+      "status": "active",
+      "joinedAt": "2025-03-20",
+      "specialization": "EV battery & HV systems",
+      "shift": "Evening"
+    },
+    {
+      "id": "E313",
+      "name": "Joseph Mathew",
+      "email": "joseph.mathew@fleetflow.in",
+      "phone": "+91 98450 11313",
+      "role": "Mechanic",
+      "branch": "Hyderabad — Gachibowli",
+      "status": "active",
+      "joinedAt": "2025-10-26",
+      "specialization": "Body & paint",
+      "shift": "Night"
+    },
+    {
+      "id": "E321",
+      "name": "Anjali Deshpande",
+      "email": "anjali.d@fleetflow.in",
+      "phone": "+91 98450 11321",
+      "role": "Manager",
+      "branch": "Bengaluru — Indiranagar Hub",
+      "status": "active",
+      "joinedAt": "2022-07-14",
+      "managedBranch": "Bengaluru — Indiranagar Hub",
+      "headcount": 14
+    },
+    {
+      "id": "E322",
+      "name": "Rajeev Khanna",
+      "email": "rajeev.khanna@fleetflow.in",
+      "phone": "+91 98450 11322",
+      "role": "Manager",
+      "branch": "Delhi — Aerocity",
+      "status": "active",
+      "joinedAt": "2024-04-14",
+      "managedBranch": "Delhi — Aerocity",
+      "headcount": 11
+    }
+  ],
+  "bookings": [
+    {
+      "id": "FF-24810",
+      "vehicleId": "V101",
+      "customerId": "C201",
+      "salespersonId": "E301",
+      "startDate": "2026-08-23",
+      "endDate": "2026-08-25",
+      "pickupLocation": "Bengaluru — Indiranagar Hub",
+      "dropoffLocation": "Mumbai — Bandra Kurla",
+      "status": "confirmed",
+      "subtotal": 12998,
+      "taxes": 2340,
+      "insurance": 499,
+      "total": 15837,
+      "createdAt": "2026-08-17",
+      "agreementId": "AGR-9100",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-23",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-08-23",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24817",
+      "vehicleId": "V104",
+      "customerId": "C206",
+      "salespersonId": "E302",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-27",
+      "pickupLocation": "Delhi — Aerocity",
+      "dropoffLocation": "Delhi — Aerocity",
+      "status": "active",
+      "subtotal": 12597,
+      "taxes": 2267,
+      "insurance": 499,
+      "total": 15363,
+      "createdAt": "2026-08-18",
+      "agreementId": "AGR-9101",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-24",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-08-24",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-08-24",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-08-24",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24824",
+      "vehicleId": "V107",
+      "customerId": "C211",
+      "salespersonId": "E303",
+      "startDate": "2026-08-02",
+      "endDate": "2026-08-06",
+      "pickupLocation": "Chennai — Guindy",
+      "dropoffLocation": "Pune — Baner",
+      "status": "completed",
+      "subtotal": 18396,
+      "taxes": 3311,
+      "insurance": 499,
+      "total": 22206,
+      "createdAt": "2026-07-27",
+      "agreementId": "AGR-9102",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-02",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-08-02",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-08-02",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-08-02",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-08-02",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-08-02",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24831",
+      "vehicleId": "V110",
+      "customerId": "C216",
+      "salespersonId": "E301",
+      "startDate": "2026-07-28",
+      "endDate": "2026-08-02",
+      "pickupLocation": "Bengaluru — KIA Airport",
+      "dropoffLocation": "Hyderabad — Gachibowli",
+      "status": "completed",
+      "subtotal": 7495,
+      "taxes": 1349,
+      "insurance": 499,
+      "total": 9343,
+      "createdAt": "2026-07-22",
+      "agreementId": "AGR-9103",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-07-28",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-07-28",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-07-28",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-07-28",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-07-28",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-07-28",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24838",
+      "vehicleId": "V113",
+      "customerId": "C201",
+      "salespersonId": "E302",
+      "startDate": "2026-07-23",
+      "endDate": "2026-07-29",
+      "pickupLocation": "Pune — Baner",
+      "dropoffLocation": "Chennai — Guindy",
+      "status": "cancelled",
+      "subtotal": 74994,
+      "taxes": 13499,
+      "insurance": 499,
+      "total": 88992,
+      "createdAt": "2026-07-17",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-07-23",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24845",
+      "vehicleId": "V116",
+      "customerId": "C206",
+      "salespersonId": "E303",
+      "startDate": "2026-08-28",
+      "endDate": "2026-09-04",
+      "pickupLocation": "Goa — Dabolim",
+      "dropoffLocation": "Goa — Dabolim",
+      "status": "pending",
+      "subtotal": 23093,
+      "taxes": 4157,
+      "insurance": 499,
+      "total": 27749,
+      "createdAt": "2026-08-22",
+      "agreementId": "AGR-9105",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-28",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24852",
+      "vehicleId": "V119",
+      "customerId": "C211",
+      "salespersonId": "E301",
+      "startDate": "2026-07-13",
+      "endDate": "2026-07-15",
+      "pickupLocation": "Mumbai — Bandra Kurla",
+      "dropoffLocation": "Bengaluru — Indiranagar Hub",
+      "status": "completed",
+      "subtotal": 8998,
+      "taxes": 1620,
+      "insurance": 499,
+      "total": 11117,
+      "createdAt": "2026-07-07",
+      "agreementId": "AGR-9106",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-07-13",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-07-13",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-07-13",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-07-13",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-07-13",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-07-13",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24859",
+      "vehicleId": "V102",
+      "customerId": "C216",
+      "salespersonId": "E302",
+      "startDate": "2026-08-30",
+      "endDate": "2026-09-02",
+      "pickupLocation": "Bengaluru — KIA Airport",
+      "dropoffLocation": "Bengaluru — KIA Airport",
+      "status": "confirmed",
+      "subtotal": 17697,
+      "taxes": 3185,
+      "insurance": 499,
+      "total": 21381,
+      "createdAt": "2026-08-24",
+      "agreementId": "AGR-9107",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-30",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-08-30",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24866",
+      "vehicleId": "V105",
+      "customerId": "C201",
+      "salespersonId": "E303",
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-04",
+      "pickupLocation": "Pune — Baner",
+      "dropoffLocation": "Mumbai — Bandra Kurla",
+      "status": "confirmed",
+      "subtotal": 10396,
+      "taxes": 1871,
+      "insurance": 499,
+      "total": 12766,
+      "createdAt": "2026-08-25",
+      "agreementId": "AGR-9108",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-31",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-08-31",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24873",
+      "vehicleId": "V108",
+      "customerId": "C206",
+      "salespersonId": "E301",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-06",
+      "pickupLocation": "Goa — Dabolim",
+      "dropoffLocation": "Delhi — Aerocity",
+      "status": "active",
+      "subtotal": 11495,
+      "taxes": 2069,
+      "insurance": 499,
+      "total": 14063,
+      "createdAt": "2026-08-26",
+      "agreementId": "AGR-9109",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-09-01",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-09-01",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-09-01",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-09-01",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24880",
+      "vehicleId": "V111",
+      "customerId": "C211",
+      "salespersonId": "E302",
+      "startDate": "2026-06-23",
+      "endDate": "2026-06-29",
+      "pickupLocation": "Mumbai — Bandra Kurla",
+      "dropoffLocation": "Pune — Baner",
+      "status": "completed",
+      "subtotal": 8394,
+      "taxes": 1511,
+      "insurance": 499,
+      "total": 10404,
+      "createdAt": "2026-06-17",
+      "agreementId": "AGR-9110",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-06-23",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-06-23",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-06-23",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-06-23",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-06-23",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-06-23",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24887",
+      "vehicleId": "V114",
+      "customerId": "C216",
+      "salespersonId": "E303",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-25",
+      "pickupLocation": "Hyderabad — Gachibowli",
+      "dropoffLocation": "Hyderabad — Gachibowli",
+      "status": "completed",
+      "subtotal": 160993,
+      "taxes": 28979,
+      "insurance": 499,
+      "total": 190471,
+      "createdAt": "2026-06-12",
+      "agreementId": "AGR-9111",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-06-18",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-06-18",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-06-18",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-06-18",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-06-18",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-06-18",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24894",
+      "vehicleId": "V117",
+      "customerId": "C201",
+      "salespersonId": "E301",
+      "startDate": "2026-06-13",
+      "endDate": "2026-06-15",
+      "pickupLocation": "Bengaluru — Indiranagar Hub",
+      "dropoffLocation": "Chennai — Guindy",
+      "status": "cancelled",
+      "subtotal": 7798,
+      "taxes": 1404,
+      "insurance": 499,
+      "total": 9701,
+      "createdAt": "2026-06-07",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-06-13",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24901",
+      "vehicleId": "V120",
+      "customerId": "C206",
+      "salespersonId": "E302",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-08",
+      "pickupLocation": "Delhi — Aerocity",
+      "dropoffLocation": "Goa — Dabolim",
+      "status": "pending",
+      "subtotal": 28497,
+      "taxes": 5129,
+      "insurance": 499,
+      "total": 34125,
+      "createdAt": "2026-08-30",
+      "agreementId": "AGR-9113",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-09-05",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24908",
+      "vehicleId": "V103",
+      "customerId": "C211",
+      "salespersonId": "E303",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-07",
+      "pickupLocation": "Mumbai — Bandra Kurla",
+      "dropoffLocation": "Bengaluru — Indiranagar Hub",
+      "status": "completed",
+      "subtotal": 13996,
+      "taxes": 2519,
+      "insurance": 499,
+      "total": 17014,
+      "createdAt": "2026-05-28",
+      "agreementId": "AGR-9114",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-06-03",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-06-03",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-06-03",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-06-03",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-06-03",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-06-03",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24915",
+      "vehicleId": "V106",
+      "customerId": "C216",
+      "salespersonId": "E301",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-12",
+      "pickupLocation": "Hyderabad — Gachibowli",
+      "dropoffLocation": "Bengaluru — KIA Airport",
+      "status": "confirmed",
+      "subtotal": 44995,
+      "taxes": 8099,
+      "insurance": 499,
+      "total": 53593,
+      "createdAt": "2026-09-01",
+      "agreementId": "AGR-9115",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-09-07",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-09-07",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24922",
+      "vehicleId": "V109",
+      "customerId": "C201",
+      "salespersonId": "E302",
+      "startDate": "2026-09-08",
+      "endDate": "2026-09-14",
+      "pickupLocation": "Bengaluru — Indiranagar Hub",
+      "dropoffLocation": "Mumbai — Bandra Kurla",
+      "status": "confirmed",
+      "subtotal": 11394,
+      "taxes": 2051,
+      "insurance": 499,
+      "total": 13944,
+      "createdAt": "2026-09-02",
+      "agreementId": "AGR-9116",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-09-08",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-09-08",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24929",
+      "vehicleId": "V112",
+      "customerId": "C206",
+      "salespersonId": "E303",
+      "startDate": "2026-09-09",
+      "endDate": "2026-09-16",
+      "pickupLocation": "Delhi — Aerocity",
+      "dropoffLocation": "Delhi — Aerocity",
+      "status": "active",
+      "subtotal": 132993,
+      "taxes": 23939,
+      "insurance": 499,
+      "total": 157431,
+      "createdAt": "2026-09-03",
+      "agreementId": "AGR-9117",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-09-09",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-09-09",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-09-09",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-09-09",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24936",
+      "vehicleId": "V115",
+      "customerId": "C211",
+      "salespersonId": "E301",
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-16",
+      "pickupLocation": "Chennai — Guindy",
+      "dropoffLocation": "Pune — Baner",
+      "status": "completed",
+      "subtotal": 5598,
+      "taxes": 1008,
+      "insurance": 499,
+      "total": 7105,
+      "createdAt": "2026-05-08",
+      "agreementId": "AGR-9118",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-05-14",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-05-14",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-05-14",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-05-14",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-05-14",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-05-14",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24943",
+      "vehicleId": "V118",
+      "customerId": "C216",
+      "salespersonId": "E302",
+      "startDate": "2026-05-09",
+      "endDate": "2026-05-12",
+      "pickupLocation": "Bengaluru — KIA Airport",
+      "dropoffLocation": "Hyderabad — Gachibowli",
+      "status": "completed",
+      "subtotal": 8997,
+      "taxes": 1619,
+      "insurance": 499,
+      "total": 11115,
+      "createdAt": "2026-05-03",
+      "agreementId": "AGR-9119",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-05-09",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-05-09",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-05-09",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-05-09",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-05-09",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-05-09",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24950",
+      "vehicleId": "V101",
+      "customerId": "C201",
+      "salespersonId": "E303",
+      "startDate": "2026-05-04",
+      "endDate": "2026-05-08",
+      "pickupLocation": "Bengaluru — Indiranagar Hub",
+      "dropoffLocation": "Chennai — Guindy",
+      "status": "cancelled",
+      "subtotal": 25996,
+      "taxes": 4679,
+      "insurance": 499,
+      "total": 31174,
+      "createdAt": "2026-04-28",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-05-04",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24957",
+      "vehicleId": "V104",
+      "customerId": "C206",
+      "salespersonId": "E301",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-31",
+      "pickupLocation": "Delhi — Aerocity",
+      "dropoffLocation": "Goa — Dabolim",
+      "status": "pending",
+      "subtotal": 20995,
+      "taxes": 3779,
+      "insurance": 499,
+      "total": 25273,
+      "createdAt": "2026-08-20",
+      "agreementId": "AGR-9121",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-26",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "FF-24964",
+      "vehicleId": "V107",
+      "customerId": "C211",
+      "salespersonId": "E302",
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-30",
+      "pickupLocation": "Chennai — Guindy",
+      "dropoffLocation": "Bengaluru — Indiranagar Hub",
+      "status": "completed",
+      "subtotal": 27594,
+      "taxes": 4967,
+      "insurance": 499,
+      "total": 33060,
+      "createdAt": "2026-04-18",
+      "agreementId": "AGR-9122",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-04-24",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-04-24",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": "2026-04-24",
+          "done": true
+        },
+        {
+          "label": "Active",
+          "at": "2026-04-24",
+          "done": true
+        },
+        {
+          "label": "Returned",
+          "at": "2026-04-24",
+          "done": true
+        },
+        {
+          "label": "Completed",
+          "at": "2026-04-24",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "FF-24971",
+      "vehicleId": "V110",
+      "customerId": "C216",
+      "salespersonId": "E303",
+      "startDate": "2026-08-28",
+      "endDate": "2026-09-04",
+      "pickupLocation": "Bengaluru — KIA Airport",
+      "dropoffLocation": "Bengaluru — KIA Airport",
+      "status": "confirmed",
+      "subtotal": 10493,
+      "taxes": 1889,
+      "insurance": 499,
+      "total": 12881,
+      "createdAt": "2026-08-22",
+      "agreementId": "AGR-9123",
+      "timeline": [
+        {
+          "label": "Booked",
+          "at": "2026-08-28",
+          "done": true
+        },
+        {
+          "label": "Confirmed",
+          "at": "2026-08-28",
+          "done": true
+        },
+        {
+          "label": "Pickup",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Active",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Returned",
+          "at": null,
+          "done": false
+        },
+        {
+          "label": "Completed",
+          "at": null,
+          "done": false
+        }
+      ]
+    }
+  ],
+  "rentalAgreements": [
+    {
+      "id": "AGR-9100",
+      "bookingId": "FF-24810",
+      "customerId": "C201",
+      "vehicleId": "V101",
+      "salespersonId": "E301",
+      "startDate": "2026-08-23",
+      "endDate": "2026-08-25",
+      "durationDays": 2,
+      "amount": 15837,
+      "status": "active",
+      "signedAt": "2026-08-17",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9101",
+      "bookingId": "FF-24817",
+      "customerId": "C206",
+      "vehicleId": "V104",
+      "salespersonId": "E302",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-27",
+      "durationDays": 3,
+      "amount": 15363,
+      "status": "active",
+      "signedAt": "2026-08-18",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9102",
+      "bookingId": "FF-24824",
+      "customerId": "C211",
+      "vehicleId": "V107",
+      "salespersonId": "E303",
+      "startDate": "2026-08-02",
+      "endDate": "2026-08-06",
+      "durationDays": 4,
+      "amount": 22206,
+      "status": "closed",
+      "signedAt": "2026-07-27",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9103",
+      "bookingId": "FF-24831",
+      "customerId": "C216",
+      "vehicleId": "V110",
+      "salespersonId": "E301",
+      "startDate": "2026-07-28",
+      "endDate": "2026-08-02",
+      "durationDays": 5,
+      "amount": 9343,
+      "status": "closed",
+      "signedAt": "2026-07-22",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9105",
+      "bookingId": "FF-24845",
+      "customerId": "C206",
+      "vehicleId": "V116",
+      "salespersonId": "E303",
+      "startDate": "2026-08-28",
+      "endDate": "2026-09-04",
+      "durationDays": 7,
+      "amount": 27749,
+      "status": "draft",
+      "signedAt": null,
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9106",
+      "bookingId": "FF-24852",
+      "customerId": "C211",
+      "vehicleId": "V119",
+      "salespersonId": "E301",
+      "startDate": "2026-07-13",
+      "endDate": "2026-07-15",
+      "durationDays": 2,
+      "amount": 11117,
+      "status": "closed",
+      "signedAt": "2026-07-07",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9107",
+      "bookingId": "FF-24859",
+      "customerId": "C216",
+      "vehicleId": "V102",
+      "salespersonId": "E302",
+      "startDate": "2026-08-30",
+      "endDate": "2026-09-02",
+      "durationDays": 3,
+      "amount": 21381,
+      "status": "active",
+      "signedAt": "2026-08-24",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9108",
+      "bookingId": "FF-24866",
+      "customerId": "C201",
+      "vehicleId": "V105",
+      "salespersonId": "E303",
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-04",
+      "durationDays": 4,
+      "amount": 12766,
+      "status": "active",
+      "signedAt": "2026-08-25",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9109",
+      "bookingId": "FF-24873",
+      "customerId": "C206",
+      "vehicleId": "V108",
+      "salespersonId": "E301",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-06",
+      "durationDays": 5,
+      "amount": 14063,
+      "status": "active",
+      "signedAt": "2026-08-26",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9110",
+      "bookingId": "FF-24880",
+      "customerId": "C211",
+      "vehicleId": "V111",
+      "salespersonId": "E302",
+      "startDate": "2026-06-23",
+      "endDate": "2026-06-29",
+      "durationDays": 6,
+      "amount": 10404,
+      "status": "closed",
+      "signedAt": "2026-06-17",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9111",
+      "bookingId": "FF-24887",
+      "customerId": "C216",
+      "vehicleId": "V114",
+      "salespersonId": "E303",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-25",
+      "durationDays": 7,
+      "amount": 190471,
+      "status": "closed",
+      "signedAt": "2026-06-12",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9113",
+      "bookingId": "FF-24901",
+      "customerId": "C206",
+      "vehicleId": "V120",
+      "salespersonId": "E302",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-08",
+      "durationDays": 3,
+      "amount": 34125,
+      "status": "draft",
+      "signedAt": null,
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9114",
+      "bookingId": "FF-24908",
+      "customerId": "C211",
+      "vehicleId": "V103",
+      "salespersonId": "E303",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-07",
+      "durationDays": 4,
+      "amount": 17014,
+      "status": "closed",
+      "signedAt": "2026-05-28",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9115",
+      "bookingId": "FF-24915",
+      "customerId": "C216",
+      "vehicleId": "V106",
+      "salespersonId": "E301",
+      "startDate": "2026-09-07",
+      "endDate": "2026-09-12",
+      "durationDays": 5,
+      "amount": 53593,
+      "status": "active",
+      "signedAt": "2026-09-01",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9116",
+      "bookingId": "FF-24922",
+      "customerId": "C201",
+      "vehicleId": "V109",
+      "salespersonId": "E302",
+      "startDate": "2026-09-08",
+      "endDate": "2026-09-14",
+      "durationDays": 6,
+      "amount": 13944,
+      "status": "active",
+      "signedAt": "2026-09-02",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9117",
+      "bookingId": "FF-24929",
+      "customerId": "C206",
+      "vehicleId": "V112",
+      "salespersonId": "E303",
+      "startDate": "2026-09-09",
+      "endDate": "2026-09-16",
+      "durationDays": 7,
+      "amount": 157431,
+      "status": "active",
+      "signedAt": "2026-09-03",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9118",
+      "bookingId": "FF-24936",
+      "customerId": "C211",
+      "vehicleId": "V115",
+      "salespersonId": "E301",
+      "startDate": "2026-05-14",
+      "endDate": "2026-05-16",
+      "durationDays": 2,
+      "amount": 7105,
+      "status": "closed",
+      "signedAt": "2026-05-08",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9119",
+      "bookingId": "FF-24943",
+      "customerId": "C216",
+      "vehicleId": "V118",
+      "salespersonId": "E302",
+      "startDate": "2026-05-09",
+      "endDate": "2026-05-12",
+      "durationDays": 3,
+      "amount": 11115,
+      "status": "closed",
+      "signedAt": "2026-05-03",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9121",
+      "bookingId": "FF-24957",
+      "customerId": "C206",
+      "vehicleId": "V104",
+      "salespersonId": "E301",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-31",
+      "durationDays": 5,
+      "amount": 25273,
+      "status": "draft",
+      "signedAt": null,
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9122",
+      "bookingId": "FF-24964",
+      "customerId": "C211",
+      "vehicleId": "V107",
+      "salespersonId": "E302",
+      "startDate": "2026-04-24",
+      "endDate": "2026-04-30",
+      "durationDays": 6,
+      "amount": 33060,
+      "status": "closed",
+      "signedAt": "2026-04-18",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    },
+    {
+      "id": "AGR-9123",
+      "bookingId": "FF-24971",
+      "customerId": "C216",
+      "vehicleId": "V110",
+      "salespersonId": "E303",
+      "startDate": "2026-08-28",
+      "endDate": "2026-09-04",
+      "durationDays": 7,
+      "amount": 12881,
+      "status": "active",
+      "signedAt": "2026-08-22",
+      "terms": [
+        "Fuel/charge level at return must match the level recorded at handover.",
+        "Included 250 km per rental day; ₹14 per additional kilometre.",
+        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Only drivers listed on this agreement may operate the vehicle.",
+        "Late return is charged at 10% of the daily rate per hour."
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY-70210",
+      "bookingId": "FF-24810",
+      "customerId": "C201",
+      "amount": 15837,
+      "date": "2026-08-17",
+      "method": "Card",
+      "status": "failed",
+      "reference": "rzp_5gtg0"
+    },
+    {
+      "id": "PAY-70213",
+      "bookingId": "FF-24817",
+      "customerId": "C206",
+      "amount": 15363,
+      "date": "2026-08-18",
+      "method": "UPI",
+      "status": "paid",
+      "reference": "rzp_5gwxh"
+    },
+    {
+      "id": "PAY-70216",
+      "bookingId": "FF-24824",
+      "customerId": "C211",
+      "amount": 22206,
+      "date": "2026-07-27",
+      "method": "Netbanking",
+      "status": "paid",
+      "reference": "rzp_5h0ey"
+    },
+    {
+      "id": "PAY-70219",
+      "bookingId": "FF-24831",
+      "customerId": "C216",
+      "amount": 9343,
+      "date": "2026-07-22",
+      "method": "Wallet",
+      "status": "paid",
+      "reference": "rzp_5h3wf"
+    },
+    {
+      "id": "PAY-70222",
+      "bookingId": "FF-24838",
+      "customerId": "C201",
+      "amount": 88992,
+      "date": "2026-07-17",
+      "method": "Card",
+      "status": "refunded",
+      "reference": "rzp_5h7dw"
+    },
+    {
+      "id": "PAY-70225",
+      "bookingId": "FF-24845",
+      "customerId": "C206",
+      "amount": 27749,
+      "date": "2026-08-22",
+      "method": "UPI",
+      "status": "pending",
+      "reference": "rzp_5havd"
+    },
+    {
+      "id": "PAY-70228",
+      "bookingId": "FF-24852",
+      "customerId": "C211",
+      "amount": 11117,
+      "date": "2026-07-07",
+      "method": "Netbanking",
+      "status": "paid",
+      "reference": "rzp_5hecu"
+    },
+    {
+      "id": "PAY-70231",
+      "bookingId": "FF-24859",
+      "customerId": "C216",
+      "amount": 21381,
+      "date": "2026-08-24",
+      "method": "Wallet",
+      "status": "paid",
+      "reference": "rzp_5hhub"
+    },
+    {
+      "id": "PAY-70234",
+      "bookingId": "FF-24866",
+      "customerId": "C201",
+      "amount": 12766,
+      "date": "2026-08-25",
+      "method": "Card",
+      "status": "paid",
+      "reference": "rzp_5hlbs"
+    },
+    {
+      "id": "PAY-70237",
+      "bookingId": "FF-24873",
+      "customerId": "C206",
+      "amount": 14063,
+      "date": "2026-08-26",
+      "method": "UPI",
+      "status": "paid",
+      "reference": "rzp_5hot9"
+    },
+    {
+      "id": "PAY-70240",
+      "bookingId": "FF-24880",
+      "customerId": "C211",
+      "amount": 10404,
+      "date": "2026-06-17",
+      "method": "Netbanking",
+      "status": "paid",
+      "reference": "rzp_5hsaq"
+    },
+    {
+      "id": "PAY-70243",
+      "bookingId": "FF-24887",
+      "customerId": "C216",
+      "amount": 190471,
+      "date": "2026-06-12",
+      "method": "Wallet",
+      "status": "paid",
+      "reference": "rzp_5hvs7"
+    },
+    {
+      "id": "PAY-70246",
+      "bookingId": "FF-24894",
+      "customerId": "C201",
+      "amount": 9701,
+      "date": "2026-06-07",
+      "method": "Card",
+      "status": "refunded",
+      "reference": "rzp_5hz9o"
+    },
+    {
+      "id": "PAY-70249",
+      "bookingId": "FF-24901",
+      "customerId": "C206",
+      "amount": 34125,
+      "date": "2026-08-30",
+      "method": "UPI",
+      "status": "pending",
+      "reference": "rzp_5i2r5"
+    },
+    {
+      "id": "PAY-70252",
+      "bookingId": "FF-24908",
+      "customerId": "C211",
+      "amount": 17014,
+      "date": "2026-05-28",
+      "method": "Netbanking",
+      "status": "paid",
+      "reference": "rzp_5i68m"
+    },
+    {
+      "id": "PAY-70255",
+      "bookingId": "FF-24915",
+      "customerId": "C216",
+      "amount": 53593,
+      "date": "2026-09-01",
+      "method": "Wallet",
+      "status": "paid",
+      "reference": "rzp_5i9q3"
+    },
+    {
+      "id": "PAY-70258",
+      "bookingId": "FF-24922",
+      "customerId": "C201",
+      "amount": 13944,
+      "date": "2026-09-02",
+      "method": "Card",
+      "status": "paid",
+      "reference": "rzp_5id7k"
+    },
+    {
+      "id": "PAY-70261",
+      "bookingId": "FF-24929",
+      "customerId": "C206",
+      "amount": 157431,
+      "date": "2026-09-03",
+      "method": "UPI",
+      "status": "paid",
+      "reference": "rzp_5igp1"
+    },
+    {
+      "id": "PAY-70264",
+      "bookingId": "FF-24936",
+      "customerId": "C211",
+      "amount": 7105,
+      "date": "2026-05-08",
+      "method": "Netbanking",
+      "status": "paid",
+      "reference": "rzp_5ik6i"
+    },
+    {
+      "id": "PAY-70267",
+      "bookingId": "FF-24943",
+      "customerId": "C216",
+      "amount": 11115,
+      "date": "2026-05-03",
+      "method": "Wallet",
+      "status": "paid",
+      "reference": "rzp_5innz"
+    },
+    {
+      "id": "PAY-70270",
+      "bookingId": "FF-24950",
+      "customerId": "C201",
+      "amount": 31174,
+      "date": "2026-04-28",
+      "method": "Card",
+      "status": "refunded",
+      "reference": "rzp_5ir5g"
+    },
+    {
+      "id": "PAY-70273",
+      "bookingId": "FF-24957",
+      "customerId": "C206",
+      "amount": 25273,
+      "date": "2026-08-20",
+      "method": "UPI",
+      "status": "pending",
+      "reference": "rzp_5iumx"
+    },
+    {
+      "id": "PAY-70276",
+      "bookingId": "FF-24964",
+      "customerId": "C211",
+      "amount": 33060,
+      "date": "2026-04-18",
+      "method": "Netbanking",
+      "status": "paid",
+      "reference": "rzp_5iy4e"
+    },
+    {
+      "id": "PAY-70279",
+      "bookingId": "FF-24971",
+      "customerId": "C216",
+      "amount": 12881,
+      "date": "2026-08-22",
+      "method": "Wallet",
+      "status": "paid",
+      "reference": "rzp_5j1lv"
+    }
+  ],
+  "maintenanceRecords": [
+    {
+      "id": "V101-M1",
+      "vehicleId": "V101",
+      "mechanicId": "E311",
+      "type": "Scheduled 10,000 km service",
+      "description": "Scheduled 10,000 km service carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-08-10",
+      "completedAt": "2026-08-11",
+      "cost": 2400,
+      "odometerKm": 8000
+    },
+    {
+      "id": "V103-M2",
+      "vehicleId": "V103",
+      "mechanicId": "E312",
+      "type": "Brake pad replacement",
+      "description": "Brake pad replacement carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "status": "scheduled",
+      "scheduledFor": "2026-08-24",
+      "completedAt": null,
+      "cost": 3550,
+      "odometerKm": 13800
+    },
+    {
+      "id": "V105-M3",
+      "vehicleId": "V105",
+      "mechanicId": "E313",
+      "type": "Tyre rotation & alignment",
+      "description": "Tyre rotation & alignment carried out at the Pune — Baner workshop bay.",
+      "status": "in-progress",
+      "scheduledFor": "2026-08-25",
+      "completedAt": null,
+      "cost": 4700,
+      "odometerKm": 19600
+    },
+    {
+      "id": "V107-M4",
+      "vehicleId": "V107",
+      "mechanicId": "E311",
+      "type": "HV battery health check",
+      "description": "HV battery health check carried out at the Chennai — Guindy workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-07-23",
+      "completedAt": "2026-07-24",
+      "cost": 5850,
+      "odometerKm": 25400
+    },
+    {
+      "id": "V109-M5",
+      "vehicleId": "V109",
+      "mechanicId": "E312",
+      "type": "AC condenser repair",
+      "description": "AC condenser repair carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "status": "overdue",
+      "scheduledFor": "2026-08-27",
+      "completedAt": null,
+      "cost": 7000,
+      "odometerKm": 31200
+    },
+    {
+      "id": "V111-M6",
+      "vehicleId": "V111",
+      "mechanicId": "E313",
+      "type": "Clutch overhaul",
+      "description": "Clutch overhaul carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-07-11",
+      "completedAt": "2026-07-12",
+      "cost": 8150,
+      "odometerKm": 39000
+    },
+    {
+      "id": "V113-M7",
+      "vehicleId": "V113",
+      "mechanicId": "E311",
+      "type": "Annual inspection",
+      "description": "Annual inspection carried out at the Pune — Baner workshop bay.",
+      "status": "scheduled",
+      "scheduledFor": "2026-08-29",
+      "completedAt": null,
+      "cost": 9300,
+      "odometerKm": 44800
+    },
+    {
+      "id": "V115-M8",
+      "vehicleId": "V115",
+      "mechanicId": "E312",
+      "type": "Scheduled 10,000 km service",
+      "description": "Scheduled 10,000 km service carried out at the Chennai — Guindy workshop bay.",
+      "status": "in-progress",
+      "scheduledFor": "2026-08-30",
+      "completedAt": null,
+      "cost": 10450,
+      "odometerKm": 50600
+    },
+    {
+      "id": "V117-M9",
+      "vehicleId": "V117",
+      "mechanicId": "E313",
+      "type": "Brake pad replacement",
+      "description": "Brake pad replacement carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-06-23",
+      "completedAt": "2026-06-24",
+      "cost": 11600,
+      "odometerKm": 56400
+    },
+    {
+      "id": "V119-M10",
+      "vehicleId": "V119",
+      "mechanicId": "E311",
+      "type": "Tyre rotation & alignment",
+      "description": "Tyre rotation & alignment carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "status": "overdue",
+      "scheduledFor": "2026-09-01",
+      "completedAt": null,
+      "cost": 12750,
+      "odometerKm": 62200
+    },
+    {
+      "id": "V101-M11",
+      "vehicleId": "V101",
+      "mechanicId": "E312",
+      "type": "HV battery health check",
+      "description": "HV battery health check carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-06-11",
+      "completedAt": "2026-06-12",
+      "cost": 13900,
+      "odometerKm": 8000
+    },
+    {
+      "id": "V103-M12",
+      "vehicleId": "V103",
+      "mechanicId": "E313",
+      "type": "AC condenser repair",
+      "description": "AC condenser repair carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "status": "scheduled",
+      "scheduledFor": "2026-09-03",
+      "completedAt": null,
+      "cost": 15050,
+      "odometerKm": 13800
+    },
+    {
+      "id": "V105-M13",
+      "vehicleId": "V105",
+      "mechanicId": "E311",
+      "type": "Clutch overhaul",
+      "description": "Clutch overhaul carried out at the Pune — Baner workshop bay.",
+      "status": "in-progress",
+      "scheduledFor": "2026-09-04",
+      "completedAt": null,
+      "cost": 16200,
+      "odometerKm": 19600
+    },
+    {
+      "id": "V107-M14",
+      "vehicleId": "V107",
+      "mechanicId": "E312",
+      "type": "Annual inspection",
+      "description": "Annual inspection carried out at the Chennai — Guindy workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-05-24",
+      "completedAt": "2026-05-25",
+      "cost": 17350,
+      "odometerKm": 25400
+    },
+    {
+      "id": "V109-M15",
+      "vehicleId": "V109",
+      "mechanicId": "E313",
+      "type": "Scheduled 10,000 km service",
+      "description": "Scheduled 10,000 km service carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "status": "overdue",
+      "scheduledFor": "2026-09-06",
+      "completedAt": null,
+      "cost": 18500,
+      "odometerKm": 31200
+    },
+    {
+      "id": "V111-M16",
+      "vehicleId": "V111",
+      "mechanicId": "E311",
+      "type": "Brake pad replacement",
+      "description": "Brake pad replacement carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "status": "completed",
+      "scheduledFor": "2026-05-12",
+      "completedAt": "2026-05-13",
+      "cost": 19650,
+      "odometerKm": 39000
+    },
+    {
+      "id": "V113-M17",
+      "vehicleId": "V113",
+      "mechanicId": "E312",
+      "type": "Tyre rotation & alignment",
+      "description": "Tyre rotation & alignment carried out at the Pune — Baner workshop bay.",
+      "status": "scheduled",
+      "scheduledFor": "2026-09-08",
+      "completedAt": null,
+      "cost": 20800,
+      "odometerKm": 44800
+    },
+    {
+      "id": "V115-M18",
+      "vehicleId": "V115",
+      "mechanicId": "E313",
+      "type": "HV battery health check",
+      "description": "HV battery health check carried out at the Chennai — Guindy workshop bay.",
+      "status": "in-progress",
+      "scheduledFor": "2026-09-09",
+      "completedAt": null,
+      "cost": 21950,
+      "odometerKm": 50600
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-5001",
+      "customerId": "C202",
+      "kind": "Driving License",
+      "title": "Driving licence — KA0320180004213",
+      "uploadedAt": "2026-04-24",
+      "status": "verified",
+      "expiresAt": "2028-05-03"
+    },
+    {
+      "id": "DOC-5002",
+      "customerId": "C202",
+      "kind": "Rental Agreement",
+      "title": "Rental agreement — FF-24817",
+      "uploadedAt": "2026-08-04",
+      "status": "verified",
+      "bookingId": "FF-24817"
+    },
+    {
+      "id": "DOC-5003",
+      "customerId": "C202",
+      "kind": "Invoice",
+      "title": "Invoice — FF-24810",
+      "uploadedAt": "2026-07-07",
+      "status": "verified",
+      "bookingId": "FF-24810"
+    },
+    {
+      "id": "DOC-5004",
+      "customerId": "C202",
+      "kind": "Payment Receipt",
+      "title": "Receipt — PAY-70213",
+      "uploadedAt": "2026-07-07",
+      "status": "verified"
+    },
+    {
+      "id": "DOC-5005",
+      "customerId": "C202",
+      "kind": "ID Proof",
+      "title": "Address proof — utility bill",
+      "uploadedAt": "2026-08-18",
+      "status": "pending"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "R-400",
+      "vehicleId": "V101",
+      "customerId": "C201",
+      "rating": 4,
+      "title": "Effortless pickup",
+      "body": "Picked up at 6am for an airport run and the car was already cooled and charged. Handover took four minutes.",
+      "createdAt": "2026-08-17"
+    },
+    {
+      "id": "R-401",
+      "vehicleId": "V102",
+      "customerId": "C204",
+      "rating": 5,
+      "title": "Exactly as listed",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "createdAt": "2026-08-08"
+    },
+    {
+      "id": "R-402",
+      "vehicleId": "V103",
+      "customerId": "C207",
+      "rating": 4,
+      "title": "Solid long-drive car",
+      "body": "Great highway  stability on the Pune expressway. Only nitpick: the phone mount was missing.",
+      "createdAt": "2026-07-30"
+    },
+    {
+      "id": "R-403",
+      "vehicleId": "V104",
+      "customerId": "C210",
+      "rating": 5,
+      "title": "Flexible and fair",
+      "body": "Booking modification through the app was painless when our flight moved by a day.",
+      "createdAt": "2026-07-21"
+    },
+    {
+      "id": "R-404",
+      "vehicleId": "V105",
+      "customerId": "C213",
+      "rating": 4,
+      "title": "Effortless pickup",
+      "body": "Picked up at 6am for an airport run and the car was already cooled and charged. Handover took four minutes.",
+      "createdAt": "2026-07-12"
+    },
+    {
+      "id": "R-405",
+      "vehicleId": "V106",
+      "customerId": "C216",
+      "rating": 5,
+      "title": "Exactly as listed",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "createdAt": "2026-07-03"
+    },
+    {
+      "id": "R-406",
+      "vehicleId": "V107",
+      "customerId": "C219",
+      "rating": 4,
+      "title": "Solid long-drive car",
+      "body": "Great highway  stability on the Pune expressway. Only nitpick: the phone mount was missing.",
+      "createdAt": "2026-06-24"
+    },
+    {
+      "id": "R-407",
+      "vehicleId": "V108",
+      "customerId": "C202",
+      "rating": 5,
+      "title": "Flexible and fair",
+      "body": "Booking modification through the app was painless when our flight moved by a day.",
+      "createdAt": "2026-06-15"
+    },
+    {
+      "id": "R-408",
+      "vehicleId": "V109",
+      "customerId": "C205",
+      "rating": 4,
+      "title": "Effortless pickup",
+      "body": "Picked up at 6am for an airport run and the car was already cooled and charged. Handover took four minutes.",
+      "createdAt": "2026-06-06"
+    },
+    {
+      "id": "R-409",
+      "vehicleId": "V110",
+      "customerId": "C208",
+      "rating": 5,
+      "title": "Exactly as listed",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "createdAt": "2026-05-28"
+    },
+    {
+      "id": "R-410",
+      "vehicleId": "V111",
+      "customerId": "C211",
+      "rating": 4,
+      "title": "Solid long-drive car",
+      "body": "Great highway  stability on the Pune expressway. Only nitpick: the phone mount was missing.",
+      "createdAt": "2026-05-19"
+    },
+    {
+      "id": "R-411",
+      "vehicleId": "V112",
+      "customerId": "C214",
+      "rating": 5,
+      "title": "Flexible and fair",
+      "body": "Booking modification through the app was painless when our flight moved by a day.",
+      "createdAt": "2026-05-10"
+    },
+    {
+      "id": "R-412",
+      "vehicleId": "V113",
+      "customerId": "C217",
+      "rating": 4,
+      "title": "Effortless pickup",
+      "body": "Picked up at 6am for an airport run and the car was already cooled and charged. Handover took four minutes.",
+      "createdAt": "2026-05-01"
+    },
+    {
+      "id": "R-413",
+      "vehicleId": "V114",
+      "customerId": "C220",
+      "rating": 5,
+      "title": "Exactly as listed",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "createdAt": "2026-04-22"
+    },
+    {
+      "id": "R-414",
+      "vehicleId": "V115",
+      "customerId": "C203",
+      "rating": 4,
+      "title": "Solid long-drive car",
+      "body": "Great highway  stability on the Pune expressway. Only nitpick: the phone mount was missing.",
+      "createdAt": "2026-04-13"
+    },
+    {
+      "id": "R-415",
+      "vehicleId": "V116",
+      "customerId": "C206",
+      "rating": 5,
+      "title": "Flexible and fair",
+      "body": "Booking modification through the app was painless when our flight moved by a day.",
+      "createdAt": "2026-04-04"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "N1",
+      "kind": "booking",
+      "title": "Booking confirmed",
+      "body": "FF-24817 — Volvo XC60 Ultimate, pickup Aug 24, 09:00.",
+      "at": "2h ago",
+      "read": false
+    },
+    {
+      "id": "N2",
+      "kind": "payment",
+      "title": "Payment successful",
+      "body": "₹9,345 received via UPI for FF-24817.",
+      "at": "2h ago",
+      "read": false
+    },
+    {
+      "id": "N3",
+      "kind": "document",
+      "title": "Licence verified",
+      "body": "Your driving licence passed verification.",
+      "at": "Yesterday",
+      "read": true
+    },
+    {
+      "id": "N4",
+      "kind": "reminder",
+      "title": "Return reminder",
+      "body": "Drop off the Tata Nexon EV by 18:00 tomorrow.",
+      "at": "Yesterday",
+      "read": true
+    },
+    {
+      "id": "N5",
+      "kind": "maintenance",
+      "title": "Maintenance alert",
+      "body": "V114 Porsche Macan GTS is overdue for its annual inspection.",
+      "at": "2d ago",
+      "read": true
+    },
+    {
+      "id": "N6",
+      "kind": "ai",
+      "title": "New recommendation",
+      "body": "Three automatic SUVs under ₹3,500 match your last trip.",
+      "at": "3d ago",
+      "read": true
+    }
+  ],
+  "bookRelations": [
+    {
+      "salespersonId": "E301",
+      "customerId": "C201",
+      "bookingId": "FF-24810",
+      "bookedOn": "2026-08-17",
+      "commission": 554
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C206",
+      "bookingId": "FF-24817",
+      "bookedOn": "2026-08-18",
+      "commission": 538
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C211",
+      "bookingId": "FF-24824",
+      "bookedOn": "2026-07-27",
+      "commission": 777
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C216",
+      "bookingId": "FF-24831",
+      "bookedOn": "2026-07-22",
+      "commission": 327
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C201",
+      "bookingId": "FF-24838",
+      "bookedOn": "2026-07-17",
+      "commission": 3115
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C206",
+      "bookingId": "FF-24845",
+      "bookedOn": "2026-08-22",
+      "commission": 971
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C211",
+      "bookingId": "FF-24852",
+      "bookedOn": "2026-07-07",
+      "commission": 389
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C216",
+      "bookingId": "FF-24859",
+      "bookedOn": "2026-08-24",
+      "commission": 748
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C201",
+      "bookingId": "FF-24866",
+      "bookedOn": "2026-08-25",
+      "commission": 447
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C206",
+      "bookingId": "FF-24873",
+      "bookedOn": "2026-08-26",
+      "commission": 492
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C211",
+      "bookingId": "FF-24880",
+      "bookedOn": "2026-06-17",
+      "commission": 364
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C216",
+      "bookingId": "FF-24887",
+      "bookedOn": "2026-06-12",
+      "commission": 6666
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C201",
+      "bookingId": "FF-24894",
+      "bookedOn": "2026-06-07",
+      "commission": 340
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C206",
+      "bookingId": "FF-24901",
+      "bookedOn": "2026-08-30",
+      "commission": 1194
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C211",
+      "bookingId": "FF-24908",
+      "bookedOn": "2026-05-28",
+      "commission": 595
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C216",
+      "bookingId": "FF-24915",
+      "bookedOn": "2026-09-01",
+      "commission": 1876
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C201",
+      "bookingId": "FF-24922",
+      "bookedOn": "2026-09-02",
+      "commission": 488
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C206",
+      "bookingId": "FF-24929",
+      "bookedOn": "2026-09-03",
+      "commission": 5510
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C211",
+      "bookingId": "FF-24936",
+      "bookedOn": "2026-05-08",
+      "commission": 249
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C216",
+      "bookingId": "FF-24943",
+      "bookedOn": "2026-05-03",
+      "commission": 389
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C201",
+      "bookingId": "FF-24950",
+      "bookedOn": "2026-04-28",
+      "commission": 1091
+    },
+    {
+      "salespersonId": "E301",
+      "customerId": "C206",
+      "bookingId": "FF-24957",
+      "bookedOn": "2026-08-20",
+      "commission": 885
+    },
+    {
+      "salespersonId": "E302",
+      "customerId": "C211",
+      "bookingId": "FF-24964",
+      "bookedOn": "2026-04-18",
+      "commission": 1157
+    },
+    {
+      "salespersonId": "E303",
+      "customerId": "C216",
+      "bookingId": "FF-24971",
+      "bookedOn": "2026-08-22",
+      "commission": 451
+    }
+  ],
+  "serviceAssignments": [
+    {
+      "mechanicId": "E311",
+      "vehicleId": "V101",
+      "maintenanceId": "V101-M1",
+      "servicedOn": "2026-08-11",
+      "hours": 2
+    },
+    {
+      "mechanicId": "E312",
+      "vehicleId": "V103",
+      "maintenanceId": "V103-M2",
+      "servicedOn": "2026-08-24",
+      "hours": 3
+    },
+    {
+      "mechanicId": "E313",
+      "vehicleId": "V105",
+      "maintenanceId": "V105-M3",
+      "servicedOn": "2026-08-25",
+      "hours": 4
+    },
+    {
+      "mechanicId": "E311",
+      "vehicleId": "V107",
+      "maintenanceId": "V107-M4",
+      "servicedOn": "2026-07-24",
+      "hours": 5
+    },
+    {
+      "mechanicId": "E312",
+      "vehicleId": "V109",
+      "maintenanceId": "V109-M5",
+      "servicedOn": "2026-08-27",
+      "hours": 6
+    },
+    {
+      "mechanicId": "E313",
+      "vehicleId": "V111",
+      "maintenanceId": "V111-M6",
+      "servicedOn": "2026-07-12",
+      "hours": 2
+    },
+    {
+      "mechanicId": "E311",
+      "vehicleId": "V113",
+      "maintenanceId": "V113-M7",
+      "servicedOn": "2026-08-29",
+      "hours": 3
+    },
+    {
+      "mechanicId": "E312",
+      "vehicleId": "V115",
+      "maintenanceId": "V115-M8",
+      "servicedOn": "2026-08-30",
+      "hours": 4
+    },
+    {
+      "mechanicId": "E313",
+      "vehicleId": "V117",
+      "maintenanceId": "V117-M9",
+      "servicedOn": "2026-06-24",
+      "hours": 5
+    },
+    {
+      "mechanicId": "E311",
+      "vehicleId": "V119",
+      "maintenanceId": "V119-M10",
+      "servicedOn": "2026-09-01",
+      "hours": 6
+    },
+    {
+      "mechanicId": "E312",
+      "vehicleId": "V101",
+      "maintenanceId": "V101-M11",
+      "servicedOn": "2026-06-12",
+      "hours": 2
+    },
+    {
+      "mechanicId": "E313",
+      "vehicleId": "V103",
+      "maintenanceId": "V103-M12",
+      "servicedOn": "2026-09-03",
+      "hours": 3
+    },
+    {
+      "mechanicId": "E311",
+      "vehicleId": "V105",
+      "maintenanceId": "V105-M13",
+      "servicedOn": "2026-09-04",
+      "hours": 4
+    },
+    {
+      "mechanicId": "E312",
+      "vehicleId": "V107",
+      "maintenanceId": "V107-M14",
+      "servicedOn": "2026-05-25",
+      "hours": 5
+    },
+    {
+      "mechanicId": "E313",
+      "vehicleId": "V109",
+      "maintenanceId": "V109-M15",
+      "servicedOn": "2026-09-06",
+      "hours": 6
+    },
+    {
+      "mechanicId": "E311",
+      "vehicleId": "V111",
+      "maintenanceId": "V111-M16",
+      "servicedOn": "2026-05-13",
+      "hours": 2
+    },
+    {
+      "mechanicId": "E312",
+      "vehicleId": "V113",
+      "maintenanceId": "V113-M17",
+      "servicedOn": "2026-09-08",
+      "hours": 3
+    },
+    {
+      "mechanicId": "E313",
+      "vehicleId": "V115",
+      "maintenanceId": "V115-M18",
+      "servicedOn": "2026-09-09",
+      "hours": 4
+    }
+  ]
+}
