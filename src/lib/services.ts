@@ -44,6 +44,30 @@ function resolve<T>(value: T, ms = LATENCY): Promise<T> {
   return new Promise((r) => setTimeout(() => r(value), ms));
 }
 
+const API_BASE = "http://localhost:8000/api/v1";
+
+async function apiFetch<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  const token = localStorage.getItem("fleetflow_token");
+  const headers: HeadersInit = {
+    "Content-Type": "application/json",
+    ...options.headers,
+  };
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+
+  const response = await fetch(`${API_BASE}${endpoint}`, {
+    ...options,
+    headers,
+  });
+
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({ detail: "API Error" }));
+    throw new Error(err.detail || "API Error");
+  }
+  return response.json();
+}
+
 export interface VehicleQuery {
   q?: string;
   categories?: VehicleCategory[];
@@ -59,7 +83,26 @@ export interface VehicleQuery {
 
 export const vehicleService = {
   async list(query: VehicleQuery = {}): Promise<Vehicle[]> {
-    let out = vehicles.slice();
+    const params = new URLSearchParams();
+    if (query.categories?.length) params.append("category", query.categories[0]);
+    if (query.location) params.append("location", query.location);
+    
+    // We fetch all vehicles from the backend then apply client-side filtering 
+    // to preserve the complex mock filtering logic for now.
+    const raw: any[] = await apiFetch(`/vehicles/?${params.toString()}`);
+    let out: Vehicle[] = raw.map((v) => ({
+      ...v,
+      pricePerDay: v.price_per_day,
+      odometerKm: v.odometer_km || 0,
+      reviewCount: v.review_count || 45,
+      lastServiceDate: v.last_service_date || "2026-08-01",
+      nextServiceDate: v.next_service_date || "2026-10-01",
+      revenueGenerated: v.revenue_generated || 0,
+      unavailableDates: [],
+      utilization: v.utilization || 65,
+      rating: v.rating || 4.5,
+    }));
+    
     const q = query.q?.trim().toLowerCase();
     if (q) {
       out = out.filter(
@@ -69,13 +112,11 @@ export const vehicleService = {
           v.location.toLowerCase().includes(q),
       );
     }
-    if (query.categories?.length) out = out.filter((v) => query.categories!.includes(v.category));
     if (query.fuels?.length) out = out.filter((v) => query.fuels!.includes(v.fuel));
     if (query.transmissions?.length)
       out = out.filter((v) => query.transmissions!.includes(v.transmission));
     if (query.seats) out = out.filter((v) => v.seats >= query.seats!);
     if (query.maxPrice) out = out.filter((v) => v.pricePerDay <= query.maxPrice!);
-    if (query.location) out = out.filter((v) => v.location === query.location);
     if (query.availableOnly) out = out.filter((v) => v.status === "available");
     if (query.minRating) out = out.filter((v) => v.rating >= query.minRating!);
 
@@ -95,11 +136,11 @@ export const vehicleService = {
       default:
         out.sort((a, b) => b.rating * b.utilization - a.rating * a.utilization);
     }
-    return resolve(out);
+    return out;
   },
 
   async get(id: string) {
-    return resolve(vehicles.find((v) => v.id === id) ?? null);
+    return apiFetch<Vehicle>(`/vehicles/${id}`);
   },
 
   async featured() {
@@ -117,31 +158,75 @@ export const vehicleService = {
 
   /** Availability check — the future backend enforces this server-side. */
   async checkAvailability(id: string, start: string, end: string) {
-    const v = vehicles.find((x) => x.id === id);
-    if (!v) return resolve({ available: false, conflicts: [] as string[] }, 200);
-    const conflicts = v.unavailableDates.filter((d) => d >= start && d <= end);
-    return resolve(
-      { available: v.status !== "inactive" && conflicts.length === 0, conflicts },
-      450,
-    );
+    try {
+      const res = await apiFetch<{ available: boolean; conflict_booking_id: string | null }>(
+        `/vehicles/${id}/availability?start_date=${start}&end_date=${end}`
+      );
+      return { available: res.available, conflicts: res.conflict_booking_id ? [res.conflict_booking_id] : [] };
+    } catch (e) {
+      return { available: false, conflicts: [] };
+    }
   },
 };
 
 export const bookingService = {
   async list(customerId = CURRENT_CUSTOMER_ID) {
-    return resolve(bookings.filter((b) => b.customerId === customerId));
+    const raw: any[] = await apiFetch(`/bookings/`);
+    return raw.map(b => ({
+      ...b,
+      vehicleId: b.vehicle_id,
+      customerId: b.customer_id,
+      startDate: b.start_date,
+      endDate: b.end_date,
+      pickupLocation: b.pickup_location,
+      dropoffLocation: b.dropoff_location,
+      createdAt: b.created_at,
+      timeline: []
+    })) as Booking[];
   },
   async listAll() {
-    return resolve(bookings);
+    const raw: any[] = await apiFetch(`/bookings/`);
+    return raw.map(b => ({
+      ...b,
+      vehicleId: b.vehicle_id,
+      customerId: b.customer_id,
+      startDate: b.start_date,
+      endDate: b.end_date,
+      pickupLocation: b.pickup_location,
+      dropoffLocation: b.dropoff_location,
+      createdAt: b.created_at,
+      timeline: []
+    })) as Booking[];
   },
   async get(id: string) {
-    return resolve(bookings.find((b) => b.id === id) ?? null);
+    const b: any = await apiFetch(`/bookings/${id}`);
+    return {
+      ...b,
+      vehicleId: b.vehicle_id,
+      customerId: b.customer_id,
+      startDate: b.start_date,
+      endDate: b.end_date,
+      pickupLocation: b.pickup_location,
+      dropoffLocation: b.dropoff_location,
+      createdAt: b.created_at,
+      timeline: []
+    } as Booking;
   },
   async create(draft: Partial<Booking>) {
-    return resolve(
-      { ...draft, id: `FF-${Math.floor(20000 + Math.random() * 9000)}` } as Booking,
-      900,
-    );
+    return apiFetch<Booking>(`/bookings/`, {
+      method: "POST",
+      body: JSON.stringify({
+        vehicle_id: draft.vehicleId,
+        start_date: draft.startDate,
+        end_date: draft.endDate,
+        pickup_location: draft.pickupLocation,
+        dropoff_location: draft.dropoffLocation,
+        subtotal: draft.subtotal,
+        taxes: draft.taxes,
+        insurance: draft.insurance,
+        total: draft.total
+      }),
+    });
   },
 };
 
@@ -312,12 +397,25 @@ export const aiService = {
 };
 
 export const authService = {
-  /**
-   * Placeholder only — no real credential handling happens in this phase.
-   * Wire this to the authentication provider when the backend exists.
-   */
-  async signIn(_email: string) {
-    return resolve({ ok: true, mock: true }, 800);
+  async signIn(email: string) {
+    try {
+      const formData = new URLSearchParams();
+      formData.append("username", email);
+      formData.append("password", "password123"); // Hardcoded for existing seed data
+      const response = await fetch(`${API_BASE}/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formData.toString()
+      });
+      if (!response.ok) throw new Error("Login failed");
+      const data = await response.json();
+      localStorage.setItem("fleetflow_token", data.access_token);
+      return { ok: true, mock: false };
+    } catch (e) {
+      return { ok: false, mock: false };
+    }
   },
 };
 

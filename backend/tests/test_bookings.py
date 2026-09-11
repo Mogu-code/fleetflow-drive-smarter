@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 from app.core.config import settings
 from app.models.customer import Customer
 from app.models.employee import Manager
+from app.models.user import User
 from app.core.security import get_password_hash
 import uuid
 import pytest
@@ -9,11 +10,18 @@ import pytest
 def create_test_customer(db):
     test_email = f"customer_{uuid.uuid4()}@example.com"
     test_password = "password123"
-    user = Customer(
-        id=str(uuid.uuid4()),
+    user_id = str(uuid.uuid4())
+    user = User(
+        id=user_id,
         email=test_email,
         password_hash=get_password_hash(test_password),
-        role="Customer",
+        role="Customer"
+    )
+    db.add(user)
+    db.commit()
+
+    customer = Customer(
+        id=user_id,
         name="Test Customer",
         phone="1234567890",
         dob="1990-01-01",
@@ -23,31 +31,44 @@ def create_test_customer(db):
         joined_at="2023-01-01",
         status="active"
     )
-    db.add(user)
+    db.add(customer)
     db.commit()
-    db.refresh(user)
+    db.refresh(customer)
     return user, test_password
 
 def create_test_manager(db):
     test_email = f"manager_{uuid.uuid4()}@example.com"
     test_password = "password123"
-    user = Manager(
-        id=str(uuid.uuid4()),
+    user_id = str(uuid.uuid4())
+    user = User(
+        id=user_id,
         email=test_email,
         password_hash=get_password_hash(test_password),
-        role="Manager",
+        role="Manager"
+    )
+    db.add(user)
+    db.commit()
+
+    from app.models.employee import Employee
+    employee = Employee(
+        id=user_id,
         name="Test Manager",
         phone="0987654321",
         branch="Test Branch",
         status="active",
-        joined_at="2023-01-01",
-        employee_id=str(uuid.uuid4()),
+        joined_at="2023-01-01"
+    )
+    db.add(employee)
+    db.commit()
+
+    manager = Manager(
+        employee_id=user_id,
         managed_branch="Test Branch",
         headcount=5
     )
-    db.add(user)
+    db.add(manager)
     db.commit()
-    db.refresh(user)
+    db.refresh(manager)
     return user, test_password
 
 def get_token(client: TestClient, email: str, password: str):
