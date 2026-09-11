@@ -1,9 +1,9 @@
-const heroVehicle = "";
-const vehSedan = "";
-const vehHatchback = "";
-const vehLuxury = "";
-const vehElectric = "";
-const vehMuv = "";
+const heroVehicle = "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80"; // SUV
+const vehSedan = "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80";
+const vehHatchback = "https://images.unsplash.com/photo-1620286780709-661ffaa95349?auto=format&fit=crop&w=800&q=80";
+const vehLuxury = "https://images.unsplash.com/photo-1503376760367-1b612171bef7?auto=format&fit=crop&w=800&q=80";
+const vehElectric = "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80"; // Tesla
+const vehMuv = "https://images.unsplash.com/photo-1582467029213-ce71667c2e28?auto=format&fit=crop&w=800&q=80";
 
 import type {
   AIInsight,

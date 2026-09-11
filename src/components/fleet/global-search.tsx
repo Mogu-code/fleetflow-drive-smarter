@@ -57,8 +57,8 @@ export function GlobalSearchModal({
 
   const handleSelect = (hit: SearchHit) => {
     onClose();
-    if (hit.params && "id" in hit.params && hit.params.id) {
-      router.navigate({ to: hit.to as any, params: { id: hit.params.id } });
+    if (hit.params && "id" in hit.params && hit.params["id"]) {
+      router.navigate({ to: hit.to as any, params: { id: hit.params["id"] } as any });
     } else {
       router.navigate({ to: hit.to as any });
     }

@@ -36,6 +36,7 @@ import type {
   OCRResult,
   Vehicle,
   VehicleCategory,
+  MaintenanceRecord,
 } from "@/types";
 
 const LATENCY = 350;
@@ -48,9 +49,9 @@ const API_BASE = "http://localhost:8000/api/v1";
 
 async function apiFetch<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
   const token = localStorage.getItem("fleetflow_token");
-  const headers: HeadersInit = {
+  const headers: Record<string, string> = {
     "Content-Type": "application/json",
-    ...options.headers,
+    ...(options.headers as Record<string, string>),
   };
   if (token) {
     headers["Authorization"] = `Bearer ${token}`;
@@ -84,7 +85,7 @@ export interface VehicleQuery {
 export const vehicleService = {
   async list(query: VehicleQuery = {}): Promise<Vehicle[]> {
     const params = new URLSearchParams();
-    if (query.categories?.length) params.append("category", query.categories[0]);
+    if (query.categories?.length && query.categories[0]) params.append("category", query.categories[0]);
     if (query.location) params.append("location", query.location);
     
     // We fetch all vehicles from the backend then apply client-side filtering 
@@ -141,6 +142,16 @@ export const vehicleService = {
 
   async get(id: string) {
     return apiFetch<Vehicle>(`/vehicles/${id}`);
+  },
+
+  async updateStatus(id: string, status: string) {
+    // We haven't implemented full PUT in the backend yet, just mock success for the UI
+    return resolve({ ok: true });
+  },
+
+  async create(draft: Partial<Vehicle>) {
+    // Mock success for admin dashboard
+    return resolve({ ...draft, id: `V-${Date.now()}` } as Vehicle);
   },
 
   async featured() {
@@ -212,6 +223,14 @@ export const bookingService = {
       timeline: []
     } as Booking;
   },
+  async updateStatus(id: string, status: string) {
+    if (status === "cancelled") {
+      return apiFetch(`/bookings/${id}/cancel`, { method: "POST" });
+    } else if (status === "confirmed") {
+      return apiFetch(`/bookings/${id}/confirm`, { method: "POST" });
+    }
+    return resolve({ ok: true });
+  },
   async create(draft: Partial<Booking>) {
     return apiFetch<Booking>(`/bookings/`, {
       method: "POST",
@@ -258,6 +277,9 @@ export const maintenanceService = {
   async forVehicle(vehicleId: string) {
     return resolve(maintenanceRecords.filter((m) => m.vehicleId === vehicleId));
   },
+  async create(draft: Partial<MaintenanceRecord>) {
+    return resolve({ ...draft, id: `M-${Date.now()}` } as MaintenanceRecord);
+  }
 };
 
 export const paymentService = {
@@ -336,6 +358,26 @@ export const analyticsService = {
   async insights() {
     return resolve(aiInsights);
   },
+  async fleetHealth() {
+    return resolve({
+      overallScore: 92,
+      criticalIssues: 2,
+      warnings: 5,
+      label: "Excellent",
+      metrics: {
+        totalVehicles: vehicles.length,
+        activeRentals: bookings.filter(b => b.status === "active").length,
+        inMaintenanceCount: vehicles.filter(v => v.status === "maintenance").length,
+        overdueMaintenanceCount: 2,
+      },
+      subScores: {
+        maintenance: 94,
+        availability: 88,
+        utilization: 95,
+        serviceCompliance: 91,
+      }
+    });
+  }
 };
 
 /** Mock AI. Replace with a real model call behind the same signature. */

@@ -145,7 +145,7 @@ function LoginPage() {
         </div>
 
         {/* Demo Access Panel */}
-        <DemoAccessPanel redirectUrl={redirect} />
+        <DemoAccessPanel {...(redirect ? { redirectUrl: redirect } : {})} />
 
         <div className="text-center text-xs text-muted-foreground pt-2">
           Don't have a FleetFlow account?{" "}

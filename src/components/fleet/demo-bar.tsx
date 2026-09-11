@@ -70,7 +70,7 @@ export function DemoBar() {
       <SwitchAccountModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
-        targetRole={targetRole}
+        {...(targetRole ? { targetRole } : {})}
       />
     </>
   );

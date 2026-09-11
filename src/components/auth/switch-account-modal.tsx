@@ -23,7 +23,7 @@ export function SwitchAccountModal({
     // 1. Perform clean logout & clear session state
     await logout();
     // 2. Redirect to /login in demo selection mode
-    router.navigate({ to: "/login", search: { mode: "demo", targetRole } });
+    router.navigate({ to: "/login", search: { mode: "demo", targetRole } as any });
   };
 
   return (
