@@ -36,14 +36,14 @@ function ProfilePage() {
   const [activeTab, setActiveTab] = useState<ProfileTab>("personal");
 
   // Form State
-  const [firstName, setFirstName] = useState(user?.firstName || "Aviskha");
-  const [lastName, setLastName] = useState(user?.lastName || "Talukdar");
-  const [email, setEmail] = useState(user?.email || "aviskha.talukdar@example.com");
-  const [phone, setPhone] = useState(user?.phone || "+91 98765 43210");
-  const [city, setCity] = useState(user?.city || "Bengaluru");
+  const [firstName, setFirstName] = useState(user?.firstName || "");
+  const [lastName, setLastName] = useState(user?.lastName || "");
+  const [email, setEmail] = useState(user?.email || "");
+  const [phone, setPhone] = useState(user?.phone || "");
+  const [city, setCity] = useState(user?.city || "");
 
   // License State
-  const [licenseNum, setLicenseNum] = useState(user?.licenseNumber || "KA0320180004213");
+  const [licenseNum, setLicenseNum] = useState(user?.licenseNumber || "");
 
   // Security State
   const [currentPass, setCurrentPass] = useState("");

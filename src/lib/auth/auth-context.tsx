@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import type { AuthSession, LoginCredentials, SignupData, User, UserRole } from "@/types/auth";
 import { authService, USER_PRESETS } from "./auth-service";
 import { can as canHelper, type Permission } from "./permissions";
@@ -21,6 +22,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const queryClient = useQueryClient();
   const [session, setSession] = useState<AuthSession | null>(() => {
     const existing = authService.getSession();
     if (existing) return existing;
@@ -47,6 +49,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setLoading(true);
     const newSession = await authService.loginAsDemo(newRole);
     setSession(newSession);
+    queryClient.clear(); // Prevent data leakage between accounts
     setLoading(false);
   };
 
@@ -64,6 +67,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setLoading(true);
     await authService.logout();
     setSession(null);
+    queryClient.clear(); // Clear all user-specific data from cache
     setLoading(false);
   };
 

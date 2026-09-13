@@ -29,6 +29,7 @@ export function VehicleCard({
           loading="lazy"
           width={1200}
           height={800}
+          onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800"; }}
           className="h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
         />
         <div className="absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-surface to-transparent" />

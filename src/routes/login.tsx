@@ -34,8 +34,8 @@ function LoginPage() {
   const router = useRouter();
   const { login, loading } = useAuth();
 
-  const [email, setEmail] = useState("aviskha.talukdar@example.com");
-  const [password, setPassword] = useState("FleetFlow#2026");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -129,14 +129,14 @@ function LoginPage() {
           <div className="grid grid-cols-2 gap-3 -mt-2">
             <button
               type="button"
-              onClick={() => setEmail("aviskha.talukdar@example.com")}
+              onClick={() => alert("SSO disabled in demo")}
               className="p-2.5 rounded-xl bg-surface-2 border border-border hover:border-primary/50 text-xs font-medium text-foreground transition-all flex items-center justify-center gap-2"
             >
               <span>Google</span>
             </button>
             <button
               type="button"
-              onClick={() => setEmail("aviskha.talukdar@example.com")}
+              onClick={() => alert("SSO disabled in demo")}
               className="p-2.5 rounded-xl bg-surface-2 border border-border hover:border-primary/50 text-xs font-medium text-foreground transition-all flex items-center justify-center gap-2"
             >
               <span>Apple ID</span>

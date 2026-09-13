@@ -80,10 +80,10 @@ function BookingFlow() {
     returnDate: search.return || "",
   });
   const [customer, setCustomer] = useState({
-    name: "Aviskha Talukdar",
-    email: "aviskha.talukdar@example.com",
-    phone: "+91 9876543210",
-    dob: "1996-04-11",
+    name: user?.name || "",
+    email: user?.email || "",
+    phone: user?.phone || "",
+    dob: "",
   });
   const [document, setDocument] = useState<OCRResult | null>(null);
 
@@ -102,6 +102,7 @@ function BookingFlow() {
     mutationFn: (file: File) =>
       documentService.upload(file, "Driving License", "Booking License Upload"),
     onSuccess: (data: any) => {
+      setDocument(null); // Reset previous state before processing
       processOcrMutation.mutate(data.id);
     },
   });
@@ -110,10 +111,10 @@ function BookingFlow() {
     mutationFn: (docId: string) => documentService.processOCR(docId),
     onSuccess: (data: any) => {
       setDocument({
-        name: data.extracted_name || customer.name,
-        licenseNumber: data.extracted_document_number || "DL-XXXX",
-        dob: data.extracted_date_of_birth || customer.dob,
-        expiry: data.extracted_expiry_date || "2030-01-01",
+        name: data.extracted_name || "",
+        licenseNumber: data.extracted_document_number || "",
+        dob: data.extracted_date_of_birth || "",
+        expiry: data.extracted_expiry_date || "",
       } as OCRResult);
     },
   });
@@ -397,8 +398,9 @@ function BookingFlow() {
                     accept="image/*,application/pdf"
                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                     onChange={(e) => {
-                      if (e.target.files && e.target.files.length > 0) {
-                        uploadMutation.mutate(e.target.files[0]);
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        uploadMutation.mutate(file);
                       }
                     }}
                     disabled={uploadMutation.isPending || processOcrMutation.isPending}

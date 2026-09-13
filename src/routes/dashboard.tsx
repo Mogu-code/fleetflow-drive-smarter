@@ -68,7 +68,7 @@ function CustomerDashboard() {
               <div>
                 <div className="flex items-center gap-2">
                   <h1 className="font-display font-semibold text-2xl text-foreground">
-                    Good morning, {user?.firstName || "Aviskha"}.
+                    Good morning, {user?.firstName || "Customer"}.
                   </h1>
                   <span className="text-xs font-semibold px-2 py-0.5 rounded bg-success/20 text-success flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5" /> License Verified

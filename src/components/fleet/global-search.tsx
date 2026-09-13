@@ -120,7 +120,7 @@ export function GlobalSearchModal({
             <div className="py-6 px-4 text-xs text-muted-foreground">
               <p className="font-medium text-foreground mb-2">Try searching for:</p>
               <div className="flex flex-wrap gap-2">
-                {["Volvo", "FF-24817", "Aviskha", "PAY-70210", "Maintenance"].map((sample) => (
+                {["Volvo", "C202", "PAY-70210", "Maintenance"].map((sample) => (
                   <button
                     key={sample}
                     onClick={() => setQuery(sample)}

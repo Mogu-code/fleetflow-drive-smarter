@@ -19,7 +19,7 @@ export const USER_PRESETS: Record<UserRole, User> = {
     joinedAt: "2024-03-15",
   },
   Salesperson: {
-    id: "E102",
+    id: "E302",
     name: "Imran Qureshi",
     firstName: "Imran",
     lastName: "Qureshi",
@@ -35,7 +35,7 @@ export const USER_PRESETS: Record<UserRole, User> = {
     joinedAt: "2023-01-10",
   },
   Mechanic: {
-    id: "E106",
+    id: "E313",
     name: "Joseph Mathew",
     firstName: "Joseph",
     lastName: "Mathew",
@@ -49,18 +49,17 @@ export const USER_PRESETS: Record<UserRole, User> = {
     joinedAt: "2022-08-01",
   },
   Manager: {
-    id: "E101",
-    name: "Rithika Menon",
-    firstName: "Rithika",
-    lastName: "Menon",
-    email: "rithika.menon@fleetflow.in",
+    id: "E321",
+    name: "Anjali D",
+    firstName: "Anjali",
+    lastName: "D",
+    email: "anjali.d@fleetflow.in",
     phone: "+91 98450 11321",
     role: "Manager",
-    avatarLabel: "RM",
+    avatarLabel: "AD",
     emailVerified: true,
     branch: "Bengaluru — Indiranagar Hub",
-    headcount: 14,
-    joinedAt: "2021-05-20",
+    joinedAt: "2021-11-01",
   },
 };
 
@@ -109,24 +108,7 @@ class AuthService {
     );
 
     if (!userMatch) {
-      if (email.includes("aviskha")) {
-        userMatch = {
-          id: "C202",
-          name: "Aviskha Talukdar",
-          firstName: "Aviskha",
-          lastName: "Talukdar",
-          email,
-          phone: "+91 98765 43210",
-          role: "Customer",
-          avatarLabel: "AT",
-          emailVerified: true,
-          city: "Bengaluru",
-          licenseNumber: "KA0320180004213",
-          licenseVerified: true,
-          joinedAt: "2024-03-15",
-        };
-      } else {
-        const nameParts = email.split("@")[0]!.split(".");
+      const nameParts = email.split("@")[0]!.split(".");
         const first = nameParts[0] ? nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1) : "Renter";
         const last = nameParts[1] ? nameParts[1].charAt(0).toUpperCase() + nameParts[1].slice(1) : "User";
         userMatch = {
@@ -144,13 +126,12 @@ class AuthService {
           licenseVerified: true,
           joinedAt: new Date().toISOString().slice(0, 10),
         };
-      }
     }
 
     try {
       const formData = new URLSearchParams();
       formData.append("username", email);
-      formData.append("password", credentials.password);
+      formData.append("password", credentials.password || "");
       
       const res = await fetch("http://localhost:8000/api/auth/login", {
         method: "POST",

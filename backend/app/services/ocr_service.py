@@ -34,43 +34,59 @@ class OCRService:
             
             document.extracted_text = extracted_text
             
-            # Basic heuristics for parsing
-            lines = [res[1] for res in results]
+            # Smarter heuristics for parsing using regex across the entire text
             
-            # Very basic extraction logic
-            for i, line in enumerate(lines):
-                line_lower = line.lower()
-                
-                if "dob" in line_lower or "birth" in line_lower:
-                    # Look for date pattern in current or next line
-                    date_match = re.search(r'\d{2}[-/]\d{2}[-/]\d{4}', line)
-                    if date_match:
-                        document.extracted_date_of_birth = date_match.group(0)
-                    elif i + 1 < len(lines):
-                        next_match = re.search(r'\d{2}[-/]\d{2}[-/]\d{4}', lines[i+1])
-                        if next_match:
-                            document.extracted_date_of_birth = next_match.group(0)
-                            
-                elif "name" in line_lower and "father" not in line_lower:
-                    if i + 1 < len(lines):
-                        # Assuming name is the next line
-                        document.extracted_name = lines[i+1][:255]
-                        
-                elif "exp" in line_lower or "valid till" in line_lower:
-                    date_match = re.search(r'\d{2}[-/]\d{2}[-/]\d{4}', line)
-                    if date_match:
-                        document.extracted_expiry_date = date_match.group(0)
-                    elif i + 1 < len(lines):
-                        next_match = re.search(r'\d{2}[-/]\d{2}[-/]\d{4}', lines[i+1])
-                        if next_match:
-                            document.extracted_expiry_date = next_match.group(0)
-                            
-            # Document Number: Look for typical alphanumeric patterns
-            for line in lines:
-                if re.match(r'^[A-Z0-9-]{6,15}$', line.replace(" ", "")):
-                    if not document.extracted_document_number:
-                        document.extracted_document_number = line
-                        break
+            # 1. Extract Dates
+            date_patterns = [
+                r'\b\d{2}[-/]\d{2}[-/]\d{4}\b',
+                r'\b\d{4}[-/]\d{2}[-/]\d{2}\b'
+            ]
+            found_dates = []
+            for pattern in date_patterns:
+                found_dates.extend(re.findall(pattern, extracted_text))
+            
+            parsed_dates = []
+            for d in found_dates:
+                try:
+                    d_clean = d.replace('/', '-')
+                    if len(d_clean.split('-')[0]) == 4:
+                        parsed = datetime.strptime(d_clean, '%Y-%m-%d')
+                    else:
+                        parsed = datetime.strptime(d_clean, '%d-%m-%Y')
+                    parsed_dates.append((d, parsed))
+                except ValueError:
+                    continue
+            
+            if parsed_dates:
+                # Sort chronologically to find DOB (oldest) and Expiry (newest)
+                parsed_dates.sort(key=lambda x: x[1])
+                document.extracted_date_of_birth = parsed_dates[0][0]
+                if len(parsed_dates) > 1:
+                    document.extracted_expiry_date = parsed_dates[-1][0]
+                else:
+                    if parsed_dates[0][1] > datetime.utcnow():
+                        document.extracted_expiry_date = parsed_dates[0][0]
+                        document.extracted_date_of_birth = None
+            
+            # 2. Document Number
+            exclude_words = {"DOCUMENT", "SAMPLE", "LICENSE", "GENERIC", "NUMBER", "STATE", "VALID", "EXPIRY"}
+            for word in extracted_text.split():
+                word_clean = word.replace(":", "").replace(",", "")
+                # License numbers typically have numbers and uppercase letters and are 7-15 chars long
+                if re.match(r'^[A-Z0-9-]{7,15}$', word_clean) and any(c.isdigit() for c in word_clean) and word_clean not in exclude_words:
+                    document.extracted_document_number = word_clean
+                    break
+            
+            # 3. Name Extraction
+            # Try to find a Title Case name
+            name_match = re.search(r'\b([A-Z][a-z]+ [A-Z][a-z]+)\b', extracted_text)
+            if name_match and not any(w.upper() in exclude_words for w in name_match.group(1).split()):
+                document.extracted_name = name_match.group(1)
+            else:
+                # Fallback to ALL CAPS name
+                all_caps_match = re.search(r'\b([A-Z]{3,} [A-Z]{3,})\b', extracted_text)
+                if all_caps_match and not any(w in exclude_words for w in all_caps_match.group(1).split()):
+                    document.extracted_name = all_caps_match.group(1)
 
             document.ocr_status = "Processed"
             document.processed_at = datetime.utcnow()
