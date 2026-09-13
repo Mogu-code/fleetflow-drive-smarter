@@ -29,3 +29,26 @@ class Booking(Base):
     rental_agreement = relationship("RentalAgreement", back_populates="booking", uselist=False)
     payments = relationship("Payment", back_populates="booking")
     book_relations = relationship("BookRelation", back_populates="booking")
+
+    @property
+    def salesperson(self):
+        if self.book_relations and len(self.book_relations) > 0:
+            emp = self.book_relations[0].salesperson.employee
+            if emp:
+                return emp
+        return None
+
+    @property
+    def payment_status(self):
+        if self.payments and len(self.payments) > 0:
+            return self.payments[-1].status
+        return "Pending"
+
+    @property
+    def document_status(self):
+        if self.customer and self.customer.documents:
+            # Check the latest document status
+            latest = sorted(self.customer.documents, key=lambda d: d.created_at, reverse=True)
+            if latest:
+                return latest[0].verification_status
+        return "Missing"

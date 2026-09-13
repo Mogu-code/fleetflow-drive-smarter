@@ -4,7 +4,8 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 from app.core.config import settings
 from app.api import deps
-from app.api.routes import auth, vehicles, bookings, secondary
+from app.db import base  # Ensures all models are registered for SQLAlchemy relationships
+from app.api.routes import auth, vehicles, bookings, secondary, documents
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -25,6 +26,7 @@ if settings.BACKEND_CORS_ORIGINS:
 app.include_router(auth.router, prefix=f"{settings.API_V1_STR}/auth", tags=["auth"])
 app.include_router(vehicles.router, prefix=f"{settings.API_V1_STR}/vehicles", tags=["vehicles"])
 app.include_router(bookings.router, prefix=f"{settings.API_V1_STR}/bookings", tags=["bookings"])
+app.include_router(documents.router, prefix=f"{settings.API_V1_STR}/documents", tags=["documents"])
 app.include_router(secondary.router, prefix=f"{settings.API_V1_STR}", tags=["secondary"])
 
 @app.get(f"{settings.API_V1_STR}/health")

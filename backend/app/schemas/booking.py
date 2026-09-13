@@ -17,16 +17,10 @@ class BookingBase(BaseModel):
 
 class BookingCreate(BaseModel):
     vehicle_id: str
-    # customer_id can be pulled from the authenticated user, but we'll accept it for now
     start_date: str
     end_date: str
     pickup_location: str
     dropoff_location: str
-    
-    subtotal: float
-    taxes: float
-    insurance: float
-    total: float
 
 class BookingUpdate(BaseModel):
     status: Optional[str] = None
@@ -40,3 +34,40 @@ class BookingInDBBase(BookingBase):
 
 class Booking(BookingInDBBase):
     pass
+
+class VehicleNested(BaseModel):
+    id: str
+    name: str
+    category: str
+    image: Optional[str] = None
+    registration: str
+    location: str
+
+    class Config:
+        from_attributes = True
+
+class CustomerNested(BaseModel):
+    id: str
+    name: str
+    phone: str
+
+    class Config:
+        from_attributes = True
+
+class EmployeeNested(BaseModel):
+    id: str
+    name: str
+    phone: str
+    
+    class Config:
+        from_attributes = True
+
+class BookingDetail(Booking):
+    vehicle: Optional[VehicleNested] = None
+    customer: Optional[CustomerNested] = None
+    salesperson: Optional[EmployeeNested] = None
+    payment_status: str = "Pending"
+    document_status: str = "Missing"
+    
+    class Config:
+        from_attributes = True

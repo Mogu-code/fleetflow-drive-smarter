@@ -118,40 +118,14 @@ function VehicleDetail() {
 
         {/* Hero Visual Gallery */}
         <div
-          className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 h-[40vh] md:h-[60vh] animate-rise"
+          className="mt-8 h-[40vh] md:h-[60vh] overflow-hidden rounded-2xl animate-rise"
           style={{ animationDelay: "100ms" }}
         >
-          <div className="md:col-span-2 overflow-hidden rounded-2xl">
-            <img
-              src={vehicle.gallery[0]}
-              alt={vehicle.name}
-              className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-            />
-          </div>
-          <div className="hidden md:grid grid-rows-2 gap-4">
-            <div className="overflow-hidden rounded-2xl bg-surface-2 flex items-center justify-center">
-              {vehicle.gallery[1] ? (
-                <img
-                  src={vehicle.gallery[1]}
-                  alt="Gallery 2"
-                  className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                />
-              ) : (
-                <span className="text-muted-foreground text-sm font-medium">Interior View</span>
-              )}
-            </div>
-            <div className="overflow-hidden rounded-2xl bg-surface-2 flex items-center justify-center">
-              {vehicle.gallery[2] ? (
-                <img
-                  src={vehicle.gallery[2]}
-                  alt="Gallery 3"
-                  className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                />
-              ) : (
-                <span className="text-muted-foreground text-sm font-medium">Profile View</span>
-              )}
-            </div>
-          </div>
+          <img
+            src={vehicle.image}
+            alt={vehicle.name}
+            className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+          />
         </div>
 
         {/* Content Layout */}

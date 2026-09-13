@@ -3,6 +3,8 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from app.models.booking import Booking
 from app.models.vehicle import Vehicle
+from app.models.employee import Salesperson
+from app.models.junctions import BookRelation
 from app.schemas.booking import BookingCreate
 
 class BookingService:
@@ -11,6 +13,10 @@ class BookingService:
         """
         Returns True if vehicle is available, False otherwise.
         """
+        vehicle = db.query(Vehicle).filter(Vehicle.id == vehicle_id).first()
+        if not vehicle or vehicle.status != "available":
+            return False
+
         query = db.query(Booking).filter(
             Booking.vehicle_id == vehicle_id,
             Booking.status.in_(["pending", "confirmed", "active"]),
@@ -47,6 +53,15 @@ class BookingService:
         if not is_available:
             raise HTTPException(status_code=409, detail="Vehicle is not available for the selected dates")
 
+        duration_days = (end_dt - start_dt).days
+        if duration_days < 1:
+            duration_days = 1
+
+        subtotal = vehicle.price_per_day * duration_days
+        taxes = subtotal * 0.18
+        insurance = 0.0
+        total = subtotal + taxes + insurance
+
         import uuid
         booking = Booking(
             id=str(uuid.uuid4()),
@@ -57,14 +72,36 @@ class BookingService:
             pickup_location=booking_in.pickup_location,
             dropoff_location=booking_in.dropoff_location,
             status="pending",
-            subtotal=booking_in.subtotal,
-            taxes=booking_in.taxes,
-            insurance=booking_in.insurance,
-            total=booking_in.total,
+            subtotal=subtotal,
+            taxes=taxes,
+            insurance=insurance,
+            total=total,
             created_at=datetime.utcnow()
         )
         
         db.add(booking)
+
+        # Assign salesperson
+        from sqlalchemy import func
+        salesperson = (
+            db.query(Salesperson)
+            .join(Salesperson.employee)
+            .outerjoin(BookRelation, Salesperson.employee_id == BookRelation.salesperson_id)
+            .filter(Salesperson.employee.has(status="active"))
+            .group_by(Salesperson.employee_id)
+            .order_by(func.count(BookRelation.booking_id).asc())
+            .first()
+        )
+        if salesperson:
+            book_relation = BookRelation(
+                salesperson_id=salesperson.employee_id,
+                customer_id=customer_id,
+                booking_id=booking.id,
+                booked_on=datetime.utcnow().strftime("%Y-%m-%d"),
+                commission=total * (salesperson.commission_rate / 100.0) if salesperson.commission_rate else 0.0
+            )
+            db.add(book_relation)
+
         db.commit()
         db.refresh(booking)
         return booking

@@ -5,17 +5,16 @@ import { Eyebrow } from "@/components/fleet/brand";
 import { SiteFooter, SiteHeader } from "@/components/fleet/site-chrome";
 import { Button } from "@/components/ui/button";
 import { documentService } from "@/lib/services";
-import type { OCRResult } from "@/types";
 import { ProtectedRoute } from "@/components/auth/protected-route";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   FileText,
   ShieldCheck,
   Upload,
   Sparkles,
   CheckCircle2,
-  AlertTriangle,
-  Clock,
   RefreshCw,
+  Loader2
 } from "lucide-react";
 
 export const Route = createFileRoute("/documents")({
@@ -33,19 +32,39 @@ export const Route = createFileRoute("/documents")({
 
 function DocumentsPage() {
   const { user } = useAuth();
-  const [ocrLoading, setOcrLoading] = useState(false);
-  const [extractedOcr, setExtractedOcr] = useState<OCRResult | null>(null);
-  const [confirmed, setConfirmed] = useState(false);
+  const queryClient = useQueryClient();
+  const [file, setFile] = useState<File | null>(null);
 
-  const handleSimulateOCR = async () => {
-    setOcrLoading(true);
-    const res = await documentService.extract("driver_license_scan.pdf");
-    setExtractedOcr(res);
-    setOcrLoading(false);
+  const { data: documents, isPending: loadingDocs } = useQuery<any[]>({
+    queryKey: ["documents"],
+    queryFn: () => documentService.list() as Promise<any[]>,
+  });
+
+  const uploadMutation = useMutation({
+    mutationFn: (file: File) => documentService.upload(file, "Driving License", "User License Upload"),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["documents"] });
+      setFile(null);
+    },
+  });
+
+  const processOcrMutation = useMutation({
+    mutationFn: (id: string) => documentService.processOCR(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["documents"] });
+    },
+  });
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setFile(e.target.files[0] || null);
+    }
   };
 
-  const handleConfirmExtraction = () => {
-    setConfirmed(true);
+  const handleUpload = () => {
+    if (file) {
+      uploadMutation.mutate(file);
+    }
   };
 
   return (
@@ -64,112 +83,65 @@ function DocumentsPage() {
             </p>
           </div>
 
-          {/* Status Alert Card */}
-          <div className="p-6 rounded-2xl bg-surface border border-border flex flex-wrap items-center justify-between gap-6 shadow-xl">
+          <div className="p-6 rounded-2xl bg-surface border border-border space-y-4">
+            <h3 className="font-display font-semibold text-lg text-foreground">Upload New Document</h3>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-success/20 text-success border border-success/30 flex items-center justify-center">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="font-display font-semibold text-lg text-foreground">Driving License Verification</h3>
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-success/20 text-success border border-success/30">
-                    VERIFIED
-                  </span>
-                </div>
-                <p className="text-xs text-muted-foreground mt-1">
-                  License Number: <strong className="font-mono text-foreground">{user?.licenseNumber || "KA0320180004213"}</strong> • Valid across all 8 hubs.
-                </p>
-              </div>
+              <input type="file" accept="image/*,application/pdf" onChange={handleFileChange} className="text-sm" />
+              <Button onClick={handleUpload} disabled={!file || uploadMutation.isPending} size="sm">
+                {uploadMutation.isPending ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Upload className="w-4 h-4 mr-2" />}
+                Upload Document
+              </Button>
             </div>
-
-            <Button onClick={handleSimulateOCR} disabled={ocrLoading} variant="outline" className="gap-2 text-xs">
-              <RefreshCw className="w-3.5 h-3.5" /> Re-scan License OCR
-            </Button>
           </div>
 
-          {/* OCR Extraction Box */}
-          {ocrLoading && (
-            <div className="p-6 rounded-2xl bg-surface border border-border text-center space-y-3 animate-pulse">
-              <Sparkles className="w-8 h-8 text-primary mx-auto" />
-              <div className="font-display font-semibold text-base text-foreground">Running AI OCR License Extraction...</div>
-              <p className="text-xs text-muted-foreground">Extracting Name, License Number, DOB, and Expiry Date from scan...</p>
-            </div>
-          )}
-
-          {extractedOcr && !confirmed && (
-            <div className="p-6 rounded-2xl bg-surface border border-primary/40 space-y-4 animate-rise shadow-2xl">
-              <div className="flex items-center justify-between border-b border-border/80 pb-3">
-                <div className="flex items-center gap-2 font-display font-semibold text-base text-foreground">
-                  <Sparkles className="w-4 h-4 text-primary" /> Extracted License Details
-                </div>
-                <span className="text-xs font-semibold text-success bg-success/20 px-2 py-0.5 rounded">
-                  {(extractedOcr.confidence * 100).toFixed(0)}% Confidence
-                </span>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 text-xs">
-                <div>Renter Name: <strong className="text-foreground">{extractedOcr.name}</strong></div>
-                <div>License Number: <strong className="font-mono text-foreground">{extractedOcr.licenseNumber}</strong></div>
-                <div>Date of Birth: <strong className="text-foreground">{extractedOcr.dob}</strong></div>
-                <div>Expiration Date: <strong className="text-foreground">{extractedOcr.expiry}</strong></div>
-              </div>
-
-              <div className="pt-3 border-t border-border/80 flex justify-end gap-3">
-                <Button size="sm" onClick={handleConfirmExtraction} className="gap-2 font-semibold">
-                  <CheckCircle2 className="w-4 h-4" /> Confirm & Verify Extracted Data
-                </Button>
-              </div>
-            </div>
-          )}
-
-          {confirmed && (
-            <div className="p-4 rounded-xl bg-success/20 border border-success/40 text-success text-xs font-semibold flex items-center gap-2 animate-rise">
-              <CheckCircle2 className="w-4 h-4" /> Driving credentials confirmed and stored securely in your account vault.
-            </div>
-          )}
-
-          {/* Document Records Table */}
           <div className="p-6 rounded-2xl bg-surface border border-border space-y-4">
             <h3 className="font-display font-semibold text-lg text-foreground">Uploaded Documents Ledger</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead className="border-b border-border/80 uppercase text-[10px] text-muted-foreground tracking-wider bg-surface-2/50">
                   <tr>
-                    <th className="p-3">Document Title</th>
+                    <th className="p-3">Title</th>
                     <th className="p-3">Type</th>
-                    <th className="p-3">Uploaded Date</th>
-                    <th className="p-3">Verification Status</th>
+                    <th className="p-3">Uploaded</th>
+                    <th className="p-3">OCR Status</th>
+                    <th className="p-3">Extracted Details</th>
                     <th className="p-3 text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border/60">
-                  <tr className="hover:bg-surface-2/50 transition-colors">
-                    <td className="p-3 font-semibold text-foreground flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-primary" /> Physical Driving License Scan
-                    </td>
-                    <td className="p-3 text-muted-foreground">Driver KYC</td>
-                    <td className="p-3 text-muted-foreground">2024-03-15</td>
-                    <td className="p-3">
-                      <span className="text-xs font-semibold px-2 py-0.5 rounded bg-success/20 text-success">Verified</span>
-                    </td>
-                    <td className="p-3 text-right">
-                      <Button size="sm" variant="ghost" className="h-7 text-xs">View Document</Button>
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-surface-2/50 transition-colors">
-                    <td className="p-3 font-semibold text-foreground flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-primary" /> Aadhaar / Identity Proof
-                    </td>
-                    <td className="p-3 text-muted-foreground">Identity Proof</td>
-                    <td className="p-3 text-muted-foreground">2024-03-15</td>
-                    <td className="p-3">
-                      <span className="text-xs font-semibold px-2 py-0.5 rounded bg-success/20 text-success">Verified</span>
-                    </td>
-                    <td className="p-3 text-right">
-                      <Button size="sm" variant="ghost" className="h-7 text-xs">View Document</Button>
-                    </td>
-                  </tr>
+                  {loadingDocs ? (
+                    <tr><td colSpan={6} className="p-4 text-center">Loading...</td></tr>
+                  ) : documents?.map((doc: any) => (
+                    <tr key={doc.id} className="hover:bg-surface-2/50 transition-colors">
+                      <td className="p-3 font-semibold text-foreground flex items-center gap-2">
+                        <FileText className="w-4 h-4 text-primary" /> {doc.title}
+                      </td>
+                      <td className="p-3 text-muted-foreground">{doc.kind}</td>
+                      <td className="p-3 text-muted-foreground">{doc.uploaded_at}</td>
+                      <td className="p-3">
+                        <span className={`text-[10px] font-semibold px-2 py-0.5 rounded ${
+                          doc.ocr_status === 'Processed' ? 'bg-success/20 text-success' : 
+                          doc.ocr_status === 'Processing' ? 'bg-amber-500/20 text-amber-500' : 'bg-muted text-muted-foreground'
+                        }`}>{doc.ocr_status}</span>
+                      </td>
+                      <td className="p-3 text-muted-foreground text-[10px]">
+                        {doc.extracted_name && <div>Name: {doc.extracted_name}</div>}
+                        {doc.extracted_document_number && <div>Doc #: {doc.extracted_document_number.substring(0,4)}****</div>}
+                        {doc.extracted_date_of_birth && <div>DOB: {doc.extracted_date_of_birth}</div>}
+                        {!doc.extracted_name && !doc.extracted_document_number && <span>-</span>}
+                      </td>
+                      <td className="p-3 text-right">
+                        {doc.ocr_status === "Not processed" && (
+                          <Button size="sm" variant="outline" className="h-7 text-xs" onClick={() => processOcrMutation.mutate(doc.id)} disabled={processOcrMutation.isPending}>
+                            {processOcrMutation.isPending ? <Loader2 className="w-3 h-3 animate-spin mr-1" /> : <Sparkles className="w-3 h-3 mr-1" />} Process OCR
+                          </Button>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                  {documents?.length === 0 && (
+                     <tr><td colSpan={6} className="p-4 text-center text-muted-foreground">No documents uploaded yet.</td></tr>
+                  )}
                 </tbody>
               </table>
             </div>

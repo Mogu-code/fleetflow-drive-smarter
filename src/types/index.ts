@@ -62,8 +62,13 @@ export interface Booking {
   insurance: number;
   total: number;
   createdAt: string;
+  paymentStatus?: string;
+  documentStatus?: string;
   agreementId?: string | undefined;
   timeline: BookingTimelineEvent[];
+  vehicle?: Partial<Vehicle>;
+  customer?: Partial<Customer>;
+  salesperson?: Partial<EmployeeBase>;
 }
 
 export interface Customer {

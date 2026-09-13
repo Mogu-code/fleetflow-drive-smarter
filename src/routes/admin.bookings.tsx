@@ -28,10 +28,7 @@ function AdminBookings() {
     queryFn: () => bookingService.listAll(),
   });
 
-  const { data: vehicles } = useQuery({
-    queryKey: ["vehicles", "admin-bookings"],
-    queryFn: () => vehicleService.list({}),
-  });
+
 
   return (
     <ProtectedRoute allowedRoles={["Manager", "Salesperson"]}>
@@ -56,11 +53,14 @@ function AdminBookings() {
                   <tr>
                     <th className="p-3">Ref ID</th>
                     <th className="p-3">Vehicle</th>
-                    <th className="p-3">Customer ID</th>
+                    <th className="p-3">Customer</th>
+                    <th className="p-3">Salesperson</th>
                     <th className="p-3">Pickup Location</th>
                     <th className="p-3">Rental Dates</th>
                     <th className="p-3">Total Amount</th>
                     <th className="p-3">Status</th>
+                    <th className="p-3">Payment</th>
+                    <th className="p-3">Docs</th>
                     <th className="p-3 text-right">Action</th>
                   </tr>
                 </thead>
@@ -70,17 +70,32 @@ function AdminBookings() {
                       <td colSpan={8} className="p-8 text-center text-muted-foreground">Loading booking database...</td>
                     </tr>
                   ) : bookings?.map((b) => {
-                    const v = vehicles?.find((veh) => veh.id === b.vehicleId);
                     return (
                       <tr key={b.id} className="hover:bg-surface-2/50 transition-colors">
                         <td className="p-3 font-mono font-bold text-foreground">{b.id}</td>
-                        <td className="p-3 font-semibold text-foreground">{v?.name || b.vehicleId}</td>
-                        <td className="p-3 font-mono text-muted-foreground">{b.customerId}</td>
+                        <td className="p-3 font-semibold text-foreground">{b.vehicle?.name || b.vehicleId}</td>
+                        <td className="p-3 text-muted-foreground">{b.customer?.name || b.customerId}</td>
+                        <td className="p-3 text-muted-foreground">{b.salesperson?.name || "Unassigned"}</td>
                         <td className="p-3 text-muted-foreground">{b.pickupLocation}</td>
                         <td className="p-3 text-muted-foreground">{b.startDate} to {b.endDate}</td>
                         <td className="p-3 font-mono font-semibold text-primary">{inr(b.total)}</td>
                         <td className="p-3">
                           <StatusBadge status={b.status} />
+                        </td>
+                        <td className="p-3">
+                          <span className={`inline-flex px-2 py-0.5 rounded-full text-[10px] font-semibold ${
+                            b.paymentStatus === 'Paid' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-amber-500/10 text-amber-500'
+                          }`}>
+                            {b.paymentStatus || 'Pending'}
+                          </span>
+                        </td>
+                        <td className="p-3">
+                          <span className={`inline-flex px-2 py-0.5 rounded-full text-[10px] font-semibold ${
+                            b.documentStatus === 'Verified' ? 'bg-emerald-500/10 text-emerald-500' :
+                            b.documentStatus === 'Missing' ? 'bg-destructive/10 text-destructive' : 'bg-amber-500/10 text-amber-500'
+                          }`}>
+                            {b.documentStatus || 'Missing'}
+                          </span>
                         </td>
                         <td className="p-3 text-right">
                           <Button asChild size="sm" variant="ghost" className="h-7 text-xs">

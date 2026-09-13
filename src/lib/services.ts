@@ -23,7 +23,6 @@ import {
   serviceAssignments,
   revenueTrend,
   utilizationTrend,
-  vehicles,
   CURRENT_CUSTOMER_ID,
 } from "./mock-data";
 import type {
@@ -45,10 +44,16 @@ function resolve<T>(value: T, ms = LATENCY): Promise<T> {
   return new Promise((r) => setTimeout(() => r(value), ms));
 }
 
-const API_BASE = "http://localhost:8000/api/v1";
+const API_BASE = "http://localhost:8000/api";
 
 async function apiFetch<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const token = localStorage.getItem("fleetflow_token");
+  let token = null;
+  const sessionRaw = localStorage.getItem("fleetflow_auth_session");
+  if (sessionRaw) {
+    try {
+      token = JSON.parse(sessionRaw).token;
+    } catch {}
+  }
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
     ...(options.headers as Record<string, string>),
@@ -94,14 +99,14 @@ export const vehicleService = {
     let out: Vehicle[] = raw.map((v) => ({
       ...v,
       pricePerDay: v.price_per_day,
-      odometerKm: v.odometer_km || 0,
-      reviewCount: v.review_count || 45,
-      lastServiceDate: v.last_service_date || "2026-08-01",
-      nextServiceDate: v.next_service_date || "2026-10-01",
-      revenueGenerated: v.revenue_generated || 0,
+      odometerKm: v.odometer_km,
+      reviewCount: v.review_count,
+      lastServiceDate: v.last_service_date,
+      nextServiceDate: v.next_service_date,
+      revenueGenerated: v.revenue_generated,
       unavailableDates: [],
-      utilization: v.utilization || 65,
-      rating: v.rating || 4.5,
+      utilization: v.utilization,
+      rating: v.rating,
     }));
     
     const q = query.q?.trim().toLowerCase();
@@ -141,7 +146,19 @@ export const vehicleService = {
   },
 
   async get(id: string) {
-    return apiFetch<Vehicle>(`/vehicles/${id}`);
+    const v: any = await apiFetch(`/vehicles/${id}`);
+    return {
+      ...v,
+      pricePerDay: v.price_per_day,
+      odometerKm: v.odometer_km,
+      reviewCount: v.review_count,
+      lastServiceDate: v.last_service_date,
+      nextServiceDate: v.next_service_date,
+      revenueGenerated: v.revenue_generated,
+      unavailableDates: [],
+      utilization: v.utilization,
+      rating: v.rating,
+    } as Vehicle;
   },
 
   async updateStatus(id: string, status: string) {
@@ -155,16 +172,14 @@ export const vehicleService = {
   },
 
   async featured() {
-    return resolve(vehicles.filter((v) => v.status === "available").slice(0, 6), 200);
+    const all = await this.list({ availableOnly: true });
+    return all.slice(0, 6);
   },
 
   async similar(id: string) {
-    const base = vehicles.find((v) => v.id === id);
-    return resolve(
-      vehicles
-        .filter((v) => v.id !== id && v.category === base?.category && v.status === "available")
-        .slice(0, 3),
-    );
+    const base = await this.get(id);
+    const all = await this.list({ availableOnly: true });
+    return all.filter((v) => v.id !== id && v.category === base?.category).slice(0, 3);
   },
 
   /** Availability check — the future backend enforces this server-side. */
@@ -187,11 +202,17 @@ export const bookingService = {
       ...b,
       vehicleId: b.vehicle_id,
       customerId: b.customer_id,
+      salespersonId: b.salesperson?.id,
       startDate: b.start_date,
       endDate: b.end_date,
       pickupLocation: b.pickup_location,
       dropoffLocation: b.dropoff_location,
       createdAt: b.created_at,
+      vehicle: b.vehicle,
+      customer: b.customer,
+      salesperson: b.salesperson,
+      paymentStatus: b.payment_status,
+      documentStatus: b.document_status,
       timeline: []
     })) as Booking[];
   },
@@ -201,11 +222,17 @@ export const bookingService = {
       ...b,
       vehicleId: b.vehicle_id,
       customerId: b.customer_id,
+      salespersonId: b.salesperson?.id,
       startDate: b.start_date,
       endDate: b.end_date,
       pickupLocation: b.pickup_location,
       dropoffLocation: b.dropoff_location,
       createdAt: b.created_at,
+      vehicle: b.vehicle,
+      customer: b.customer,
+      salesperson: b.salesperson,
+      paymentStatus: b.payment_status,
+      documentStatus: b.document_status,
       timeline: []
     })) as Booking[];
   },
@@ -215,11 +242,17 @@ export const bookingService = {
       ...b,
       vehicleId: b.vehicle_id,
       customerId: b.customer_id,
+      salespersonId: b.salesperson?.id,
       startDate: b.start_date,
       endDate: b.end_date,
       pickupLocation: b.pickup_location,
       dropoffLocation: b.dropoff_location,
       createdAt: b.created_at,
+      vehicle: b.vehicle,
+      customer: b.customer,
+      salesperson: b.salesperson,
+      paymentStatus: b.payment_status,
+      documentStatus: b.document_status,
       timeline: []
     } as Booking;
   },
@@ -232,7 +265,7 @@ export const bookingService = {
     return resolve({ ok: true });
   },
   async create(draft: Partial<Booking>) {
-    return apiFetch<Booking>(`/bookings/`, {
+    const response = await apiFetch<any>(`/bookings/`, {
       method: "POST",
       body: JSON.stringify({
         vehicle_id: draft.vehicleId,
@@ -240,12 +273,25 @@ export const bookingService = {
         end_date: draft.endDate,
         pickup_location: draft.pickupLocation,
         dropoff_location: draft.dropoffLocation,
-        subtotal: draft.subtotal,
-        taxes: draft.taxes,
-        insurance: draft.insurance,
-        total: draft.total
       }),
     });
+    return {
+      ...response,
+      vehicleId: response.vehicle_id,
+      customerId: response.customer_id,
+      salespersonId: response.salesperson?.id,
+      startDate: response.start_date,
+      endDate: response.end_date,
+      pickupLocation: response.pickup_location,
+      dropoffLocation: response.dropoff_location,
+      createdAt: response.created_at,
+      vehicle: response.vehicle,
+      customer: response.customer,
+      salesperson: response.salesperson,
+      paymentStatus: response.payment_status,
+      documentStatus: response.document_status,
+      timeline: []
+    } as Booking;
   },
 };
 
@@ -299,21 +345,50 @@ export const paymentService = {
 };
 
 export const documentService = {
-  async list(customerId = CURRENT_CUSTOMER_ID) {
-    return resolve(documents.filter((d) => d.customerId === customerId));
+  async list() {
+    return await apiFetch(`/documents/`);
   },
-  /** Mock OCR extraction — replaced by the document-processing service later. */
-  async extract(fileName: string): Promise<OCRResult> {
+  async upload(file: File, kind: string, title: string, bookingId?: string) {
+    const formData = new FormData();
+    formData.append("file", file);
+    
+    let url = `/documents/?kind=${encodeURIComponent(kind)}&title=${encodeURIComponent(title)}`;
+    if (bookingId) url += `&booking_id=${encodeURIComponent(bookingId)}`;
+    
+    let token = null;
+    const sessionRaw = localStorage.getItem("fleetflow_auth_session");
+    if (sessionRaw) {
+      try {
+        token = JSON.parse(sessionRaw).token;
+      } catch {}
+    }
+    const response = await fetch(`${API_BASE}${url}`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: formData,
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Upload failed: ${response.statusText}`);
+    }
+    return response.json();
+  },
+  async processOCR(id: string) {
+    return await apiFetch(`/documents/${id}/process-ocr`, { method: "POST" });
+  },
+  async extract(fileUri: string) {
     return resolve(
       {
         name: "Aviskha Talukdar",
-        licenseNumber: "KA0320180004213",
+        licenseNumber: "DL-1420210089",
         dob: "1996-04-11",
-        expiry: "2031-04-10",
-        confidence: 0.98,
+        expiry: "2036-04-10",
+        confidence: 0.96,
       },
-      1500,
-    ).then((r) => ({ ...r, source: fileName }) as OCRResult);
+      2500,
+    );
   },
 };
 
@@ -338,15 +413,18 @@ export const notificationService = {
 
 export const analyticsService = {
   async overview() {
-    const activeRentals = bookings.filter((b) => b.status === "active").length;
-    const available = vehicles.filter((v) => v.status === "available").length;
-    const inMaintenance = vehicles.filter((v) => v.status === "maintenance").length;
+    const allVehicles = await vehicleService.list();
+    const allBookings = await bookingService.listAll();
+    const activeRentals = allBookings.filter((b) => b.status === "active").length;
+    const available = allVehicles.filter((v) => v.status === "available").length;
+    const inMaintenance = allVehicles.filter((v) => v.status === "maintenance").length;
     const pendingPayments = payments.filter((p) => p.status === "pending").length;
+    
     return resolve({
       revenue: revenueTrend.at(-1)!.revenue,
       revenueDelta: 9.2,
       activeRentals,
-      utilization: Math.round(vehicles.reduce((s, v) => s + v.utilization, 0) / vehicles.length),
+      utilization: Math.round(allVehicles.reduce((s, v) => s + v.utilization, 0) / (allVehicles.length || 1)),
       available,
       inMaintenance,
       pendingPayments,
@@ -359,15 +437,17 @@ export const analyticsService = {
     return resolve(aiInsights);
   },
   async fleetHealth() {
+    const allVehicles = await vehicleService.list();
+    const allBookings = await bookingService.listAll();
     return resolve({
       overallScore: 92,
       criticalIssues: 2,
       warnings: 5,
       label: "Excellent",
       metrics: {
-        totalVehicles: vehicles.length,
-        activeRentals: bookings.filter(b => b.status === "active").length,
-        inMaintenanceCount: vehicles.filter(v => v.status === "maintenance").length,
+        totalVehicles: allVehicles.length,
+        activeRentals: allBookings.filter(b => b.status === "active").length,
+        inMaintenanceCount: allVehicles.filter(v => v.status === "maintenance").length,
         overdueMaintenanceCount: 2,
       },
       subScores: {
@@ -384,7 +464,7 @@ export const analyticsService = {
 export const aiService = {
   async ask(prompt: string): Promise<AIMessage> {
     const p = prompt.toLowerCase();
-    let pool = vehicles.filter((v) => v.status === "available");
+    let pool = await vehicleService.list({ availableOnly: true });
     let content = "Here are the vehicles that fit best right now.";
 
     if (p.includes("suv")) pool = pool.filter((v) => v.category === "SUV");
@@ -400,7 +480,7 @@ export const aiService = {
       const next = bookings.find(
         (b) => b.customerId === CURRENT_CUSTOMER_ID && b.status !== "completed",
       );
-      const veh = vehicles.find((v) => v.id === next?.vehicleId);
+      const veh = next ? await vehicleService.get(next.vehicleId) : null;
       return resolve(
         {
           id: crypto.randomUUID(),
@@ -484,10 +564,11 @@ export const relationshipService = {
   /** Services junction — vehicles a mechanic has worked on. */
   async vehiclesServicedBy(mechanicId: string) {
     const rows = serviceAssignments.filter((s) => s.mechanicId === mechanicId);
+    const allVehicles = await vehicleService.list();
     return resolve(
       rows.map((r) => ({
         ...r,
-        vehicle: vehicles.find((v) => v.id === r.vehicleId)!,
+        vehicle: allVehicles.find((v) => v.id === r.vehicleId)!,
       })),
     );
   },
@@ -549,7 +630,8 @@ export const searchService = {
     const q = term.trim().toLowerCase();
     if (!q) return [];
     const hits: SearchHit[] = [];
-    for (const v of vehicles) {
+    const allVehicles = await vehicleService.list();
+    for (const v of allVehicles) {
       if (`${v.id} ${v.name} ${v.registration}`.toLowerCase().includes(q))
         hits.push({
           id: v.id,

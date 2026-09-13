@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useQuery, useMutation } from "@tanstack/react-query";
-import { useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useState, useEffect } from "react";
 import { format, differenceInDays } from "date-fns";
 import {
   ChevronLeft,
@@ -33,6 +33,7 @@ import {
 import type { OCRResult, Booking, RentalAgreement } from "@/types";
 
 import { ProtectedRoute } from "@/components/auth/protected-route";
+import { useAuth } from "@/lib/auth/auth-context";
 
 type BookSearch = { pickup?: string; return?: string };
 
@@ -61,6 +62,8 @@ function BookingFlow() {
   const { id } = Route.useParams();
   const search = Route.useSearch();
   const navigate = useNavigate();
+  const { user } = useAuth();
+  const queryClient = useQueryClient();
 
   const { data: vehicle, isPending: loadingVehicle } = useQuery({
     queryKey: ["vehicle", id],
@@ -95,9 +98,24 @@ function BookingFlow() {
       vehicleService.checkAvailability(id, schedule.pickupDate, schedule.returnDate),
   });
 
-  const extractDoc = useMutation({
-    mutationFn: () => documentService.extract("license_upload.jpg"),
-    onSuccess: (data) => setDocument(data),
+  const uploadMutation = useMutation({
+    mutationFn: (file: File) =>
+      documentService.upload(file, "Driving License", "Booking License Upload"),
+    onSuccess: (data: any) => {
+      processOcrMutation.mutate(data.id);
+    },
+  });
+
+  const processOcrMutation = useMutation({
+    mutationFn: (docId: string) => documentService.processOCR(docId),
+    onSuccess: (data: any) => {
+      setDocument({
+        name: data.extracted_name || customer.name,
+        licenseNumber: data.extracted_document_number || "DL-XXXX",
+        dob: data.extracted_date_of_birth || customer.dob,
+        expiry: data.extracted_expiry_date || "2030-01-01",
+      } as OCRResult);
+    },
   });
 
   const processPayment = useMutation({
@@ -107,7 +125,7 @@ function BookingFlow() {
       // 2. Create Booking
       const b = await bookingService.create({
         vehicleId: id,
-        customerId: CURRENT_CUSTOMER_ID,
+        customerId: user?.id || "",
         startDate: schedule.pickupDate,
         endDate: schedule.returnDate,
         pickupLocation: schedule.pickupLocation,
@@ -131,7 +149,7 @@ function BookingFlow() {
       const a: RentalAgreement = {
         id: `AGR-${Math.floor(8000 + Math.random() * 1000)}`,
         bookingId: b.id,
-        customerId: CURRENT_CUSTOMER_ID,
+        customerId: user?.id || "",
         vehicleId: id,
         startDate: b.startDate,
         endDate: b.endDate,
@@ -148,6 +166,7 @@ function BookingFlow() {
       return { booking: b, agreement: a };
     },
     onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ["bookings"] });
       setBookingResult(data);
       setStep(6);
     },
@@ -161,13 +180,15 @@ function BookingFlow() {
   }
 
   // Pre-fill location if empty
-  if (!schedule.pickupLocation) {
-    setSchedule((s) => ({
-      ...s,
-      pickupLocation: vehicle.location,
-      returnLocation: vehicle.location,
-    }));
-  }
+  useEffect(() => {
+    if (vehicle && !schedule.pickupLocation && vehicle.location) {
+      setSchedule((s) => ({
+        ...s,
+        pickupLocation: vehicle.location,
+        returnLocation: vehicle.location,
+      }));
+    }
+  }, [vehicle, schedule.pickupLocation]);
 
   const duration =
     schedule.pickupDate && schedule.returnDate
@@ -176,7 +197,7 @@ function BookingFlow() {
 
   const subtotal = duration * vehicle.pricePerDay;
   const taxes = Math.round(subtotal * 0.18);
-  const insurance = 499;
+  const insurance = 0;
   const estimatedTotal = subtotal + taxes + insurance;
 
   const nextStep = async () => {
@@ -364,12 +385,25 @@ function BookingFlow() {
                 faster verification.
               </p>
 
+              {uploadMutation.isError || processOcrMutation.isError ? (
+                <div className="p-4 mb-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm font-medium">
+                  {uploadMutation.error?.message || processOcrMutation.error?.message || "Failed to process document. Please try again."}
+                </div>
+              ) : null}
               {!document ? (
-                <div
-                  className="border-2 border-dashed border-border/70 rounded-xl p-10 flex flex-col items-center justify-center gap-4 bg-surface-2/30 cursor-pointer hover:bg-surface-2/50 transition-colors"
-                  onClick={() => extractDoc.mutate()}
-                >
-                  {extractDoc.isPending ? (
+                <div className="relative border-2 border-dashed border-border/70 rounded-xl p-10 flex flex-col items-center justify-center gap-4 bg-surface-2/30 hover:bg-surface-2/50 transition-colors">
+                  <input 
+                    type="file" 
+                    accept="image/*,application/pdf"
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files.length > 0) {
+                        uploadMutation.mutate(e.target.files[0]);
+                      }
+                    }}
+                    disabled={uploadMutation.isPending || processOcrMutation.isPending}
+                  />
+                  {uploadMutation.isPending || processOcrMutation.isPending ? (
                     <>
                       <Loader2 className="w-10 h-10 text-primary animate-spin" />
                       <div className="text-center">
@@ -514,7 +548,12 @@ function BookingFlow() {
                 {vehicle.name} rental.
               </p>
 
-              <div className="pt-8">
+              <div className="pt-8 space-y-4">
+                {processPayment.isError && (
+                  <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm font-medium">
+                    {processPayment.error?.message || "Failed to process booking. Please try again or check vehicle availability."}
+                  </div>
+                )}
                 <Button
                   size="lg"
                   className="w-full sm:w-auto min-w-[200px]"
@@ -642,7 +681,7 @@ function BookingFlow() {
                   <Link to="/">Return to Home</Link>
                 </Button>
                 <Button asChild>
-                  <Link to="/dashboard">Go to Dashboard</Link>
+                  <Link to="/bookings">Go to My Bookings</Link>
                 </Button>
               </div>
             </div>

@@ -4,13 +4,14 @@ from sqlalchemy.orm import Session
 
 from app.api import deps
 from app.models.booking import Booking
+from app.models.junctions import BookRelation
 from app.models.user import User
-from app.schemas.booking import Booking as BookingSchema, BookingCreate
+from app.schemas.booking import BookingDetail, BookingCreate
 from app.services.booking_service import BookingService
 
 router = APIRouter()
 
-@router.get("/", response_model=List[BookingSchema])
+@router.get("/", response_model=List[BookingDetail])
 def read_bookings(
     db: Session = Depends(deps.get_db),
     skip: int = 0,
@@ -18,15 +19,17 @@ def read_bookings(
     current_user: User = Depends(deps.get_current_user)
 ) -> Any:
     """
-    Retrieve bookings. Customers see their own, Managers see all.
+    Retrieve bookings. Customers see their own, Managers see all, Salespersons see assigned.
     """
     if current_user.role in ["Manager", "Admin"]:
         bookings = db.query(Booking).offset(skip).limit(limit).all()
+    elif current_user.role == "Salesperson":
+        bookings = db.query(Booking).join(BookRelation).filter(BookRelation.salesperson_id == current_user.id).offset(skip).limit(limit).all()
     else:
         bookings = db.query(Booking).filter(Booking.customer_id == current_user.id).offset(skip).limit(limit).all()
     return bookings
 
-@router.get("/{id}", response_model=BookingSchema)
+@router.get("/{id}", response_model=BookingDetail)
 def read_booking(
     id: str,
     db: Session = Depends(deps.get_db),
@@ -39,12 +42,16 @@ def read_booking(
     if not booking:
         raise HTTPException(status_code=404, detail="Booking not found")
         
-    if current_user.role not in ["Manager", "Admin"] and booking.customer_id != current_user.id:
-        raise HTTPException(status_code=403, detail="Not enough permissions")
+    if current_user.role not in ["Manager", "Admin"]:
+        if current_user.role == "Salesperson":
+            if not any(br.salesperson_id == current_user.id for br in booking.book_relations):
+                raise HTTPException(status_code=403, detail="Not enough permissions")
+        elif booking.customer_id != current_user.id:
+            raise HTTPException(status_code=403, detail="Not enough permissions")
         
     return booking
 
-@router.post("/", response_model=BookingSchema)
+@router.post("/", response_model=BookingDetail)
 def create_booking(
     *,
     db: Session = Depends(deps.get_db),
@@ -57,7 +64,7 @@ def create_booking(
     booking = BookingService.create_booking(db=db, booking_in=booking_in, customer_id=current_user.id)
     return booking
 
-@router.post("/{id}/confirm", response_model=BookingSchema)
+@router.post("/{id}/confirm", response_model=BookingDetail)
 def confirm_booking(
     *,
     id: str,
@@ -70,7 +77,7 @@ def confirm_booking(
     booking = BookingService.confirm_booking(db=db, booking_id=id, manager_id=current_user.id)
     return booking
 
-@router.post("/{id}/cancel", response_model=BookingSchema)
+@router.post("/{id}/cancel", response_model=BookingDetail)
 def cancel_booking(
     *,
     id: str,

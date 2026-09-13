@@ -15,23 +15,23 @@
       "pricePerDay": 6499,
       "rating": 4.2,
       "reviewCount": 38,
-      "status": "available",
-      "location": "Bengaluru — Indiranagar Hub",
-      "image": "",
+      "status": "maintenance",
+      "location": "Bengaluru \u2014 Indiranagar Hub",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Adaptive cruise control",
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist"
       ],
-      "description": "The Volvo XC60 Ultimate is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Volvo XC60 Ultimate is part of FleetFlow's suv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 8000,
       "lastServiceDate": "2026-07-13",
       "nextServiceDate": "2026-09-11",
@@ -58,23 +58,23 @@
       "pricePerDay": 5899,
       "rating": 4.9,
       "reviewCount": 55,
-      "status": "rented",
-      "location": "Bengaluru — KIA Airport",
-      "image": "",
+      "status": "inactive",
+      "location": "Bengaluru \u2014 KIA Airport",
+      "image": "https://images.unsplash.com/photo-1549317661-bd32c8ce0be2?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0be2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0be2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1549317661-bd32c8ce0be2?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist",
         "Six airbags"
       ],
-      "description": "The Toyota Fortuner Legender is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Toyota Fortuner Legender is part of FleetFlow's suv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 11100,
       "lastServiceDate": "2026-07-12",
       "nextServiceDate": "2026-09-10",
@@ -99,12 +99,12 @@
       "rating": 4.8,
       "reviewCount": 72,
       "status": "available",
-      "location": "Mumbai — Bandra Kurla",
-      "image": "",
+      "location": "Mumbai \u2014 Bandra Kurla",
+      "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Ventilated front seats",
@@ -114,7 +114,7 @@
         "Six airbags",
         "Digital cockpit"
       ],
-      "description": "The Mahindra XUV700 AX7 is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Mahindra XUV700 AX7 is part of FleetFlow's suv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 14200,
       "lastServiceDate": "2026-07-11",
       "nextServiceDate": "2026-09-09",
@@ -137,13 +137,13 @@
       "pricePerDay": 4199,
       "rating": 4.7,
       "reviewCount": 89,
-      "status": "maintenance",
-      "location": "Delhi — Aerocity",
-      "image": "",
+      "status": "available",
+      "location": "Delhi \u2014 Aerocity",
+      "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Wireless CarPlay & Android Auto",
@@ -153,7 +153,7 @@
         "Digital cockpit",
         "Ambient lighting"
       ],
-      "description": "The Jeep Compass Trailhawk is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Jeep Compass Trailhawk is part of FleetFlow's suv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 17300,
       "lastServiceDate": "2026-07-10",
       "nextServiceDate": "2026-09-08",
@@ -181,22 +181,22 @@
       "rating": 4.6,
       "reviewCount": 106,
       "status": "available",
-      "location": "Pune — Baner",
-      "image": "",
+      "location": "Pune \u2014 Baner",
+      "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Adaptive cruise control",
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist"
       ],
-      "description": "The Hyundai Creta SX(O) is part of FleetFlow's suv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Hyundai Creta SX(O) is part of FleetFlow's suv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 20400,
       "lastServiceDate": "2026-07-09",
       "nextServiceDate": "2026-09-07",
@@ -223,22 +223,22 @@
       "rating": 4.5,
       "reviewCount": 123,
       "status": "available",
-      "location": "Hyderabad — Gachibowli",
-      "image": "",
+      "location": "Hyderabad \u2014 Gachibowli",
+      "image": "https://images.unsplash.com/photo-1503371064186-b73a3fd1ff85?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1503371064186-b73a3fd1ff85?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1503371064186-b73a3fd1ff85?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1503371064186-b73a3fd1ff85?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist",
         "Six airbags"
       ],
-      "description": "The BMW 530i M Sport is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The BMW 530i M Sport is part of FleetFlow's sedan line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 23500,
       "lastServiceDate": "2026-07-08",
       "nextServiceDate": "2026-09-06",
@@ -261,13 +261,13 @@
       "pricePerDay": 4599,
       "rating": 4.4,
       "reviewCount": 140,
-      "status": "reserved",
-      "location": "Chennai — Guindy",
-      "image": "",
+      "status": "available",
+      "location": "Chennai \u2014 Guindy",
+      "image": "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Ventilated front seats",
@@ -277,7 +277,7 @@
         "Six airbags",
         "Digital cockpit"
       ],
-      "description": "The Skoda Superb Laurin is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Skoda Superb Laurin is part of FleetFlow's sedan line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 26600,
       "lastServiceDate": "2026-07-07",
       "nextServiceDate": "2026-09-05",
@@ -305,12 +305,12 @@
       "rating": 4.3,
       "reviewCount": 157,
       "status": "available",
-      "location": "Goa — Dabolim",
-      "image": "",
+      "location": "Goa \u2014 Dabolim",
+      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Wireless CarPlay & Android Auto",
@@ -320,7 +320,7 @@
         "Digital cockpit",
         "Ambient lighting"
       ],
-      "description": "The Honda City ZX is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Honda City ZX is part of FleetFlow's sedan line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 29700,
       "lastServiceDate": "2026-07-06",
       "nextServiceDate": "2026-09-04",
@@ -344,22 +344,22 @@
       "rating": 4.2,
       "reviewCount": 174,
       "status": "available",
-      "location": "Bengaluru — Indiranagar Hub",
-      "image": "",
+      "location": "Bengaluru \u2014 Indiranagar Hub",
+      "image": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Adaptive cruise control",
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist"
       ],
-      "description": "The Hyundai Verna SX is part of FleetFlow's sedan line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Hyundai Verna SX is part of FleetFlow's sedan line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 32800,
       "lastServiceDate": "2026-07-05",
       "nextServiceDate": "2026-09-03",
@@ -386,22 +386,22 @@
       "rating": 4.9,
       "reviewCount": 191,
       "status": "available",
-      "location": "Bengaluru — KIA Airport",
-      "image": "",
+      "location": "Bengaluru \u2014 KIA Airport",
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist",
         "Six airbags"
       ],
-      "description": "The Maruti Baleno Alpha is part of FleetFlow's hatchback line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Maruti Baleno Alpha is part of FleetFlow's hatchback line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 35900,
       "lastServiceDate": "2026-07-04",
       "nextServiceDate": "2026-09-02",
@@ -428,13 +428,13 @@
       "pricePerDay": 1399,
       "rating": 4.8,
       "reviewCount": 208,
-      "status": "rented",
-      "location": "Mumbai — Bandra Kurla",
-      "image": "",
+      "status": "available",
+      "location": "Mumbai \u2014 Bandra Kurla",
+      "image": "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Ventilated front seats",
@@ -444,7 +444,7 @@
         "Six airbags",
         "Digital cockpit"
       ],
-      "description": "The Tata Altroz Racer is part of FleetFlow's hatchback line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Tata Altroz Racer is part of FleetFlow's hatchback line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 39000,
       "lastServiceDate": "2026-07-03",
       "nextServiceDate": "2026-09-01",
@@ -469,12 +469,12 @@
       "rating": 4.7,
       "reviewCount": 225,
       "status": "available",
-      "location": "Delhi — Aerocity",
-      "image": "",
+      "location": "Delhi \u2014 Aerocity",
+      "image": "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Wireless CarPlay & Android Auto",
@@ -484,7 +484,7 @@
         "Digital cockpit",
         "Ambient lighting"
       ],
-      "description": "The Mercedes-Benz S 450 is part of FleetFlow's luxury line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Mercedes-Benz S 450 is part of FleetFlow's luxury line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 42100,
       "lastServiceDate": "2026-07-02",
       "nextServiceDate": "2026-08-31",
@@ -507,23 +507,23 @@
       "pricePerDay": 12499,
       "rating": 4.6,
       "reviewCount": 242,
-      "status": "reserved",
-      "location": "Pune — Baner",
-      "image": "",
+      "status": "available",
+      "location": "Pune \u2014 Baner",
+      "image": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Adaptive cruise control",
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist"
       ],
-      "description": "The Audi A6 Technology is part of FleetFlow's luxury line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Audi A6 Technology is part of FleetFlow's luxury line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 45200,
       "lastServiceDate": "2026-07-01",
       "nextServiceDate": "2026-08-30",
@@ -550,23 +550,23 @@
       "pricePerDay": 22999,
       "rating": 4.5,
       "reviewCount": 39,
-      "status": "maintenance",
-      "location": "Hyderabad — Gachibowli",
-      "image": "",
+      "status": "available",
+      "location": "Hyderabad \u2014 Gachibowli",
+      "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist",
         "Six airbags"
       ],
-      "description": "The Porsche Macan GTS is part of FleetFlow's luxury line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Porsche Macan GTS is part of FleetFlow's luxury line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 48300,
       "lastServiceDate": "2026-06-30",
       "nextServiceDate": "2026-08-29",
@@ -590,12 +590,12 @@
       "rating": 4.4,
       "reviewCount": 56,
       "status": "available",
-      "location": "Chennai — Guindy",
-      "image": "",
+      "location": "Chennai \u2014 Guindy",
+      "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Ventilated front seats",
@@ -605,7 +605,7 @@
         "Six airbags",
         "Digital cockpit"
       ],
-      "description": "The Tata Nexon EV Empowered is part of FleetFlow's electric line — inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Tata Nexon EV Empowered is part of FleetFlow's electric line \u2014 inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 51400,
       "lastServiceDate": "2026-06-29",
       "nextServiceDate": "2026-08-28",
@@ -629,12 +629,12 @@
       "rating": 4.3,
       "reviewCount": 73,
       "status": "available",
-      "location": "Goa — Dabolim",
-      "image": "",
+      "location": "Goa \u2014 Dabolim",
+      "image": "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Wireless CarPlay & Android Auto",
@@ -644,7 +644,7 @@
         "Digital cockpit",
         "Ambient lighting"
       ],
-      "description": "The MG ZS EV Exclusive is part of FleetFlow's electric line — inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
+      "description": "The MG ZS EV Exclusive is part of FleetFlow's electric line \u2014 inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 54500,
       "lastServiceDate": "2026-06-28",
       "nextServiceDate": "2026-08-27",
@@ -672,22 +672,22 @@
       "rating": 4.2,
       "reviewCount": 90,
       "status": "available",
-      "location": "Bengaluru — Indiranagar Hub",
-      "image": "",
+      "location": "Bengaluru \u2014 Indiranagar Hub",
+      "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Adaptive cruise control",
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist"
       ],
-      "description": "The BYD Atto 3 Superior is part of FleetFlow's electric line — inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
+      "description": "The BYD Atto 3 Superior is part of FleetFlow's electric line \u2014 inspected before every handover, delivered fully fuelled and charged, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 57600,
       "lastServiceDate": "2026-06-27",
       "nextServiceDate": "2026-08-26",
@@ -714,22 +714,22 @@
       "rating": 4.9,
       "reviewCount": 107,
       "status": "available",
-      "location": "Bengaluru — KIA Airport",
-      "image": "",
+      "location": "Bengaluru \u2014 KIA Airport",
+      "image": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
-        "360° parking camera",
+        "360\u00b0 parking camera",
         "Ventilated front seats",
         "Wireless CarPlay & Android Auto",
         "Panoramic sunroof",
         "Lane keep assist",
         "Six airbags"
       ],
-      "description": "The Kia Carens Luxury Plus is part of FleetFlow's muv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Kia Carens Luxury Plus is part of FleetFlow's muv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 60700,
       "lastServiceDate": "2026-06-26",
       "nextServiceDate": "2026-08-25",
@@ -752,13 +752,13 @@
       "pricePerDay": 4499,
       "rating": 4.8,
       "reviewCount": 124,
-      "status": "rented",
-      "location": "Mumbai — Bandra Kurla",
-      "image": "",
+      "status": "available",
+      "location": "Mumbai \u2014 Bandra Kurla",
+      "image": "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Ventilated front seats",
@@ -768,7 +768,7 @@
         "Six airbags",
         "Digital cockpit"
       ],
-      "description": "The Toyota Innova Hycross is part of FleetFlow's muv line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Toyota Innova Hycross is part of FleetFlow's muv line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 63800,
       "lastServiceDate": "2026-06-25",
       "nextServiceDate": "2026-08-24",
@@ -796,13 +796,13 @@
       "pricePerDay": 9499,
       "rating": 4.7,
       "reviewCount": 141,
-      "status": "inactive",
-      "location": "Delhi — Aerocity",
-      "image": "",
+      "status": "available",
+      "location": "Delhi \u2014 Aerocity",
+      "image": "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=800",
       "gallery": [
-        "",
-        "",
-        ""
+        "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&q=80&w=800"
       ],
       "features": [
         "Wireless CarPlay & Android Auto",
@@ -812,7 +812,7 @@
         "Digital cockpit",
         "Ambient lighting"
       ],
-      "description": "The Mini Cooper S Convertible is part of FleetFlow's convertible line — inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
+      "description": "The Mini Cooper S Convertible is part of FleetFlow's convertible line \u2014 inspected before every handover, delivered fully fuelled, and covered by roadside assistance across all 8 hubs.",
       "odometerKm": 66900,
       "lastServiceDate": "2026-06-24",
       "nextServiceDate": "2026-08-23",
@@ -1230,7 +1230,7 @@
       "email": "rithika.menon@fleetflow.in",
       "phone": "+91 98450 11201",
       "role": "Salesperson",
-      "branch": "Bengaluru — Indiranagar Hub",
+      "branch": "Bengaluru \u2014 Indiranagar Hub",
       "status": "active",
       "joinedAt": "2023-12-16",
       "target": 1800000,
@@ -1243,7 +1243,7 @@
       "email": "imran.qureshi@fleetflow.in",
       "phone": "+91 98450 11202",
       "role": "Salesperson",
-      "branch": "Mumbai — Bandra Kurla",
+      "branch": "Mumbai \u2014 Bandra Kurla",
       "status": "active",
       "joinedAt": "2024-11-20",
       "target": 2200000,
@@ -1256,7 +1256,7 @@
       "email": "sneha.kulkarni@fleetflow.in",
       "phone": "+91 98450 11203",
       "role": "Salesperson",
-      "branch": "Pune — Baner",
+      "branch": "Pune \u2014 Baner",
       "status": "on-leave",
       "joinedAt": "2025-07-08",
       "target": 1400000,
@@ -1269,7 +1269,7 @@
       "email": "dinesh.w@fleetflow.in",
       "phone": "+91 98450 11311",
       "role": "Mechanic",
-      "branch": "Bengaluru — Indiranagar Hub",
+      "branch": "Bengaluru \u2014 Indiranagar Hub",
       "status": "active",
       "joinedAt": "2023-05-10",
       "specialization": "Diesel powertrain",
@@ -1281,7 +1281,7 @@
       "email": "farah.sheikh@fleetflow.in",
       "phone": "+91 98450 11312",
       "role": "Mechanic",
-      "branch": "Mumbai — Bandra Kurla",
+      "branch": "Mumbai \u2014 Bandra Kurla",
       "status": "active",
       "joinedAt": "2025-03-20",
       "specialization": "EV battery & HV systems",
@@ -1293,7 +1293,7 @@
       "email": "joseph.mathew@fleetflow.in",
       "phone": "+91 98450 11313",
       "role": "Mechanic",
-      "branch": "Hyderabad — Gachibowli",
+      "branch": "Hyderabad \u2014 Gachibowli",
       "status": "active",
       "joinedAt": "2025-10-26",
       "specialization": "Body & paint",
@@ -1305,10 +1305,10 @@
       "email": "anjali.d@fleetflow.in",
       "phone": "+91 98450 11321",
       "role": "Manager",
-      "branch": "Bengaluru — Indiranagar Hub",
+      "branch": "Bengaluru \u2014 Indiranagar Hub",
       "status": "active",
       "joinedAt": "2022-07-14",
-      "managedBranch": "Bengaluru — Indiranagar Hub",
+      "managedBranch": "Bengaluru \u2014 Indiranagar Hub",
       "headcount": 14
     },
     {
@@ -1317,10 +1317,10 @@
       "email": "rajeev.khanna@fleetflow.in",
       "phone": "+91 98450 11322",
       "role": "Manager",
-      "branch": "Delhi — Aerocity",
+      "branch": "Delhi \u2014 Aerocity",
       "status": "active",
       "joinedAt": "2024-04-14",
-      "managedBranch": "Delhi — Aerocity",
+      "managedBranch": "Delhi \u2014 Aerocity",
       "headcount": 11
     }
   ],
@@ -1332,8 +1332,8 @@
       "salespersonId": "E301",
       "startDate": "2026-08-23",
       "endDate": "2026-08-25",
-      "pickupLocation": "Bengaluru — Indiranagar Hub",
-      "dropoffLocation": "Mumbai — Bandra Kurla",
+      "pickupLocation": "Bengaluru \u2014 Indiranagar Hub",
+      "dropoffLocation": "Mumbai \u2014 Bandra Kurla",
       "status": "confirmed",
       "subtotal": 12998,
       "taxes": 2340,
@@ -1381,8 +1381,8 @@
       "salespersonId": "E302",
       "startDate": "2026-08-24",
       "endDate": "2026-08-27",
-      "pickupLocation": "Delhi — Aerocity",
-      "dropoffLocation": "Delhi — Aerocity",
+      "pickupLocation": "Delhi \u2014 Aerocity",
+      "dropoffLocation": "Delhi \u2014 Aerocity",
       "status": "active",
       "subtotal": 12597,
       "taxes": 2267,
@@ -1430,8 +1430,8 @@
       "salespersonId": "E303",
       "startDate": "2026-08-02",
       "endDate": "2026-08-06",
-      "pickupLocation": "Chennai — Guindy",
-      "dropoffLocation": "Pune — Baner",
+      "pickupLocation": "Chennai \u2014 Guindy",
+      "dropoffLocation": "Pune \u2014 Baner",
       "status": "completed",
       "subtotal": 18396,
       "taxes": 3311,
@@ -1479,8 +1479,8 @@
       "salespersonId": "E301",
       "startDate": "2026-07-28",
       "endDate": "2026-08-02",
-      "pickupLocation": "Bengaluru — KIA Airport",
-      "dropoffLocation": "Hyderabad — Gachibowli",
+      "pickupLocation": "Bengaluru \u2014 KIA Airport",
+      "dropoffLocation": "Hyderabad \u2014 Gachibowli",
       "status": "completed",
       "subtotal": 7495,
       "taxes": 1349,
@@ -1528,8 +1528,8 @@
       "salespersonId": "E302",
       "startDate": "2026-07-23",
       "endDate": "2026-07-29",
-      "pickupLocation": "Pune — Baner",
-      "dropoffLocation": "Chennai — Guindy",
+      "pickupLocation": "Pune \u2014 Baner",
+      "dropoffLocation": "Chennai \u2014 Guindy",
       "status": "cancelled",
       "subtotal": 74994,
       "taxes": 13499,
@@ -1576,8 +1576,8 @@
       "salespersonId": "E303",
       "startDate": "2026-08-28",
       "endDate": "2026-09-04",
-      "pickupLocation": "Goa — Dabolim",
-      "dropoffLocation": "Goa — Dabolim",
+      "pickupLocation": "Goa \u2014 Dabolim",
+      "dropoffLocation": "Goa \u2014 Dabolim",
       "status": "pending",
       "subtotal": 23093,
       "taxes": 4157,
@@ -1625,8 +1625,8 @@
       "salespersonId": "E301",
       "startDate": "2026-07-13",
       "endDate": "2026-07-15",
-      "pickupLocation": "Mumbai — Bandra Kurla",
-      "dropoffLocation": "Bengaluru — Indiranagar Hub",
+      "pickupLocation": "Mumbai \u2014 Bandra Kurla",
+      "dropoffLocation": "Bengaluru \u2014 Indiranagar Hub",
       "status": "completed",
       "subtotal": 8998,
       "taxes": 1620,
@@ -1674,8 +1674,8 @@
       "salespersonId": "E302",
       "startDate": "2026-08-30",
       "endDate": "2026-09-02",
-      "pickupLocation": "Bengaluru — KIA Airport",
-      "dropoffLocation": "Bengaluru — KIA Airport",
+      "pickupLocation": "Bengaluru \u2014 KIA Airport",
+      "dropoffLocation": "Bengaluru \u2014 KIA Airport",
       "status": "confirmed",
       "subtotal": 17697,
       "taxes": 3185,
@@ -1723,8 +1723,8 @@
       "salespersonId": "E303",
       "startDate": "2026-08-31",
       "endDate": "2026-09-04",
-      "pickupLocation": "Pune — Baner",
-      "dropoffLocation": "Mumbai — Bandra Kurla",
+      "pickupLocation": "Pune \u2014 Baner",
+      "dropoffLocation": "Mumbai \u2014 Bandra Kurla",
       "status": "confirmed",
       "subtotal": 10396,
       "taxes": 1871,
@@ -1772,8 +1772,8 @@
       "salespersonId": "E301",
       "startDate": "2026-09-01",
       "endDate": "2026-09-06",
-      "pickupLocation": "Goa — Dabolim",
-      "dropoffLocation": "Delhi — Aerocity",
+      "pickupLocation": "Goa \u2014 Dabolim",
+      "dropoffLocation": "Delhi \u2014 Aerocity",
       "status": "active",
       "subtotal": 11495,
       "taxes": 2069,
@@ -1821,8 +1821,8 @@
       "salespersonId": "E302",
       "startDate": "2026-06-23",
       "endDate": "2026-06-29",
-      "pickupLocation": "Mumbai — Bandra Kurla",
-      "dropoffLocation": "Pune — Baner",
+      "pickupLocation": "Mumbai \u2014 Bandra Kurla",
+      "dropoffLocation": "Pune \u2014 Baner",
       "status": "completed",
       "subtotal": 8394,
       "taxes": 1511,
@@ -1870,8 +1870,8 @@
       "salespersonId": "E303",
       "startDate": "2026-06-18",
       "endDate": "2026-06-25",
-      "pickupLocation": "Hyderabad — Gachibowli",
-      "dropoffLocation": "Hyderabad — Gachibowli",
+      "pickupLocation": "Hyderabad \u2014 Gachibowli",
+      "dropoffLocation": "Hyderabad \u2014 Gachibowli",
       "status": "completed",
       "subtotal": 160993,
       "taxes": 28979,
@@ -1919,8 +1919,8 @@
       "salespersonId": "E301",
       "startDate": "2026-06-13",
       "endDate": "2026-06-15",
-      "pickupLocation": "Bengaluru — Indiranagar Hub",
-      "dropoffLocation": "Chennai — Guindy",
+      "pickupLocation": "Bengaluru \u2014 Indiranagar Hub",
+      "dropoffLocation": "Chennai \u2014 Guindy",
       "status": "cancelled",
       "subtotal": 7798,
       "taxes": 1404,
@@ -1967,8 +1967,8 @@
       "salespersonId": "E302",
       "startDate": "2026-09-05",
       "endDate": "2026-09-08",
-      "pickupLocation": "Delhi — Aerocity",
-      "dropoffLocation": "Goa — Dabolim",
+      "pickupLocation": "Delhi \u2014 Aerocity",
+      "dropoffLocation": "Goa \u2014 Dabolim",
       "status": "pending",
       "subtotal": 28497,
       "taxes": 5129,
@@ -2016,8 +2016,8 @@
       "salespersonId": "E303",
       "startDate": "2026-06-03",
       "endDate": "2026-06-07",
-      "pickupLocation": "Mumbai — Bandra Kurla",
-      "dropoffLocation": "Bengaluru — Indiranagar Hub",
+      "pickupLocation": "Mumbai \u2014 Bandra Kurla",
+      "dropoffLocation": "Bengaluru \u2014 Indiranagar Hub",
       "status": "completed",
       "subtotal": 13996,
       "taxes": 2519,
@@ -2065,8 +2065,8 @@
       "salespersonId": "E301",
       "startDate": "2026-09-07",
       "endDate": "2026-09-12",
-      "pickupLocation": "Hyderabad — Gachibowli",
-      "dropoffLocation": "Bengaluru — KIA Airport",
+      "pickupLocation": "Hyderabad \u2014 Gachibowli",
+      "dropoffLocation": "Bengaluru \u2014 KIA Airport",
       "status": "confirmed",
       "subtotal": 44995,
       "taxes": 8099,
@@ -2114,8 +2114,8 @@
       "salespersonId": "E302",
       "startDate": "2026-09-08",
       "endDate": "2026-09-14",
-      "pickupLocation": "Bengaluru — Indiranagar Hub",
-      "dropoffLocation": "Mumbai — Bandra Kurla",
+      "pickupLocation": "Bengaluru \u2014 Indiranagar Hub",
+      "dropoffLocation": "Mumbai \u2014 Bandra Kurla",
       "status": "confirmed",
       "subtotal": 11394,
       "taxes": 2051,
@@ -2163,8 +2163,8 @@
       "salespersonId": "E303",
       "startDate": "2026-09-09",
       "endDate": "2026-09-16",
-      "pickupLocation": "Delhi — Aerocity",
-      "dropoffLocation": "Delhi — Aerocity",
+      "pickupLocation": "Delhi \u2014 Aerocity",
+      "dropoffLocation": "Delhi \u2014 Aerocity",
       "status": "active",
       "subtotal": 132993,
       "taxes": 23939,
@@ -2212,8 +2212,8 @@
       "salespersonId": "E301",
       "startDate": "2026-05-14",
       "endDate": "2026-05-16",
-      "pickupLocation": "Chennai — Guindy",
-      "dropoffLocation": "Pune — Baner",
+      "pickupLocation": "Chennai \u2014 Guindy",
+      "dropoffLocation": "Pune \u2014 Baner",
       "status": "completed",
       "subtotal": 5598,
       "taxes": 1008,
@@ -2261,8 +2261,8 @@
       "salespersonId": "E302",
       "startDate": "2026-05-09",
       "endDate": "2026-05-12",
-      "pickupLocation": "Bengaluru — KIA Airport",
-      "dropoffLocation": "Hyderabad — Gachibowli",
+      "pickupLocation": "Bengaluru \u2014 KIA Airport",
+      "dropoffLocation": "Hyderabad \u2014 Gachibowli",
       "status": "completed",
       "subtotal": 8997,
       "taxes": 1619,
@@ -2310,8 +2310,8 @@
       "salespersonId": "E303",
       "startDate": "2026-05-04",
       "endDate": "2026-05-08",
-      "pickupLocation": "Bengaluru — Indiranagar Hub",
-      "dropoffLocation": "Chennai — Guindy",
+      "pickupLocation": "Bengaluru \u2014 Indiranagar Hub",
+      "dropoffLocation": "Chennai \u2014 Guindy",
       "status": "cancelled",
       "subtotal": 25996,
       "taxes": 4679,
@@ -2358,8 +2358,8 @@
       "salespersonId": "E301",
       "startDate": "2026-08-26",
       "endDate": "2026-08-31",
-      "pickupLocation": "Delhi — Aerocity",
-      "dropoffLocation": "Goa — Dabolim",
+      "pickupLocation": "Delhi \u2014 Aerocity",
+      "dropoffLocation": "Goa \u2014 Dabolim",
       "status": "pending",
       "subtotal": 20995,
       "taxes": 3779,
@@ -2407,8 +2407,8 @@
       "salespersonId": "E302",
       "startDate": "2026-04-24",
       "endDate": "2026-04-30",
-      "pickupLocation": "Chennai — Guindy",
-      "dropoffLocation": "Bengaluru — Indiranagar Hub",
+      "pickupLocation": "Chennai \u2014 Guindy",
+      "dropoffLocation": "Bengaluru \u2014 Indiranagar Hub",
       "status": "completed",
       "subtotal": 27594,
       "taxes": 4967,
@@ -2456,8 +2456,8 @@
       "salespersonId": "E303",
       "startDate": "2026-08-28",
       "endDate": "2026-09-04",
-      "pickupLocation": "Bengaluru — KIA Airport",
-      "dropoffLocation": "Bengaluru — KIA Airport",
+      "pickupLocation": "Bengaluru \u2014 KIA Airport",
+      "dropoffLocation": "Bengaluru \u2014 KIA Airport",
       "status": "confirmed",
       "subtotal": 10493,
       "taxes": 1889,
@@ -2514,8 +2514,8 @@
       "signedAt": "2026-08-17",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2534,8 +2534,8 @@
       "signedAt": "2026-08-18",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2554,8 +2554,8 @@
       "signedAt": "2026-07-27",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2574,8 +2574,8 @@
       "signedAt": "2026-07-22",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2594,8 +2594,8 @@
       "signedAt": null,
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2614,8 +2614,8 @@
       "signedAt": "2026-07-07",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2634,8 +2634,8 @@
       "signedAt": "2026-08-24",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2654,8 +2654,8 @@
       "signedAt": "2026-08-25",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2674,8 +2674,8 @@
       "signedAt": "2026-08-26",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2694,8 +2694,8 @@
       "signedAt": "2026-06-17",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2714,8 +2714,8 @@
       "signedAt": "2026-06-12",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2734,8 +2734,8 @@
       "signedAt": null,
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2754,8 +2754,8 @@
       "signedAt": "2026-05-28",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2774,8 +2774,8 @@
       "signedAt": "2026-09-01",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2794,8 +2794,8 @@
       "signedAt": "2026-09-02",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2814,8 +2814,8 @@
       "signedAt": "2026-09-03",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2834,8 +2834,8 @@
       "signedAt": "2026-05-08",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2854,8 +2854,8 @@
       "signedAt": "2026-05-03",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2874,8 +2874,8 @@
       "signedAt": null,
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2894,8 +2894,8 @@
       "signedAt": "2026-04-18",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -2914,8 +2914,8 @@
       "signedAt": "2026-08-22",
       "terms": [
         "Fuel/charge level at return must match the level recorded at handover.",
-        "Included 250 km per rental day; ₹14 per additional kilometre.",
-        "Damage liability capped at ₹15,000 with the standard insurance add-on.",
+        "Included 250 km per rental day; \u20b914 per additional kilometre.",
+        "Damage liability capped at \u20b915,000 with the standard insurance add-on.",
         "Only drivers listed on this agreement may operate the vehicle.",
         "Late return is charged at 10% of the daily rate per hour."
       ]
@@ -3169,7 +3169,7 @@
       "vehicleId": "V101",
       "mechanicId": "E311",
       "type": "Scheduled 10,000 km service",
-      "description": "Scheduled 10,000 km service carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "description": "Scheduled 10,000 km service carried out at the Bengaluru \u2014 Indiranagar Hub workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-08-10",
       "completedAt": "2026-08-11",
@@ -3181,7 +3181,7 @@
       "vehicleId": "V103",
       "mechanicId": "E312",
       "type": "Brake pad replacement",
-      "description": "Brake pad replacement carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "description": "Brake pad replacement carried out at the Mumbai \u2014 Bandra Kurla workshop bay.",
       "status": "scheduled",
       "scheduledFor": "2026-08-24",
       "completedAt": null,
@@ -3193,7 +3193,7 @@
       "vehicleId": "V105",
       "mechanicId": "E313",
       "type": "Tyre rotation & alignment",
-      "description": "Tyre rotation & alignment carried out at the Pune — Baner workshop bay.",
+      "description": "Tyre rotation & alignment carried out at the Pune \u2014 Baner workshop bay.",
       "status": "in-progress",
       "scheduledFor": "2026-08-25",
       "completedAt": null,
@@ -3205,7 +3205,7 @@
       "vehicleId": "V107",
       "mechanicId": "E311",
       "type": "HV battery health check",
-      "description": "HV battery health check carried out at the Chennai — Guindy workshop bay.",
+      "description": "HV battery health check carried out at the Chennai \u2014 Guindy workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-07-23",
       "completedAt": "2026-07-24",
@@ -3217,7 +3217,7 @@
       "vehicleId": "V109",
       "mechanicId": "E312",
       "type": "AC condenser repair",
-      "description": "AC condenser repair carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "description": "AC condenser repair carried out at the Bengaluru \u2014 Indiranagar Hub workshop bay.",
       "status": "overdue",
       "scheduledFor": "2026-08-27",
       "completedAt": null,
@@ -3229,7 +3229,7 @@
       "vehicleId": "V111",
       "mechanicId": "E313",
       "type": "Clutch overhaul",
-      "description": "Clutch overhaul carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "description": "Clutch overhaul carried out at the Mumbai \u2014 Bandra Kurla workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-07-11",
       "completedAt": "2026-07-12",
@@ -3241,7 +3241,7 @@
       "vehicleId": "V113",
       "mechanicId": "E311",
       "type": "Annual inspection",
-      "description": "Annual inspection carried out at the Pune — Baner workshop bay.",
+      "description": "Annual inspection carried out at the Pune \u2014 Baner workshop bay.",
       "status": "scheduled",
       "scheduledFor": "2026-08-29",
       "completedAt": null,
@@ -3253,7 +3253,7 @@
       "vehicleId": "V115",
       "mechanicId": "E312",
       "type": "Scheduled 10,000 km service",
-      "description": "Scheduled 10,000 km service carried out at the Chennai — Guindy workshop bay.",
+      "description": "Scheduled 10,000 km service carried out at the Chennai \u2014 Guindy workshop bay.",
       "status": "in-progress",
       "scheduledFor": "2026-08-30",
       "completedAt": null,
@@ -3265,7 +3265,7 @@
       "vehicleId": "V117",
       "mechanicId": "E313",
       "type": "Brake pad replacement",
-      "description": "Brake pad replacement carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "description": "Brake pad replacement carried out at the Bengaluru \u2014 Indiranagar Hub workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-06-23",
       "completedAt": "2026-06-24",
@@ -3277,7 +3277,7 @@
       "vehicleId": "V119",
       "mechanicId": "E311",
       "type": "Tyre rotation & alignment",
-      "description": "Tyre rotation & alignment carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "description": "Tyre rotation & alignment carried out at the Mumbai \u2014 Bandra Kurla workshop bay.",
       "status": "overdue",
       "scheduledFor": "2026-09-01",
       "completedAt": null,
@@ -3289,7 +3289,7 @@
       "vehicleId": "V101",
       "mechanicId": "E312",
       "type": "HV battery health check",
-      "description": "HV battery health check carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "description": "HV battery health check carried out at the Bengaluru \u2014 Indiranagar Hub workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-06-11",
       "completedAt": "2026-06-12",
@@ -3301,7 +3301,7 @@
       "vehicleId": "V103",
       "mechanicId": "E313",
       "type": "AC condenser repair",
-      "description": "AC condenser repair carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "description": "AC condenser repair carried out at the Mumbai \u2014 Bandra Kurla workshop bay.",
       "status": "scheduled",
       "scheduledFor": "2026-09-03",
       "completedAt": null,
@@ -3313,7 +3313,7 @@
       "vehicleId": "V105",
       "mechanicId": "E311",
       "type": "Clutch overhaul",
-      "description": "Clutch overhaul carried out at the Pune — Baner workshop bay.",
+      "description": "Clutch overhaul carried out at the Pune \u2014 Baner workshop bay.",
       "status": "in-progress",
       "scheduledFor": "2026-09-04",
       "completedAt": null,
@@ -3325,7 +3325,7 @@
       "vehicleId": "V107",
       "mechanicId": "E312",
       "type": "Annual inspection",
-      "description": "Annual inspection carried out at the Chennai — Guindy workshop bay.",
+      "description": "Annual inspection carried out at the Chennai \u2014 Guindy workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-05-24",
       "completedAt": "2026-05-25",
@@ -3337,7 +3337,7 @@
       "vehicleId": "V109",
       "mechanicId": "E313",
       "type": "Scheduled 10,000 km service",
-      "description": "Scheduled 10,000 km service carried out at the Bengaluru — Indiranagar Hub workshop bay.",
+      "description": "Scheduled 10,000 km service carried out at the Bengaluru \u2014 Indiranagar Hub workshop bay.",
       "status": "overdue",
       "scheduledFor": "2026-09-06",
       "completedAt": null,
@@ -3349,7 +3349,7 @@
       "vehicleId": "V111",
       "mechanicId": "E311",
       "type": "Brake pad replacement",
-      "description": "Brake pad replacement carried out at the Mumbai — Bandra Kurla workshop bay.",
+      "description": "Brake pad replacement carried out at the Mumbai \u2014 Bandra Kurla workshop bay.",
       "status": "completed",
       "scheduledFor": "2026-05-12",
       "completedAt": "2026-05-13",
@@ -3361,7 +3361,7 @@
       "vehicleId": "V113",
       "mechanicId": "E312",
       "type": "Tyre rotation & alignment",
-      "description": "Tyre rotation & alignment carried out at the Pune — Baner workshop bay.",
+      "description": "Tyre rotation & alignment carried out at the Pune \u2014 Baner workshop bay.",
       "status": "scheduled",
       "scheduledFor": "2026-09-08",
       "completedAt": null,
@@ -3373,7 +3373,7 @@
       "vehicleId": "V115",
       "mechanicId": "E313",
       "type": "HV battery health check",
-      "description": "HV battery health check carried out at the Chennai — Guindy workshop bay.",
+      "description": "HV battery health check carried out at the Chennai \u2014 Guindy workshop bay.",
       "status": "in-progress",
       "scheduledFor": "2026-09-09",
       "completedAt": null,
@@ -3386,7 +3386,7 @@
       "id": "DOC-5001",
       "customerId": "C202",
       "kind": "Driving License",
-      "title": "Driving licence — KA0320180004213",
+      "title": "Driving licence \u2014 KA0320180004213",
       "uploadedAt": "2026-04-24",
       "status": "verified",
       "expiresAt": "2028-05-03"
@@ -3395,7 +3395,7 @@
       "id": "DOC-5002",
       "customerId": "C202",
       "kind": "Rental Agreement",
-      "title": "Rental agreement — FF-24817",
+      "title": "Rental agreement \u2014 FF-24817",
       "uploadedAt": "2026-08-04",
       "status": "verified",
       "bookingId": "FF-24817"
@@ -3404,7 +3404,7 @@
       "id": "DOC-5003",
       "customerId": "C202",
       "kind": "Invoice",
-      "title": "Invoice — FF-24810",
+      "title": "Invoice \u2014 FF-24810",
       "uploadedAt": "2026-07-07",
       "status": "verified",
       "bookingId": "FF-24810"
@@ -3413,7 +3413,7 @@
       "id": "DOC-5004",
       "customerId": "C202",
       "kind": "Payment Receipt",
-      "title": "Receipt — PAY-70213",
+      "title": "Receipt \u2014 PAY-70213",
       "uploadedAt": "2026-07-07",
       "status": "verified"
     },
@@ -3421,7 +3421,7 @@
       "id": "DOC-5005",
       "customerId": "C202",
       "kind": "ID Proof",
-      "title": "Address proof — utility bill",
+      "title": "Address proof \u2014 utility bill",
       "uploadedAt": "2026-08-18",
       "status": "pending"
     }
@@ -3442,7 +3442,7 @@
       "customerId": "C204",
       "rating": 5,
       "title": "Exactly as listed",
-      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated \u2014 no surprise charges.",
       "createdAt": "2026-08-08"
     },
     {
@@ -3478,7 +3478,7 @@
       "customerId": "C216",
       "rating": 5,
       "title": "Exactly as listed",
-      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated \u2014 no surprise charges.",
       "createdAt": "2026-07-03"
     },
     {
@@ -3514,7 +3514,7 @@
       "customerId": "C208",
       "rating": 5,
       "title": "Exactly as listed",
-      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated \u2014 no surprise charges.",
       "createdAt": "2026-05-28"
     },
     {
@@ -3550,7 +3550,7 @@
       "customerId": "C220",
       "rating": 5,
       "title": "Exactly as listed",
-      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated — no surprise charges.",
+      "body": "Second time renting this one. Interior was spotless and the fuel policy was exactly as stated \u2014 no surprise charges.",
       "createdAt": "2026-04-22"
     },
     {
@@ -3577,7 +3577,7 @@
       "id": "N1",
       "kind": "booking",
       "title": "Booking confirmed",
-      "body": "FF-24817 — Volvo XC60 Ultimate, pickup Aug 24, 09:00.",
+      "body": "FF-24817 \u2014 Volvo XC60 Ultimate, pickup Aug 24, 09:00.",
       "at": "2h ago",
       "read": false
     },
@@ -3585,7 +3585,7 @@
       "id": "N2",
       "kind": "payment",
       "title": "Payment successful",
-      "body": "₹9,345 received via UPI for FF-24817.",
+      "body": "\u20b99,345 received via UPI for FF-24817.",
       "at": "2h ago",
       "read": false
     },
@@ -3617,7 +3617,7 @@
       "id": "N6",
       "kind": "ai",
       "title": "New recommendation",
-      "body": "Three automatic SUVs under ₹3,500 match your last trip.",
+      "body": "Three automatic SUVs under \u20b93,500 match your last trip.",
       "at": "3d ago",
       "read": true
     }

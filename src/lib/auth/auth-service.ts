@@ -4,14 +4,14 @@ const STORAGE_KEY = "fleetflow_auth_session";
 
 export const USER_PRESETS: Record<UserRole, User> = {
   Customer: {
-    id: "C201",
-    name: "Alex Morgan",
-    firstName: "Alex",
-    lastName: "Morgan",
-    email: "alex@fleetflow.demo",
+    id: "C202",
+    name: "Aviskha Gupta",
+    firstName: "Aviskha",
+    lastName: "Gupta",
+    email: "aviskha.gupta@example.com",
     phone: "+91 98765 43210",
     role: "Customer",
-    avatarLabel: "AM",
+    avatarLabel: "AG",
     emailVerified: true,
     city: "Bengaluru",
     licenseNumber: "KA0320180004213",
@@ -19,14 +19,14 @@ export const USER_PRESETS: Record<UserRole, User> = {
     joinedAt: "2024-03-15",
   },
   Salesperson: {
-    id: "E301",
-    name: "Sarah Mitchell",
-    firstName: "Sarah",
-    lastName: "Mitchell",
-    email: "sarah@fleetflow.demo",
+    id: "E102",
+    name: "Imran Qureshi",
+    firstName: "Imran",
+    lastName: "Qureshi",
+    email: "imran.qureshi@fleetflow.in",
     phone: "+91 98450 11201",
     role: "Salesperson",
-    avatarLabel: "SM",
+    avatarLabel: "IQ",
     emailVerified: true,
     branch: "Bengaluru — Indiranagar Hub",
     target: 1800000,
@@ -35,28 +35,28 @@ export const USER_PRESETS: Record<UserRole, User> = {
     joinedAt: "2023-01-10",
   },
   Mechanic: {
-    id: "E311",
-    name: "Daniel Carter",
-    firstName: "Daniel",
-    lastName: "Carter",
-    email: "daniel@fleetflow.demo",
+    id: "E106",
+    name: "Joseph Mathew",
+    firstName: "Joseph",
+    lastName: "Mathew",
+    email: "joseph.mathew@fleetflow.in",
     phone: "+91 98450 11311",
     role: "Mechanic",
-    avatarLabel: "DC",
+    avatarLabel: "JM",
     emailVerified: true,
     branch: "Bengaluru — Indiranagar Hub",
     specialization: "Diesel Powertrain & EV Systems",
     joinedAt: "2022-08-01",
   },
   Manager: {
-    id: "E321",
-    name: "Michael Anderson",
-    firstName: "Michael",
-    lastName: "Anderson",
-    email: "michael@fleetflow.demo",
+    id: "E101",
+    name: "Rithika Menon",
+    firstName: "Rithika",
+    lastName: "Menon",
+    email: "rithika.menon@fleetflow.in",
     phone: "+91 98450 11321",
     role: "Manager",
-    avatarLabel: "MA",
+    avatarLabel: "RM",
     emailVerified: true,
     branch: "Bengaluru — Indiranagar Hub",
     headcount: 14,
@@ -147,27 +147,67 @@ class AuthService {
       }
     }
 
-    const session: AuthSession = {
-      user: userMatch,
-      token: `mock_jwt_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`,
-      expiresAt: new Date(Date.now() + 86400000 * 7).toISOString(),
-      isDemo: true,
-    };
+    try {
+      const formData = new URLSearchParams();
+      formData.append("username", email);
+      formData.append("password", credentials.password);
+      
+      const res = await fetch("http://localhost:8000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString()
+      });
+      
+      if (!res.ok) {
+        return { success: false, error: "Invalid email or password" };
+      }
+      
+      const data = await res.json();
+      
+      const session: AuthSession = {
+        user: userMatch,
+        token: data.access_token,
+        expiresAt: new Date(Date.now() + 86400000 * 7).toISOString(),
+        isDemo: true,
+      };
 
-    this.saveSession(session);
-    return resolve({ success: true, session });
+      this.saveSession(session);
+      return { success: true, session };
+    } catch (e: any) {
+      return { success: false, error: e.message };
+    }
   }
 
   async loginAsDemo(role: UserRole): Promise<AuthSession> {
     const user = USER_PRESETS[role];
-    const session: AuthSession = {
-      user,
-      token: `mock_demo_jwt_${role.toLowerCase()}_${Date.now()}`,
-      expiresAt: new Date(Date.now() + 86400000 * 7).toISOString(),
-      isDemo: true,
-    };
-    this.saveSession(session);
-    return resolve(session, 150);
+    try {
+      const formData = new URLSearchParams();
+      formData.append("username", user.email);
+      formData.append("password", "password123");
+      
+      const res = await fetch("http://localhost:8000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString()
+      });
+      
+      if (!res.ok) {
+        throw new Error("Demo login failed");
+      }
+      
+      const data = await res.json();
+      
+      const session: AuthSession = {
+        user,
+        token: data.access_token,
+        expiresAt: new Date(Date.now() + 86400000 * 7).toISOString(),
+        isDemo: true,
+      };
+      this.saveSession(session);
+      return session;
+    } catch (e) {
+      throw e;
+    }
   }
 
   async signup(data: SignupData): Promise<{ success: boolean; session?: AuthSession }> {

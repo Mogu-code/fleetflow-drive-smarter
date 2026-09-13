@@ -20,6 +20,10 @@ class VehicleBase(BaseModel):
     image: Optional[str] = None
     description: Optional[str] = None
     odometer_km: Optional[int] = 0
+    rating: Optional[float] = 0.0
+    review_count: Optional[int] = 0
+    utilization: Optional[int] = 0
+    revenue_generated: Optional[float] = 0.0
     gallery: Optional[List[str]] = []
     features: Optional[List[str]] = []
 
@@ -43,6 +47,10 @@ class VehicleUpdate(BaseModel):
     image: Optional[str] = None
     description: Optional[str] = None
     odometer_km: Optional[int] = None
+    rating: Optional[float] = None
+    review_count: Optional[int] = None
+    utilization: Optional[int] = None
+    revenue_generated: Optional[float] = None
     gallery: Optional[List[str]] = None
     features: Optional[List[str]] = None
 

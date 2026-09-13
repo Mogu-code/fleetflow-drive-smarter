@@ -36,13 +36,10 @@ function BookingsList() {
     queryFn: () => bookingService.list(),
   });
 
-  const { data: vehicles } = useQuery({
-    queryKey: ["vehicles", "all-bookings-list"],
-    queryFn: () => vehicleService.list({}),
-  });
+
 
   const filteredBookings = bookings?.filter((b) => {
-    if (activeTab === "upcoming") return b.status === "confirmed";
+    if (activeTab === "upcoming") return b.status === "confirmed" || b.status === "pending";
     if (activeTab === "active") return b.status === "active";
     if (activeTab === "completed") return b.status === "completed";
     if (activeTab === "cancelled") return b.status === "cancelled";
@@ -73,7 +70,7 @@ function BookingsList() {
           {/* Filter Tabs */}
           <div className="flex border-b border-border/80 gap-2 text-xs font-semibold">
             {[
-              { id: "upcoming", label: "Upcoming", count: bookings?.filter((b) => b.status === "confirmed").length },
+              { id: "upcoming", label: "Upcoming", count: bookings?.filter((b) => b.status === "confirmed" || b.status === "pending").length },
               { id: "active", label: "Active", count: bookings?.filter((b) => b.status === "active").length },
               { id: "completed", label: "Completed", count: bookings?.filter((b) => b.status === "completed").length },
               { id: "cancelled", label: "Cancelled", count: bookings?.filter((b) => b.status === "cancelled").length },
@@ -114,7 +111,7 @@ function BookingsList() {
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredBookings.map((b) => {
-                const v = vehicles?.find((veh) => veh.id === b.vehicleId);
+                const v = b.vehicle;
                 return (
                   <div key={b.id} className="p-6 rounded-2xl bg-surface border border-border flex flex-col justify-between hover:border-primary/50 transition-colors shadow-lg">
                     <div className="space-y-4">
@@ -128,7 +125,7 @@ function BookingsList() {
                           <img src={v.image} alt={v.name} className="w-16 h-12 rounded-lg object-cover border border-border" />
                           <div>
                             <div className="font-display font-semibold text-sm text-foreground">{v.name}</div>
-                            <div className="text-xs text-muted-foreground">{v.category} • {v.transmission}</div>
+                            <div className="text-xs text-muted-foreground">{v.category}</div>
                           </div>
                         </div>
                       )}

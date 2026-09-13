@@ -26,6 +26,11 @@ class Vehicle(Base):
     description = Column(String)
     odometer_km = Column(Integer, default=0)
     
+    rating = Column(Float, default=0.0)
+    review_count = Column(Integer, default=0)
+    utilization = Column(Integer, default=0)
+    revenue_generated = Column(Float, default=0.0)
+    
     gallery = Column(JSONB, default=list)
     features = Column(JSONB, default=list)
 
