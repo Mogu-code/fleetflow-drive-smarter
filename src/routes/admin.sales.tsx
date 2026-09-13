@@ -54,7 +54,7 @@ function SalespersonPortal() {
             <div className="flex items-center gap-2">
               <Eyebrow>SALES DESK</Eyebrow>
               <span className="text-[10px] font-semibold uppercase px-2 py-0.5 rounded bg-primary/20 text-primary border border-primary/30">
-                Staff: {user?.name || "Sarah Mitchell"}
+                Staff: {user?.name}
               </span>
             </div>
             <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight text-foreground flex items-center gap-2">
